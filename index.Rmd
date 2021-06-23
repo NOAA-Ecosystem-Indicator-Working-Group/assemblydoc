@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Will Klajbor"
+title: "Technical Indicator Assembly Document for NOAA NaMES"
+author: "The NOAA Ecosystem Indicators Working Group and Willem Klajbor"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
