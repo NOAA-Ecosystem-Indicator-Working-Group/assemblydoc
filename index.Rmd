@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: rstudio/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc
 description: "This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov"
 ---
 
