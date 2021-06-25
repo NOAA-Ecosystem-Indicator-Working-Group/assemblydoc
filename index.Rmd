@@ -1,6 +1,6 @@
 --- 
 title: "Technical Indicator Assembly Document for NOAA NaMES"
-author: "The NOAA Ecosystem Indicators Working Group and Willem Klajbor"
+author: "Willem Klajbor, The NOAA Ecosystem Indicators Working Group"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 knit: "bookdown::render_book"
