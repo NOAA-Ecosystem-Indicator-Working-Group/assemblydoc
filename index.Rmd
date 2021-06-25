@@ -3,8 +3,8 @@ title: "Technical Indicator Assembly Document for NOAA NaMES"
 author: "The NOAA Ecosystem Indicators Working Group and Willem Klajbor"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+knit: "bookdown::render_book"
 output: bookdown::gitbook
-number_sections: true
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike

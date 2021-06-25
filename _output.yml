@@ -1,7 +1,13 @@
+
 bookdown::gitbook:
-  css: style.css
+  lib_dir: asset
+  css: css/style.css
+  split_by: chapter
   config:
+    toolbar:
+      position: static
     toc:
+      collapse: section
       before: |
         <li><a href="./">NaMES Tech Doc</a></li>
       after: |

@@ -1,4 +1,4 @@
-# Chlorophyll-a {-}
+# Chlorophyll-a
 
 ## Data
 Under Construction
