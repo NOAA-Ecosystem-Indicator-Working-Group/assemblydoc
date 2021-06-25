@@ -1,7 +1,10 @@
 book_filename: "bookdown-demo"
 #use code below to reorder chapters
-#rmd_files: ["index.Rmd",
-#]
+rmd_files: ["index.Rmd",
+"chla.Rmd",
+"zooplankton.Rmd",
+"99-references.Rmd"]
 new_session: false
 delete_merged_file: true
 output_dir: "docs"
+number_sections: true

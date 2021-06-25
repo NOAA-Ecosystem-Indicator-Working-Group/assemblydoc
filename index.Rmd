@@ -4,6 +4,7 @@ author: "The NOAA Ecosystem Indicators Working Group and Willem Klajbor"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
+number_sections: true
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
