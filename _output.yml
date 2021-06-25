@@ -3,10 +3,10 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">NaMES Assembly Doc</a></li>
+        <li><a href="./">NaMES Tech Doc</a></li>
       after: |
-        <li><a href="https://github.com/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
