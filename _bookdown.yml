@@ -1,6 +1,7 @@
 book_filename: "bookdown-demo"
-language:
-  ui:
-    chapter_name: "Chapter "
+#use code below to reorder chapters
+#rmd_files: ["index.Rmd",
+#]
+new_session: false
 delete_merged_file: true
 output_dir: "docs"
