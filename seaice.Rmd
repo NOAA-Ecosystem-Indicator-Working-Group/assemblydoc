@@ -1,8 +1,28 @@
 # Sea Ice
+Unlike icebergs, glaciers, ice sheets, and ice shelves, which originate on land, sea ice forms, expands, and melts in the ocean. Sea ice influences global climate by reflecting sunlight back into space. Because this solar energy is not absorbed into the ocean, temperatures nearer the poles remain cool. When sea ice melts, the surface area reflecting sunlight decreases, allowing more solar energy to be absorbed by the ocean, causing temperatures to rise. This creates a positive feedback loop. Warmer water temperatures delay ice growth in the autumn and winter, and the ice melts faster the following spring, exposing dark ocean waters for longer periods the following summer.
+
+Sea ice affects the movement of ocean waters. When sea ice forms, ocean salts are left behind. As the seawater gets saltier, its density increases, and it sinks. Surface water is pulled in to replace the sinking water, which in turn becomes cold and salty and sinks. This initiates deep-ocean currents driving the global ocean conveyor belt. 
+
+Sea ice is an important element of the Arctic system. It provides an important habitat for biological activity, i.e. algae grows on the bottom of sea ice, forming the basis of the Arctic food web, and it plays a critical role in the life cycle of many marine mammals - seals and polar bears. Sea ice also serves a critical role in supporting Indigenous communities culture and survival. We present the annual sea ice extent in millions of Kilometers for the Arctic region.
 
 ## Data
-Under Construction
+Sea ice data was accessed from the NOAA National Centers for Environmental Information, https://www.ncdc.noaa.gov/snow-and-ice/extent/ , with the data pulled from here: https://www.ncdc.noaa.gov/snow-and-ice/extent/sea-ice/N/3/data.csv.  The data are plotted in units of million square km.  
 
 ## Methods
-Under construction
+To download the current sea ice data, you can either:
+
+1) Copy/paste the following url into your web browser:
+https://www.ncdc.noaa.gov/snow-and-ice/extent/sea-ice/N/3/data.csv
+
+or
+
+2) Use the following R code to download the data and import it into your RStudio environment
+
+```{r, eval=FALSE}
+url <-"https://www.ncdc.noaa.gov/snow-and-ice/extent/sea-ice/N/3/data.csv"
+# Specify destination where file should be saved
+destfile <- "C:/Users/ ... Your Path ... /my folder/output.csv"
+#Apply download.file function in R
+download.file(url, destfile)
+```
 

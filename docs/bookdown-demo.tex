@@ -41,6 +41,46 @@
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -84,7 +124,7 @@
 
 \title{Technical Indicator Assembly Document for NOAA NaMES}
 \author{Willem Klajbor, The NOAA Ecosystem Indicators Working Group}
-\date{2021-06-25}
+\date{2021-06-30}
 
 \begin{document}
 \maketitle
@@ -97,7 +137,12 @@
 \chapter*{Overview}\label{overview}}
 \addcontentsline{toc}{chapter}{Overview}
 
-Under Construction - Website Description
+The National Marine Ecosystem Status web portal provides the status of marine ecosystems across the U.S. and access to NOAA ecosystem indicator information and data. This website is designed to document the data sources and methods used to create the indicators displayed on the site.
+
+\hypertarget{definition-of-indicators}{%
+\section{Definition of Indicators}\label{definition-of-indicators}}
+
+Ecosystem indicators are quantitative and/or qualitative measures of key components of the ecosystem. Marine ecosystems provide food, jobs, security, well-being, and other services to millions of people across the U.S. Yet, marine ecosystems and the people that rely on them are facing increasingly complex challenges. Tracking the status and trends of ocean and coastal ecosystems is critically important to understand how these ecosystems are changing and identify potential issues.
 
 \hypertarget{chlorophyll-a}{%
 \chapter{Chlorophyll-a}\label{chlorophyll-a}}
@@ -248,15 +293,49 @@ Under construction
 \hypertarget{sea-ice}{%
 \chapter{Sea Ice}\label{sea-ice}}
 
+Unlike icebergs, glaciers, ice sheets, and ice shelves, which originate on land, sea ice forms, expands, and melts in the ocean. Sea ice influences global climate by reflecting sunlight back into space. Because this solar energy is not absorbed into the ocean, temperatures nearer the poles remain cool. When sea ice melts, the surface area reflecting sunlight decreases, allowing more solar energy to be absorbed by the ocean, causing temperatures to rise. This creates a positive feedback loop. Warmer water temperatures delay ice growth in the autumn and winter, and the ice melts faster the following spring, exposing dark ocean waters for longer periods the following summer.
+
+Sea ice affects the movement of ocean waters. When sea ice forms, ocean salts are left behind. As the seawater gets saltier, its density increases, and it sinks. Surface water is pulled in to replace the sinking water, which in turn becomes cold and salty and sinks. This initiates deep-ocean currents driving the global ocean conveyor belt.
+
+Sea ice is an important element of the Arctic system. It provides an important habitat for biological activity, i.e.~algae grows on the bottom of sea ice, forming the basis of the Arctic food web, and it plays a critical role in the life cycle of many marine mammals - seals and polar bears. Sea ice also serves a critical role in supporting Indigenous communities culture and survival. We present the annual sea ice extent in millions of Kilometers for the Arctic region.
+
 \hypertarget{data-11}{%
 \section{Data}\label{data-11}}
 
-Under Construction
+Sea ice data was accessed from the NOAA National Centers for Environmental Information, \url{https://www.ncdc.noaa.gov/snow-and-ice/extent/} , with the data pulled from here: \url{https://www.ncdc.noaa.gov/snow-and-ice/extent/sea-ice/N/3/data.csv}. The data are plotted in units of million square km.
 
 \hypertarget{methods-11}{%
 \section{Methods}\label{methods-11}}
 
-Under construction
+To download the current sea ice data, you can either:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\tightlist
+\item
+  Copy/paste the following url into your web browser:
+  \url{https://www.ncdc.noaa.gov/snow-and-ice/extent/sea-ice/N/3/data.csv}
+\end{enumerate}
+
+or
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Use the following R code to download the data and import it into your RStudio environment
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{url }\OtherTok{\textless{}{-}}\StringTok{"https://www.ncdc.noaa.gov/snow{-}and{-}ice/extent/sea{-}ice/N/3/data.csv"}
+\CommentTok{\# Specify destination where file should be saved}
+\NormalTok{destfile }\OtherTok{\textless{}{-}} \StringTok{"C:/Users/ ... Your Path ... /my folder/output.csv"}
+\CommentTok{\#Apply download.file function in R}
+\FunctionTok{download.file}\NormalTok{(url, destfile)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{climate-indices}{%
 \chapter{Climate Indices}\label{climate-indices}}
@@ -420,15 +499,88 @@ Under construction
 \hypertarget{billion-dollar-disasters}{%
 \chapter{Billion Dollar Disasters}\label{billion-dollar-disasters}}
 
+In the United States the number of weather and climate-related disasters exceeding 1 billion dollars has been increasing since 1980. These events have significant impacts to coastal economies and communities. The Billion Dollar Disaster indicator provides information on the frequency and the total estimated costs of major weather and climate events that occur in the United States. This indicator compiles the annual number of weather and climate-related disasters across seven event types. Events are included if they are estimated to cause more than one billion U.S. dollars in direct losses. The cost estimates of these events are adjusted for inflation using the Consumer Price Index (CPI) and are based on costs documented in several Federal and private-sector databases. We present the total annual number of disaster events for all regions.
+
 \hypertarget{data-21}{%
 \section{Data}\label{data-21}}
 
-Under Construction
+Billion dollar disaster event frequency data are taken from NOAA's National Centers for Environmental Information (\url{https://www.ncdc.noaa.gov/billions/}). The number of disasters within each region were summed for every year of available data. Although the number is the count of unique disaster events within a region, the same disaster can impact multiple regions, meaning a sum across regions will overestimate the unique number of disasters.
 
-\hypertarget{methods-21}{%
-\section{Methods}\label{methods-21}}
+\hypertarget{methods-need-qc}{%
+\section{Methods (need QC)}\label{methods-need-qc}}
 
-Under construction
+The Billion Dollar Event Frequency Data displayed on the website were compiled using the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{PKG }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"foreign"}\NormalTok{,}\StringTok{"stringr"}\NormalTok{,}\StringTok{"data.table"}\NormalTok{)}
+
+\ControlFlowTok{for}\NormalTok{ (p }\ControlFlowTok{in}\NormalTok{ PKG) \{}
+  \ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(p,}\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)) \{  }
+    \FunctionTok{install.packages}\NormalTok{(p)}
+    \FunctionTok{require}\NormalTok{(p,}\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)\}}
+\NormalTok{\}}
+
+\CommentTok{\#states \textless{}{-} c("AK","AL","AR","AZ","CA","CO","CT","DE","FL","GA","HI",}
+\CommentTok{\#            "IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI",}
+\CommentTok{\#            "MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV",}
+\CommentTok{\#            "NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT",}
+\CommentTok{\#           "VA","VT","WA","WI","WV","WY")}
+
+\NormalTok{states }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"AK"}\NormalTok{,}\StringTok{"AL"}\NormalTok{,}\StringTok{"CA"}\NormalTok{,}\StringTok{"CT"}\NormalTok{,}\StringTok{"DE"}\NormalTok{,}\StringTok{"FL"}\NormalTok{,}\StringTok{"GA"}\NormalTok{,}\StringTok{"HI"}\NormalTok{,}
+            \StringTok{"LA"}\NormalTok{,}\StringTok{"MA"}\NormalTok{,}\StringTok{"MD"}\NormalTok{,}\StringTok{"ME"}\NormalTok{,}
+            \StringTok{"MS"}\NormalTok{,}\StringTok{"NC"}\NormalTok{,}\StringTok{"NH"}\NormalTok{,}\StringTok{"NJ"}\NormalTok{,}
+            \StringTok{"NY"}\NormalTok{,}\StringTok{"OR"}\NormalTok{,}\StringTok{"PA"}\NormalTok{,}\StringTok{"RI"}\NormalTok{,}\StringTok{"SC"}\NormalTok{,}\StringTok{"TX"}\NormalTok{,}
+            \StringTok{"VA"}\NormalTok{,}\StringTok{"WA"}\NormalTok{,}\StringTok{"PR"}\NormalTok{,}\StringTok{"VI"}\NormalTok{)}
+
+\CommentTok{\#Update Year in URL (2021)}
+\NormalTok{Billion\_Storm }\OtherTok{\textless{}{-}} \ConstantTok{NULL}
+\ControlFlowTok{for}\NormalTok{ (x }\ControlFlowTok{in}\NormalTok{ states) \{}
+\NormalTok{  temp }\OtherTok{\textless{}{-}} \FunctionTok{tempfile}\NormalTok{()}
+\NormalTok{  temp.connect }\OtherTok{\textless{}{-}} \FunctionTok{url}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(}\StringTok{"https://www.ncdc.noaa.gov/billions/events{-}"}\NormalTok{,x,}\StringTok{"{-}1980{-}2021.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{""}\NormalTok{))}
+\NormalTok{  temp }\OtherTok{\textless{}{-}} \FunctionTok{data.table}\NormalTok{(}\FunctionTok{read.delim}\NormalTok{(temp.connect, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{,}\AttributeTok{fill=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{stringsAsFactors=}\ConstantTok{FALSE}\NormalTok{,}\AttributeTok{skip=}\DecValTok{1}\NormalTok{, }\AttributeTok{sep=}\StringTok{","}\NormalTok{))}
+\NormalTok{  temp}\SpecialCharTok{$}\NormalTok{State }\OtherTok{\textless{}{-}}\NormalTok{ x}
+\NormalTok{  Billion\_Storm }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(Billion\_Storm,temp)}
+  \FunctionTok{unlink}\NormalTok{(temp)}
+  \FunctionTok{rm}\NormalTok{(temp)}
+\NormalTok{\}}
+
+\NormalTok{Billion\_Storm}\SpecialCharTok{$}\NormalTok{Begin.Date }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{Begin.Date)}
+\NormalTok{Billion\_Storm}\SpecialCharTok{$}\NormalTok{Begin.Year }\OtherTok{\textless{}{-}}  \FunctionTok{substr}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{Begin.Date,}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+\NormalTok{Billion\_Storm}\SpecialCharTok{$}\NormalTok{Begin.Date }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{Begin.Date,}\StringTok{"\%Y \%m \%d"}\NormalTok{)}
+\NormalTok{Billion\_Storm}\SpecialCharTok{$}\NormalTok{End.Date }\OtherTok{\textless{}{-}} \FunctionTok{as.character}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{End.Date)}
+\NormalTok{Billion\_Storm}\SpecialCharTok{$}\NormalTok{End.Year }\OtherTok{\textless{}{-}}  \FunctionTok{substr}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{End.Date,}\DecValTok{1}\NormalTok{,}\DecValTok{4}\NormalTok{)}
+\NormalTok{Billion\_Storm}\SpecialCharTok{$}\NormalTok{End.Date }\OtherTok{\textless{}{-}} \FunctionTok{as.Date}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{End.Date,}\StringTok{"\%Y \%m \%d"}\NormalTok{)}
+
+\NormalTok{Gulf.of.Mexico }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"FL"}\NormalTok{,}\StringTok{"AL"}\NormalTok{,}\StringTok{"LA"}\NormalTok{,}\StringTok{"MS"}\NormalTok{,}\StringTok{"TX"}\NormalTok{)}
+\NormalTok{Northeast }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"NC"}\NormalTok{,}\StringTok{"VA"}\NormalTok{,}\StringTok{"MD"}\NormalTok{,}\StringTok{"DE"}\NormalTok{,}\StringTok{"PA"}\NormalTok{,}\StringTok{"NJ"}\NormalTok{,}\StringTok{"NY"}\NormalTok{,}\StringTok{"CT"}\NormalTok{,}\StringTok{"RI"}\NormalTok{,}
+               \StringTok{"MA"}\NormalTok{,}\StringTok{"NH"}\NormalTok{,}\StringTok{"ME"}\NormalTok{)}
+\NormalTok{Southeast }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"SC"}\NormalTok{,}\StringTok{"GA"}\NormalTok{,}\StringTok{"FL"}\NormalTok{)}
+\NormalTok{California.Current }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"CA"}\NormalTok{,}\StringTok{"OR"}\NormalTok{,}\StringTok{"WA"}\NormalTok{)}
+\NormalTok{Alaska}\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"AK"}\NormalTok{)}
+\NormalTok{Hawaii }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"HI"}\NormalTok{)}
+\NormalTok{Caribbean }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"PR"}\NormalTok{,}\StringTok{"VI"}\NormalTok{)}
+
+\NormalTok{Storm\_Freq }\OtherTok{\textless{}{-}} \ConstantTok{NULL}
+\ControlFlowTok{for}\NormalTok{ (x }\ControlFlowTok{in} \FunctionTok{c}\NormalTok{(}\StringTok{"Gulf.of.Mexico"}\NormalTok{,}\StringTok{"Northeast"}\NormalTok{,}\StringTok{"Southeast"}\NormalTok{,}\StringTok{"California.Current"}\NormalTok{,}\StringTok{"Alaska"}\NormalTok{,}\StringTok{"Hawaii"}\NormalTok{,}\StringTok{"Caribbean"}\NormalTok{)) \{}
+\NormalTok{  TEMP }\OtherTok{\textless{}{-}}\NormalTok{ Billion\_Storm[}\FunctionTok{which}\NormalTok{(Billion\_Storm}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\FunctionTok{get}\NormalTok{(x)),]}
+\NormalTok{  TEMP}\SpecialCharTok{$}\NormalTok{Disaster }\OtherTok{\textless{}{-}}\NormalTok{ TEMP}\SpecialCharTok{$}\NormalTok{Begin.Date }\OtherTok{\textless{}{-}}\NormalTok{ TEMP}\SpecialCharTok{$}\NormalTok{End.Date }\OtherTok{\textless{}{-}}\NormalTok{ TEMP}\SpecialCharTok{$}\NormalTok{Deaths }\OtherTok{\textless{}{-}}\NormalTok{ TEMP}\SpecialCharTok{$}\NormalTok{State }\OtherTok{\textless{}{-}}\NormalTok{ TEMP}\SpecialCharTok{$}\NormalTok{Begin.Year }\OtherTok{\textless{}{-}} \ConstantTok{NULL}
+\NormalTok{  TEMP }\OtherTok{\textless{}{-}} \FunctionTok{unique}\NormalTok{(TEMP)}
+  \FunctionTok{colnames}\NormalTok{(TEMP)}\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Name\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Frequency\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}End.Year\textquotesingle{}}\NormalTok{)}
+\NormalTok{  TEMP }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Frequency}\SpecialCharTok{\textasciitilde{}}\NormalTok{End.Year, }\AttributeTok{data=}\NormalTok{TEMP, }\AttributeTok{FUN=}\NormalTok{length)}
+\NormalTok{  TEMP}\SpecialCharTok{$}\NormalTok{Region }\OtherTok{\textless{}{-}}\NormalTok{ x}
+  \FunctionTok{assign}\NormalTok{(}\FunctionTok{paste0}\NormalTok{(x,}\StringTok{"\_Data"}\NormalTok{, }\AttributeTok{sep=}\StringTok{""}\NormalTok{),TEMP)}
+\NormalTok{  Storm\_Freq }\OtherTok{\textless{}{-}} \FunctionTok{rbind}\NormalTok{(Storm\_Freq,TEMP)}
+  \FunctionTok{rm}\NormalTok{(TEMP)}
+\NormalTok{\}}
+
+
+\FunctionTok{write.csv}\NormalTok{(Storm\_Freq,}\AttributeTok{file=}\StringTok{"C:/Users/... your path.../Billion\_Dollar\_Storms\_1980\_Present.csv"}\NormalTok{)}
+\FunctionTok{rm}\NormalTok{(}\AttributeTok{list=}\FunctionTok{ls}\NormalTok{())}
+\end{Highlighting}
+\end{Shaded}
+
+For more information, please contact Willem Klajbor (\href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}) or Geret DePiper (\href{mailto:geret.depiper@noaa.gov}{\nolinkurl{geret.depiper@noaa.gov}}).
 
 \hypertarget{beach-closures}{%
 \chapter{Beach Closures}\label{beach-closures}}
@@ -438,8 +590,8 @@ Under construction
 
 Under Construction
 
-\hypertarget{methods-22}{%
-\section{Methods}\label{methods-22}}
+\hypertarget{methods-21}{%
+\section{Methods}\label{methods-21}}
 
 Under construction
 
@@ -451,8 +603,8 @@ Under construction
 
 Under Construction
 
-\hypertarget{methods-23}{%
-\section{Methods}\label{methods-23}}
+\hypertarget{methods-22}{%
+\section{Methods}\label{methods-22}}
 
 Under construction
 

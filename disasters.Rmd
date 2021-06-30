@@ -1,7 +1,81 @@
 # Billion Dollar Disasters
 
-## Data
-Under Construction
+In the United States the number of weather and climate-related disasters exceeding 1 billion dollars has been increasing since 1980. These events have significant impacts to coastal economies and communities. The Billion Dollar Disaster indicator provides information on the frequency and the total estimated costs of major weather and climate events that occur in the United States. This indicator compiles the annual number of weather and climate-related disasters across seven event types. Events are included if they are estimated to cause more than one billion U.S. dollars in direct losses. The cost estimates of these events are adjusted for inflation using the Consumer Price Index (CPI) and are based on costs documented in several Federal and private-sector databases. We present the total annual number of disaster events for all regions.
 
-## Methods
-Under construction
+## Data
+
+Billion dollar disaster event frequency data are taken from NOAA’s National Centers for Environmental Information (https://www.ncdc.noaa.gov/billions/). The number of disasters within each region were summed for every year of available data. Although the number is the count of unique disaster events within a region, the same disaster can impact multiple regions, meaning a sum across regions will overestimate the unique number of disasters.
+
+## Methods (need QC)
+
+The Billion Dollar Event Frequency Data displayed on the website were compiled using the following code:
+
+```{r, setup, eval=FALSE}
+PKG <- c("foreign","stringr","data.table")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {  
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+
+#states <- c("AK","AL","AR","AZ","CA","CO","CT","DE","FL","GA","HI",
+#            "IA","ID","IL","IN","KS","KY","LA","MA","MD","ME","MI",
+#            "MN","MO","MS","MT","NC","ND","NE","NH","NJ","NM","NV",
+#            "NY","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT",
+#           "VA","VT","WA","WI","WV","WY")
+
+states <- c("AK","AL","CA","CT","DE","FL","GA","HI",
+            "LA","MA","MD","ME",
+            "MS","NC","NH","NJ",
+            "NY","OR","PA","RI","SC","TX",
+            "VA","WA","PR","VI")
+
+#Update Year in URL (2021)
+Billion_Storm <- NULL
+for (x in states) {
+  temp <- tempfile()
+  temp.connect <- url(paste0("https://www.ncdc.noaa.gov/billions/events-",x,"-1980-2021.csv", sep=""))
+  temp <- data.table(read.delim(temp.connect, header=TRUE,fill=FALSE, stringsAsFactors=FALSE,skip=1, sep=","))
+  temp$State <- x
+  Billion_Storm <- rbind(Billion_Storm,temp)
+  unlink(temp)
+  rm(temp)
+}
+
+Billion_Storm$Begin.Date <- as.character(Billion_Storm$Begin.Date)
+Billion_Storm$Begin.Year <-  substr(Billion_Storm$Begin.Date,1,4)
+Billion_Storm$Begin.Date <- as.Date(Billion_Storm$Begin.Date,"%Y %m %d")
+Billion_Storm$End.Date <- as.character(Billion_Storm$End.Date)
+Billion_Storm$End.Year <-  substr(Billion_Storm$End.Date,1,4)
+Billion_Storm$End.Date <- as.Date(Billion_Storm$End.Date,"%Y %m %d")
+
+Gulf.of.Mexico <- c("FL","AL","LA","MS","TX")
+Northeast <- c("NC","VA","MD","DE","PA","NJ","NY","CT","RI",
+               "MA","NH","ME")
+Southeast <- c("SC","GA","FL")
+California.Current <- c("CA","OR","WA")
+Alaska<- c("AK")
+Hawaii <- c("HI")
+Caribbean <- c("PR","VI")
+
+Storm_Freq <- NULL
+for (x in c("Gulf.of.Mexico","Northeast","Southeast","California.Current","Alaska","Hawaii","Caribbean")) {
+  TEMP <- Billion_Storm[which(Billion_Storm$State%in%get(x)),]
+  TEMP$Disaster <- TEMP$Begin.Date <- TEMP$End.Date <- TEMP$Deaths <- TEMP$State <- TEMP$Begin.Year <- NULL
+  TEMP <- unique(TEMP)
+  colnames(TEMP)<- c('Name','Frequency','End.Year')
+  TEMP <- aggregate(Frequency~End.Year, data=TEMP, FUN=length)
+  TEMP$Region <- x
+  assign(paste0(x,"_Data", sep=""),TEMP)
+  Storm_Freq <- rbind(Storm_Freq,TEMP)
+  rm(TEMP)
+}
+
+
+write.csv(Storm_Freq,file="C:/Users/... your path.../Billion_Dollar_Storms_1980_Present.csv")
+rm(list=ls())
+
+```
+
+For more information, please contact Willem Klajbor (willem.klajbor@noaa.gov) or Geret DePiper (geret.depiper@noaa.gov).

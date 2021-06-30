@@ -1,3 +1,4 @@
+definition-of-indicators
 chlorophyll-a
 data
 methods
@@ -74,10 +75,10 @@ data-20
 methods-20
 billion-dollar-disasters
 data-21
-methods-21
+methods-need-qc
 beach-closures
 data-22
-methods-22
+methods-21
 marine-species-distribution
 data-23
-methods-23
+methods-22
