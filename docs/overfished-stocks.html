@@ -305,13 +305,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="overfished-stocks" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> Overfished Stocks</h1>
+<p>Fish play an important role in marine ecosystems, supporting the ecological structure of many marine food webs. Caught by recreational and commercial fisheries, fish support significant parts of coastal economies, and can play an important cultural role in many regions. To understand the health of fish populations - as well as their abundance and distribution, we regularly assess fish stocks - stock assessments. Assessments let us know if a stock is experiencing overfishing or if it is overfished i.e. how much catch is sustainable while maintaining a healthy stock. And, if a stock becomes depleted, stock assessments can help determine what steps may be taken to rebuild it to sustainable levels. Understanding stock assessments helps measure how well we’re managing and recovering fish stocks over time.</p>
+<p>We present the number of overfished stocks by year in all regions.</p>
 <div id="data-5" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Data</h2>
-<p>Under Construction</p>
+<p>Data are obtained from the NOAA Fisheries Fishery Stock Status website <a href="https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates" class="uri">https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates</a>. Stocks that meet the criteria for overfished status are summed by year for each region. The status of stocks are available in report form and graphically.</p>
 </div>
 <div id="methods-5" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> Methods</h2>
-<p>Under construction</p>
+<p>This indicator is compiled manually.</p>
+<p>After traveling to <a href="https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates" class="uri">https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates</a>, identify the most up to date status report. The reports should be available in two formats - through a report and through a visual.</p>
+<p>The easiest way to compile the data are using the visual, which should be named “Stocks on the Overfished and Overfishing Lists by Region.” After opening the visual (example below), overfished stocks will be displayed by sqaures and sorted spatially by region. We are only counting the “Overfished” stocks - do not count stocks that are only on the “Overfishing” list.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="overfished-stocks.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;overfished.png&quot;</span>))</span></code></pre></div>
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="overfished.png" alt="NOAA Fisheries 2020 Q4 Stock Status Map" width="1382" />
+<p class="caption">
+Figure 6.1: NOAA Fisheries 2020 Q4 Stock Status Map
+</p>
+</div>
+<p>North Pacific corresponds to the Alaska Region, Pacific corresponds to the California Current, Western Pacific corresponds to Hawaii (but be sure not to count the pacific island specific complexes), and New England corresponds to North Atlantic.</p>
+<p>For more information, contact Willem Klajbor (<a href="mailto:willem.klajbor@noaa.gov" class="email">willem.klajbor@noaa.gov</a>) or Stephanie Oakes (<a href="mailto:stephanie.oakes@noaa.gov" class="email">stephanie.oakes@noaa.gov</a>).</p>
 
 </div>
 </div>

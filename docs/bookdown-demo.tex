@@ -212,15 +212,37 @@ Under construction
 \hypertarget{overfished-stocks}{%
 \chapter{Overfished Stocks}\label{overfished-stocks}}
 
+Fish play an important role in marine ecosystems, supporting the ecological structure of many marine food webs. Caught by recreational and commercial fisheries, fish support significant parts of coastal economies, and can play an important cultural role in many regions. To understand the health of fish populations - as well as their abundance and distribution, we regularly assess fish stocks - stock assessments. Assessments let us know if a stock is experiencing overfishing or if it is overfished i.e.~how much catch is sustainable while maintaining a healthy stock. And, if a stock becomes depleted, stock assessments can help determine what steps may be taken to rebuild it to sustainable levels. Understanding stock assessments helps measure how well we're managing and recovering fish stocks over time.
+
+We present the number of overfished stocks by year in all regions.
+
 \hypertarget{data-5}{%
 \section{Data}\label{data-5}}
 
-Under Construction
+Data are obtained from the NOAA Fisheries Fishery Stock Status website \url{https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates}. Stocks that meet the criteria for overfished status are summed by year for each region. The status of stocks are available in report form and graphically.
 
 \hypertarget{methods-5}{%
 \section{Methods}\label{methods-5}}
 
-Under construction
+This indicator is compiled manually.
+
+After traveling to \url{https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates}, identify the most up to date status report. The reports should be available in two formats - through a report and through a visual.
+
+The easiest way to compile the data are using the visual, which should be named ``Stocks on the Overfished and Overfishing Lists by Region.'' After opening the visual (example below), overfished stocks will be displayed by sqaures and sorted spatially by region. We are only counting the ``Overfished'' stocks - do not count stocks that are only on the ``Overfishing'' list.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\FunctionTok{rep}\NormalTok{(}\StringTok{"overfished.png"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{figure}
+\includegraphics[width=38.39in]{overfished} \caption{NOAA Fisheries 2020 Q4 Stock Status Map}\label{fig:unnamed-chunk-2}
+\end{figure}
+
+North Pacific corresponds to the Alaska Region, Pacific corresponds to the California Current, Western Pacific corresponds to Hawaii (but be sure not to count the pacific island specific complexes), and New England corresponds to North Atlantic.
+
+For more information, contact Willem Klajbor (\href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}) or Stephanie Oakes (\href{mailto:stephanie.oakes@noaa.gov}{\nolinkurl{stephanie.oakes@noaa.gov}}).
 
 \hypertarget{marine-mammals}{%
 \chapter{Marine Mammals}\label{marine-mammals}}

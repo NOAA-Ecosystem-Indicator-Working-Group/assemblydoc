@@ -1,7 +1,23 @@
 # Overfished Stocks
 
+Fish play an important role in marine ecosystems, supporting the ecological structure of many marine food webs. Caught by recreational and commercial fisheries, fish support significant parts of coastal economies, and can play an important cultural role in many regions.  To understand the health of fish populations - as well as their abundance and distribution, we regularly assess fish stocks - stock assessments. Assessments let us know if a stock is experiencing overfishing or if it is overfished i.e. how much catch is sustainable while maintaining a healthy stock. And, if a stock becomes depleted, stock assessments can help determine what steps may be taken to rebuild it to sustainable levels. Understanding stock assessments helps measure how well we’re managing and recovering fish stocks over time. 
+
+We present the number of overfished stocks by year in all regions.
+
 ## Data
-Under Construction
+Data are obtained from the NOAA Fisheries Fishery Stock Status website https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates. Stocks that meet the criteria for overfished status are summed by year for each region. The status of stocks are available in report form and graphically.
 
 ## Methods
-Under construction
+This indicator is compiled manually.
+
+After traveling to https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates, identify the most up to date status report. The reports should be available in two formats - through a report and through a visual.
+
+The easiest way to compile the data are using the visual, which should be named "Stocks on the Overfished and Overfishing Lists by Region." After opening the visual (example below), overfished stocks will be displayed by sqaures and sorted spatially by region. We are only counting the "Overfished" stocks - do not count stocks that are only on the "Overfishing" list.
+
+```{r, eval=TRUE, fig.cap = "NOAA Fisheries 2020 Q4 Stock Status Map"}
+knitr::include_graphics(rep("overfished.png"))
+```
+
+North Pacific corresponds to the Alaska Region, Pacific corresponds to the California Current, Western Pacific corresponds to Hawaii (but be sure not to count the pacific island specific complexes), and New England corresponds to North Atlantic.
+
+For more information, contact Willem Klajbor (willem.klajbor@noaa.gov) or Stephanie Oakes (stephanie.oakes@noaa.gov).
