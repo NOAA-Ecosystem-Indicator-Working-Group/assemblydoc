@@ -6,7 +6,7 @@ In the United States the number of weather and climate-related disasters exceedi
 
 Billion dollar disaster event frequency data are taken from NOAA’s National Centers for Environmental Information (https://www.ncdc.noaa.gov/billions/). The number of disasters within each region were summed for every year of available data. Although the number is the count of unique disaster events within a region, the same disaster can impact multiple regions, meaning a sum across regions will overestimate the unique number of disasters.
 
-## Methods (need QC)
+## Methods
 
 The Billion Dollar Event Frequency Data displayed on the website were compiled using the following code:
 
