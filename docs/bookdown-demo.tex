@@ -124,7 +124,7 @@
 
 \title{Technical Indicator Assembly Document for NOAA NaMES}
 \author{Willem Klajbor, The NOAA Ecosystem Indicators Working Group}
-\date{2021-06-30}
+\date{2021-07-08}
 
 \begin{document}
 \maketitle
@@ -336,6 +336,10 @@ or
 \FunctionTok{download.file}\NormalTok{(url, destfile)}
 \end{Highlighting}
 \end{Shaded}
+
+Data were restructured and gauge values were calculated manually.
+
+For more information, contact Willem Klajbor (\href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}) or Scott Cross (\href{mailto:scott.cross@noaa.gov}{\nolinkurl{scott.cross@noaa.gov}}).
 
 \hypertarget{climate-indices}{%
 \chapter{Climate Indices}\label{climate-indices}}
@@ -574,13 +578,16 @@ The Billion Dollar Event Frequency Data displayed on the website were compiled u
   \FunctionTok{rm}\NormalTok{(TEMP)}
 \NormalTok{\}}
 
+\NormalTok{Storm\_Freq\_F }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(Storm\_Freq,Region,Frequency)}
 
-\FunctionTok{write.csv}\NormalTok{(Storm\_Freq,}\AttributeTok{file=}\StringTok{"C:/Users/... your path.../Billion\_Dollar\_Storms\_1980\_Present.csv"}\NormalTok{)}
+\FunctionTok{write.csv}\NormalTok{(Storm\_Freq\_F,}\AttributeTok{file=}\StringTok{"C:/Users/... your path.../Billion\_Dollar\_Storms\_1980\_Present.csv"}\NormalTok{)}
 \FunctionTok{rm}\NormalTok{(}\AttributeTok{list=}\FunctionTok{ls}\NormalTok{())}
 \end{Highlighting}
 \end{Shaded}
 
-For more information, please contact Willem Klajbor (\href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}) or Geret DePiper (\href{mailto:geret.depiper@noaa.gov}{\nolinkurl{geret.depiper@noaa.gov}}).
+Gauge values counted manually.
+
+For more information, please contact Willem Klajbor (\href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}) or Kate Quigley (\href{mailto:kate.quigley@noaa.gov}{\nolinkurl{kate.quigley@noaa.gov}}).
 
 \hypertarget{beach-closures}{%
 \chapter{Beach Closures}\label{beach-closures}}

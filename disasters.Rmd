@@ -72,10 +72,13 @@ for (x in c("Gulf.of.Mexico","Northeast","Southeast","California.Current","Alask
   rm(TEMP)
 }
 
+Storm_Freq_F <- spread(Storm_Freq,Region,Frequency)
 
-write.csv(Storm_Freq,file="C:/Users/... your path.../Billion_Dollar_Storms_1980_Present.csv")
+write.csv(Storm_Freq_F,file="C:/Users/... your path.../Billion_Dollar_Storms_1980_Present.csv")
 rm(list=ls())
 
 ```
 
-For more information, please contact Willem Klajbor (willem.klajbor@noaa.gov) or Geret DePiper (geret.depiper@noaa.gov).
+Gauge values counted manually.
+
+For more information, please contact Willem Klajbor (willem.klajbor@noaa.gov) or Kate Quigley (kate.quigley@noaa.gov).

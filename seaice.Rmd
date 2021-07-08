@@ -26,3 +26,6 @@ destfile <- "C:/Users/ ... Your Path ... /my folder/output.csv"
 download.file(url, destfile)
 ```
 
+Data were restructured and gauge values were calculated manually.
+
+For more information, contact Willem Klajbor (willem.klajbor@noaa.gov) or Scott Cross (scott.cross@noaa.gov).

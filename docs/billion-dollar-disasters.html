@@ -24,7 +24,7 @@
 <meta name="author" content="Willem Klajbor, The NOAA Ecosystem Indicators Working Group" />
 
 
-<meta name="date" content="2021-06-30" />
+<meta name="date" content="2021-07-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -374,10 +374,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-59"><a href="billion-dollar-disasters.html#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span>(TEMP)</span>
 <span id="cb2-60"><a href="billion-dollar-disasters.html#cb2-60" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-61"><a href="billion-dollar-disasters.html#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-62"><a href="billion-dollar-disasters.html#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-63"><a href="billion-dollar-disasters.html#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(Storm_Freq,<span class="at">file=</span><span class="st">&quot;C:/Users/... your path.../Billion_Dollar_Storms_1980_Present.csv&quot;</span>)</span>
-<span id="cb2-64"><a href="billion-dollar-disasters.html#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div>
-<p>For more information, please contact Willem Klajbor (<a href="mailto:willem.klajbor@noaa.gov" class="email">willem.klajbor@noaa.gov</a>) or Geret DePiper (<a href="mailto:geret.depiper@noaa.gov" class="email">geret.depiper@noaa.gov</a>).</p>
+<span id="cb2-62"><a href="billion-dollar-disasters.html#cb2-62" aria-hidden="true" tabindex="-1"></a>Storm_Freq_F <span class="ot">&lt;-</span> <span class="fu">spread</span>(Storm_Freq,Region,Frequency)</span>
+<span id="cb2-63"><a href="billion-dollar-disasters.html#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="billion-dollar-disasters.html#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(Storm_Freq_F,<span class="at">file=</span><span class="st">&quot;C:/Users/... your path.../Billion_Dollar_Storms_1980_Present.csv&quot;</span>)</span>
+<span id="cb2-65"><a href="billion-dollar-disasters.html#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span></code></pre></div>
+<p>Gauge values counted manually.</p>
+<p>For more information, please contact Willem Klajbor (<a href="mailto:willem.klajbor@noaa.gov" class="email">willem.klajbor@noaa.gov</a>) or Kate Quigley (<a href="mailto:kate.quigley@noaa.gov" class="email">kate.quigley@noaa.gov</a>).</p>
 
 </div>
 </div>
