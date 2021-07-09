@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.22)  8 JUL 2021 15:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.22)  8 JUL 2021 20:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -960,118 +960,163 @@ Chapter 4.
 
 ]
 Chapter 5.
-[17] [18
+
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
+[]\TU/lmr/m/n/10 Alaska: []$[][][][][] [] [] [] [][][][] [][] [][][][] [] [][][
+][][][][][][] [] [][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][] [] 
+[][][] [] [][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+[] [] [][] [] [][][][] [] [][][] [] [][][][] [][] [][][][][][][] [] [][][][][][
+][][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 213--214
+[]\TU/lmr/m/n/10 Gulf of Mexico: []$[][][][][] [] [] [] [][][][][][] [] [][][] 
+[] [][][][][][][][][][][][][][][] [] [][][] [][] [][][][][][][][][] [][]
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+[]$[][][][][] [] [] [] [][][][][][][][][] [] [][][][] [] [][][][] [] [][][] [] 
+[][][][][][] [] [][][][][][][][] [] [][][][][] [] [] [] [][] [] [][][][] [] [][
+][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+[][][][] [][] [][][][][][][] [] [][][][][][][][][][][][][][][] [] [][][][][][] 
+[] [][][][][][][][][][] [] [][][][][][][][] [] [][][][][] [] [][][][] [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+[][][][][][] [][] [][][][][][] [] [][][][] [] [][][][][][] [] [][][][] [] [][][
+][] [] [][][][][][][][][][][][] [] [][][][][][][][][][][][][][][] [] [][][]$[]\
+TU/lmr/m/n/10 .
+ []
+
+
+Underfull \hbox (badness 6808) in paragraph at lines 238--239
+[] [] [][][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][][
+][][][][] [] [][][][] [] [][][] [] []$[]\TU/lmr/m/n/10 ). Fi-
+ []
+
+[18] [19] [20
 
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 []$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][][] [] [][][] [] []
 [][][][][][][] [] [][][][][][][][][][] [][] [][][][][][][][][][][] [] [][][][][
 ][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 []\TU/lmr/m/n/10 After traveling to []$[][][][][] [] [] [] [][][] [] [][][][][]
 [][][][] [] [][][][] [] [][][] [] [][][][][][][][] [] [][][][][][][][][][] [][]
 
  []
 
-[19]
+[21]
 File: overfished.png Graphic file (type bmp)
 <overfished.png>
 
-Overfull \hbox (415.88922pt too wide) in paragraph at lines 240--240
+Overfull \hbox (415.88922pt too wide) in paragraph at lines 268--268
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.0805pt on input line 241.
+LaTeX Warning: Float too large for page by 24.0805pt on input line 269.
 
-[20] [21] [22
+[22] [23] [24
 
 ]
 Chapter 7.
-[23] [24
-
-]
-Chapter 8.
 [25] [26
 
 ]
-Chapter 9.
+Chapter 8.
 [27] [28
 
 ]
-Chapter 10.
+Chapter 9.
 [29] [30
 
 ]
-Chapter 11.
-[31] [32]
-Chapter 12.
-[33
+Chapter 10.
+[31] [32
 
-] [34]
-Chapter 13.
+]
+Chapter 11.
+[33] [34]
+Chapter 12.
 [35
 
-] [36
+] [36]
+Chapter 13.
+[37
+
+] [38
 
 ]
 Chapter 14.
-[37] [38
-
-]
-Chapter 15.
 [39] [40
 
 ]
-Chapter 16.
+Chapter 15.
 [41] [42
 
 ]
-Chapter 17.
+Chapter 16.
 [43] [44
 
 ]
-Chapter 18.
+Chapter 17.
 [45] [46
 
 ]
+Chapter 18.
+[47] [48
+
+]
 Chapter 19.
-[47]
+[49]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 544.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 572.
 
-Underfull \vbox (badness 10000) detected at line 608
+Underfull \vbox (badness 10000) detected at line 636
  []
 
 
-Underfull \vbox (badness 10000) detected at line 608
+Underfull \vbox (badness 10000) detected at line 636
  []
 
-[48] [49] [50
+[50] [51] [52
 
 ]
 Chapter 20.
-[51] [52
+[53] [54
 
 ]
 Chapter 21.
 No file bookdown-demo.bbl.
-[53] (./bookdown-demo.aux)
+[55] (./bookdown-demo.aux)
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
 (rerunfilecheck)             Checksum: 2728D2F6EC6BF21E486676A00E35DAFC;6786.
  ) 
 Here is how much of TeX's memory you used:
- 17002 strings out of 478442
- 302267 string characters out of 5856508
- 772393 words of memory out of 5000000
- 37102 multiletter control sequences out of 15000+600000
+ 17006 strings out of 478442
+ 302322 string characters out of 5856508
+ 774580 words of memory out of 5000000
+ 37106 multiletter control sequences out of 15000+600000
  409897 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,6n,120p,888b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 87i,6n,120p,947b,446s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (53 pages).
+Output written on bookdown-demo.pdf (55 pages).

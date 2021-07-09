@@ -15,6 +15,10 @@ methods-3
 seabirds
 data-4
 methods-4
+alaska
+california-current
+gulf-of-mexico
+northeast
 overfished-stocks
 data-5
 methods-5

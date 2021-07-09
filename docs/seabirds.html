@@ -164,7 +164,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="seabirds.html"><a href="seabirds.html"><i class="fa fa-check"></i><b>5</b> Seabirds</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="seabirds.html"><a href="seabirds.html#data-4"><i class="fa fa-check"></i><b>5.1</b> Data</a></li>
-<li class="chapter" data-level="5.2" data-path="seabirds.html"><a href="seabirds.html#methods-4"><i class="fa fa-check"></i><b>5.2</b> Methods</a></li>
+<li class="chapter" data-level="5.2" data-path="seabirds.html"><a href="seabirds.html#methods-4"><i class="fa fa-check"></i><b>5.2</b> Methods</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="seabirds.html"><a href="seabirds.html#alaska"><i class="fa fa-check"></i><b>5.2.1</b> Alaska</a></li>
+<li class="chapter" data-level="5.2.2" data-path="seabirds.html"><a href="seabirds.html#california-current"><i class="fa fa-check"></i><b>5.2.2</b> California Current</a></li>
+<li class="chapter" data-level="5.2.3" data-path="seabirds.html"><a href="seabirds.html#gulf-of-mexico"><i class="fa fa-check"></i><b>5.2.3</b> Gulf of Mexico</a></li>
+<li class="chapter" data-level="5.2.4" data-path="seabirds.html"><a href="seabirds.html#northeast"><i class="fa fa-check"></i><b>5.2.4</b> Northeast</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="overfished-stocks.html"><a href="overfished-stocks.html"><i class="fa fa-check"></i><b>6</b> Overfished Stocks</a>
 <ul>
@@ -305,14 +311,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="seabirds" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Seabirds</h1>
+<p>Seabirds are a vital part of marine ecosystems and valuable indicators of an ecosystem’s status. Seabirds are attracted to fishing vessels and frequently get hooked or entangled in fishing gear, especially longline fisheries. This is a common threat to seabirds. Depending on the geographic region, fishermen in the United States often interact with albatross, cormorants, gannet, loons, pelicans, puffins, gulls, storm-petrels, shearwaters, terns, and many other species. We track seabirds because of their importance to marine food webs, but also as an indication of efficient fishing practices. We present estimates of seabird abundance in the Alaska, California Current, Gulf of Mexico and Northeast regions.</p>
 <div id="data-4" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> Data</h2>
-<p>Under Construction</p>
+<p>Data for Alaska, California Current, and the Gulf of Mexico were obtained from the regional NOAA Integrated Ecosystem Assessment Program teams that produce indicators and Ecosystem Status Report. The links for each of the datasets can be found here:</p>
+<p>Alaska: <a href="https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv" class="uri">https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv</a></p>
+<p>California Current: <a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22</a></p>
+<p>Gulf of Mexico: <a href="https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv" class="uri">https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv</a></p>
+<p>Seabird count and transect length data for the Northeast are extracted from the Atlantic Marine Assessment Program for Protected Species (AMAPPS) annual reports. Counts are summed and divided by the sum of the transect length in nautical miles. For more information see <a href="https://www.nefsc.noaa.gov/psb/AMAPPS/" class="uri">https://www.nefsc.noaa.gov/psb/AMAPPS/</a></p>
 </div>
 <div id="methods-4" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> Methods</h2>
-<p>Under construction</p>
+<div id="alaska" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Alaska</h3>
+<p>The Multivariate Breeding Index variable from the Eastern Bering Sea Ecosystem Status Report is currently used to represent seabirds for the NaMES Alaska Region. That data can be downloaded manually by clicking <a href="https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv" class="uri">https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv</a>.</p>
+</div>
+<div id="california-current" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> California Current</h3>
+<p>The Density Anomaly for Cassin’s Auklets in the Southern California Current (Spring) are used to represent the seabird indicator for the NaMES California Current region. Because this is an anomaly variable, the values for previous years will change every year - therefore, the entire dataset must be downloaded and replaced each year. The data can be downloaded manually by clicking <a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22</a></p>
+</div>
+<div id="gulf-of-mexico" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Gulf of Mexico</h3>
+<p>The GoA IEA team produces a standardized seabird relative abundance variable that is stored at <a href="https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv" class="uri">https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv</a>. As of this writing, the data had not been updated since 2020 and only go until 2015.</p>
+</div>
+<div id="northeast" class="section level3" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Northeast</h3>
+<p>The northeast seabirds indicator is compiled using the AMAPPS Annual report each year. This indicator is compiled completely manually. The reports can be found at <a href="https://www.nefsc.noaa.gov/psb/AMAPPS/" class="uri">https://www.nefsc.noaa.gov/psb/AMAPPS/</a>. To calculate the indicator score for each year, one must go to the Seabirds -&gt; Results section of a corresponding year’s report and identify the paragraphs containing the “Total seabirds seen,” “Total Seen in Zone,” and the “Nautical Miles Surveyed” values. Then, those values for each cruise should be input into this google sheet (<a href="https://docs.google.com/spreadsheets/d/1-g_d9eMWUchbm2xojlRG8Q_y7xzbtcyU1bHriW2ua4U/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1-g_d9eMWUchbm2xojlRG8Q_y7xzbtcyU1bHriW2ua4U/edit#gid=0</a>). Finally, using the google sheet, the total number of seabirds observed for the entire year should be divided by the total nautical miles surveyed. That result produces the indicator score and should be manually input into the data file.</p>
 
+</div>
 </div>
 </div>
             </section>

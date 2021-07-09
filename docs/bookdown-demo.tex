@@ -199,15 +199,43 @@ Under construction
 \hypertarget{seabirds}{%
 \chapter{Seabirds}\label{seabirds}}
 
+Seabirds are a vital part of marine ecosystems and valuable indicators of an ecosystem's status. Seabirds are attracted to fishing vessels and frequently get hooked or entangled in fishing gear, especially longline fisheries. This is a common threat to seabirds. Depending on the geographic region, fishermen in the United States often interact with albatross, cormorants, gannet, loons, pelicans, puffins, gulls, storm-petrels, shearwaters, terns, and many other species. We track seabirds because of their importance to marine food webs, but also as an indication of efficient fishing practices. We present estimates of seabird abundance in the Alaska, California Current, Gulf of Mexico and Northeast regions.
+
 \hypertarget{data-4}{%
 \section{Data}\label{data-4}}
 
-Under Construction
+Data for Alaska, California Current, and the Gulf of Mexico were obtained from the regional NOAA Integrated Ecosystem Assessment Program teams that produce indicators and Ecosystem Status Report. The links for each of the datasets can be found here:
+
+Alaska: \url{https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv}
+
+California Current: \url{https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly\&species_cohort=\%22Cassins\%20auklet\%20(So\%20CC,\%20Spring)\%22}
+
+Gulf of Mexico: \url{https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv}
+
+Seabird count and transect length data for the Northeast are extracted from the Atlantic Marine Assessment Program for Protected Species (AMAPPS) annual reports. Counts are summed and divided by the sum of the transect length in nautical miles. For more information see \url{https://www.nefsc.noaa.gov/psb/AMAPPS/}
 
 \hypertarget{methods-4}{%
 \section{Methods}\label{methods-4}}
 
-Under construction
+\hypertarget{alaska}{%
+\subsection{Alaska}\label{alaska}}
+
+The Multivariate Breeding Index variable from the Eastern Bering Sea Ecosystem Status Report is currently used to represent seabirds for the NaMES Alaska Region. That data can be downloaded manually by clicking \url{https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv}.
+
+\hypertarget{california-current}{%
+\subsection{California Current}\label{california-current}}
+
+The Density Anomaly for Cassin's Auklets in the Southern California Current (Spring) are used to represent the seabird indicator for the NaMES California Current region. Because this is an anomaly variable, the values for previous years will change every year - therefore, the entire dataset must be downloaded and replaced each year. The data can be downloaded manually by clicking \url{https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly\&species_cohort=\%22Cassins\%20auklet\%20(So\%20CC,\%20Spring)\%22}
+
+\hypertarget{gulf-of-mexico}{%
+\subsection{Gulf of Mexico}\label{gulf-of-mexico}}
+
+The GoA IEA team produces a standardized seabird relative abundance variable that is stored at \url{https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv}. As of this writing, the data had not been updated since 2020 and only go until 2015.
+
+\hypertarget{northeast}{%
+\subsection{Northeast}\label{northeast}}
+
+The northeast seabirds indicator is compiled using the AMAPPS Annual report each year. This indicator is compiled completely manually. The reports can be found at \url{https://www.nefsc.noaa.gov/psb/AMAPPS/}. To calculate the indicator score for each year, one must go to the Seabirds -\textgreater{} Results section of a corresponding year's report and identify the paragraphs containing the ``Total seabirds seen,'' ``Total Seen in Zone,'' and the ``Nautical Miles Surveyed'' values. Then, those values for each cruise should be input into this google sheet (\url{https://docs.google.com/spreadsheets/d/1-g_d9eMWUchbm2xojlRG8Q_y7xzbtcyU1bHriW2ua4U/edit\#gid=0}). Finally, using the google sheet, the total number of seabirds observed for the entire year should be divided by the total nautical miles surveyed. That result produces the indicator score and should be manually input into the data file.
 
 \hypertarget{overfished-stocks}{%
 \chapter{Overfished Stocks}\label{overfished-stocks}}
