@@ -1,7 +1,69 @@
 # Forage Fish
 
+Forage fish, otherwise known as small pelagics are fish and invertebrates (like squids) that inhabit - the pelagic zone - the open ocean. The number and distribution of pelagic fish vary regionally, depending on multiple physical and ecological factors i.e. the availability of light, nutrients, dissolved oxygen, temperature, salinity, predation, abundance of phytoplankton and zooplankton, etc. Small pelagics are known to exhibit “boom and bust” cycles of abundance in response to these conditions. Examples include anchovies, sardines, shad, menhaden and the fish that feed on them
+
+Small pelagic species are often important to fisheries and serve as forage for commercially and recreationally important fish, as well as other ecosystem species (e.g. seabirds and marine mammals). They are a critical part of marine food webs and important to monitor because so many other organisms depend on them. We present the annual total biomass of small pelagics/forage fish in the Alaska, California Current, and Northeast regions, as well as selected taxa in the Gulf of Mexico region.
+
 ## Data
-Under Construction
+
+### Alaska
+
+The Indicator for the NaMES Alaksa regions is the East Bering Sea Pelagic forager biomass (fish 1000t) which can be directly accessed from the AKIEA website here: https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/Index.php?ID=9
+
+### California Current
+
+
+
+### Gulf of Mexico
+
+The GoA IEA team produced a standardized menhaden biomass variable that is stored at https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/menhaden_abundance_index.csv As of this writing, the data had not been updated since 2020 and only go until 2015.
+
+### Northeast
+
+The NE IEA Program keeps all of their ESR data in an R package called ecodata. The following code will download and install ecodata to your machine.
+```{r, eval=FALSE}
+remotes::install_github("NOAA-EDAB/ecodata")
+library(ecodata)
+library(dplyr)
+library(tidyr)
+library(stringr)
+## These plots were pulled from: https://github.com/NOAA-EDAB/SOE-NEFMC/blob/master/SOE-NEFMC-2019.Rmd and https://github.com/NOAA-EDAB/SOE-MAFMC/blob/master/SOE-MAFMC-2019.Rmd
+```
+
+### Southeast
+
+The Southeast Atlantic forage indicator is the Menhaden CPUE Index score used by the SEIEA team in their Ecosystem Status Report. At the time of writing, the report is under review and data are not publicly available, but can be found on our Google Drive and GitHub Repository. This will be updated in the future once data are available.
 
 ## Methods
-Under construction
+
+### Alaska
+
+The variable can be directly downloaded from this link: https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Pelagic.csv
+
+### California Current
+
+
+### Gulf of Mexico
+
+The GoM Menhaden Biomass (age 1+) data can be directly accessed and downloaded at this link: https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/menhaden_abundance_index.csv
+
+### Northeast
+
+After downloading, installing, and loading the ecodata package (see above), use the following code to access the planktivore biomass data:
+
+```{r, eval=FALSE}
+## MA-SOE Fig. 16, NE-SOE Fig. 17-18
+total_surv <- ecodata::nefsc_survey %>%
+  filter(EPU %in% c("MAB"),
+         !str_detect(Var, "Other|Apex|managed"),
+         Time >= 1968) %>%
+  mutate(Var = word(Var, 1,2))
+
+total_surv2 <- filter(total_surv, Var == "Planktivore Spring")
+
+write.csv(total_surv2, file = "~/total_surveyed_biomass.csv", row.names = FALSE)
+
+```
+
+This produces a .csv file with the name "total_surv2" that displays The Spring Planktivore biomass in kg ^tow -1, which is the indicator used for NaMES.
+

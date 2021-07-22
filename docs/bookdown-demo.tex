@@ -124,7 +124,7 @@
 
 \title{Technical Indicator Assembly Document for NOAA NaMES}
 \author{Willem Klajbor, The NOAA Ecosystem Indicators Working Group}
-\date{2021-07-08}
+\date{2021-07-22}
 
 \begin{document}
 \maketitle
@@ -186,15 +186,84 @@ Under construction
 \hypertarget{forage-fish}{%
 \chapter{Forage Fish}\label{forage-fish}}
 
+Forage fish, otherwise known as small pelagics are fish and invertebrates (like squids) that inhabit - the pelagic zone - the open ocean. The number and distribution of pelagic fish vary regionally, depending on multiple physical and ecological factors i.e.~the availability of light, nutrients, dissolved oxygen, temperature, salinity, predation, abundance of phytoplankton and zooplankton, etc. Small pelagics are known to exhibit ``boom and bust'' cycles of abundance in response to these conditions. Examples include anchovies, sardines, shad, menhaden and the fish that feed on them
+
+Small pelagic species are often important to fisheries and serve as forage for commercially and recreationally important fish, as well as other ecosystem species (e.g.~seabirds and marine mammals). They are a critical part of marine food webs and important to monitor because so many other organisms depend on them. We present the annual total biomass of small pelagics/forage fish in the Alaska, California Current, and Northeast regions, as well as selected taxa in the Gulf of Mexico region.
+
 \hypertarget{data-3}{%
 \section{Data}\label{data-3}}
 
-Under Construction
+\hypertarget{alaska}{%
+\subsection{Alaska}\label{alaska}}
+
+The Indicator for the NaMES Alaksa regions is the East Bering Sea Pelagic forager biomass (fish 1000t) which can be directly accessed from the AKIEA website here: \url{https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/Index.php?ID=9}
+
+\hypertarget{california-current}{%
+\subsection{California Current}\label{california-current}}
+
+\hypertarget{gulf-of-mexico}{%
+\subsection{Gulf of Mexico}\label{gulf-of-mexico}}
+
+The GoA IEA team produced a standardized menhaden biomass variable that is stored at \url{https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/menhaden_abundance_index.csv} As of this writing, the data had not been updated since 2020 and only go until 2015.
+
+\hypertarget{northeast}{%
+\subsection{Northeast}\label{northeast}}
+
+The NE IEA Program keeps all of their ESR data in an R package called ecodata. The following code will download and install ecodata to your machine.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{remotes}\SpecialCharTok{::}\FunctionTok{install\_github}\NormalTok{(}\StringTok{"NOAA{-}EDAB/ecodata"}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(ecodata)}
+\FunctionTok{library}\NormalTok{(dplyr)}
+\FunctionTok{library}\NormalTok{(tidyr)}
+\FunctionTok{library}\NormalTok{(stringr)}
+\DocumentationTok{\#\# These plots were pulled from: https://github.com/NOAA{-}EDAB/SOE{-}NEFMC/blob/master/SOE{-}NEFMC{-}2019.Rmd and https://github.com/NOAA{-}EDAB/SOE{-}MAFMC/blob/master/SOE{-}MAFMC{-}2019.Rmd}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{southeast}{%
+\subsection{Southeast}\label{southeast}}
+
+The Southeast Atlantic forage indicator is the Menhaden CPUE Index score used by the SEIEA team in their Ecosystem Status Report. At the time of writing, the report is under review and data are not publicly available, but can be found on our Google Drive and GitHub Repository. This will be updated in the future once data are available.
 
 \hypertarget{methods-3}{%
 \section{Methods}\label{methods-3}}
 
-Under construction
+\hypertarget{alaska-1}{%
+\subsection{Alaska}\label{alaska-1}}
+
+The variable can be directly downloaded from this link: \url{https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Pelagic.csv}
+
+\hypertarget{california-current-1}{%
+\subsection{California Current}\label{california-current-1}}
+
+\hypertarget{gulf-of-mexico-1}{%
+\subsection{Gulf of Mexico}\label{gulf-of-mexico-1}}
+
+The GoM Menhaden Biomass (age 1+) data can be directly accessed and downloaded at this link: \url{https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/menhaden_abundance_index.csv}
+
+\hypertarget{northeast-1}{%
+\subsection{Northeast}\label{northeast-1}}
+
+After downloading, installing, and loading the ecodata package (see above), use the following code to access the planktivore biomass data:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\# MA{-}SOE Fig. 16, NE{-}SOE Fig. 17{-}18}
+\NormalTok{total\_surv }\OtherTok{\textless{}{-}}\NormalTok{ ecodata}\SpecialCharTok{::}\NormalTok{nefsc\_survey }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{filter}\NormalTok{(EPU }\SpecialCharTok{\%in\%} \FunctionTok{c}\NormalTok{(}\StringTok{"MAB"}\NormalTok{),}
+         \SpecialCharTok{!}\FunctionTok{str\_detect}\NormalTok{(Var, }\StringTok{"Other|Apex|managed"}\NormalTok{),}
+\NormalTok{         Time }\SpecialCharTok{\textgreater{}=} \DecValTok{1968}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%}
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{Var =} \FunctionTok{word}\NormalTok{(Var, }\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+
+\NormalTok{total\_surv2 }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{(total\_surv, Var }\SpecialCharTok{==} \StringTok{"Planktivore Spring"}\NormalTok{)}
+
+\FunctionTok{write.csv}\NormalTok{(total\_surv2, }\AttributeTok{file =} \StringTok{"\textasciitilde{}/total\_surveyed\_biomass.csv"}\NormalTok{, }\AttributeTok{row.names =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+This produces a .csv file with the name ``total\_surv2'' that displays The Spring Planktivore biomass in kg \^{}tow -1, which is the indicator used for NaMES.
 
 \hypertarget{seabirds}{%
 \chapter{Seabirds}\label{seabirds}}
@@ -217,23 +286,23 @@ Seabird count and transect length data for the Northeast are extracted from the 
 \hypertarget{methods-4}{%
 \section{Methods}\label{methods-4}}
 
-\hypertarget{alaska}{%
-\subsection{Alaska}\label{alaska}}
+\hypertarget{alaska-2}{%
+\subsection{Alaska}\label{alaska-2}}
 
 The Multivariate Breeding Index variable from the Eastern Bering Sea Ecosystem Status Report is currently used to represent seabirds for the NaMES Alaska Region. That data can be downloaded manually by clicking \url{https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv}.
 
-\hypertarget{california-current}{%
-\subsection{California Current}\label{california-current}}
+\hypertarget{california-current-2}{%
+\subsection{California Current}\label{california-current-2}}
 
 The Density Anomaly for Cassin's Auklets in the Southern California Current (Spring) are used to represent the seabird indicator for the NaMES California Current region. Because this is an anomaly variable, the values for previous years will change every year - therefore, the entire dataset must be downloaded and replaced each year. The data can be downloaded manually by clicking \url{https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly\&species_cohort=\%22Cassins\%20auklet\%20(So\%20CC,\%20Spring)\%22}
 
-\hypertarget{gulf-of-mexico}{%
-\subsection{Gulf of Mexico}\label{gulf-of-mexico}}
+\hypertarget{gulf-of-mexico-2}{%
+\subsection{Gulf of Mexico}\label{gulf-of-mexico-2}}
 
 The GoA IEA team produces a standardized seabird relative abundance variable that is stored at \url{https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv}. As of this writing, the data had not been updated since 2020 and only go until 2015.
 
-\hypertarget{northeast}{%
-\subsection{Northeast}\label{northeast}}
+\hypertarget{northeast-2}{%
+\subsection{Northeast}\label{northeast-2}}
 
 The northeast seabirds indicator is compiled using the AMAPPS Annual report each year. This indicator is compiled completely manually. The reports can be found at \url{https://www.nefsc.noaa.gov/psb/AMAPPS/}. To calculate the indicator score for each year, one must go to the Seabirds -\textgreater{} Results section of a corresponding year's report and identify the paragraphs containing the ``Total seabirds seen,'' ``Total Seen in Zone,'' and the ``Nautical Miles Surveyed'' values. Then, those values for each cruise should be input into this google sheet (\url{https://docs.google.com/spreadsheets/d/1-g_d9eMWUchbm2xojlRG8Q_y7xzbtcyU1bHriW2ua4U/edit\#gid=0}). Finally, using the google sheet, the total number of seabirds observed for the entire year should be divided by the total nautical miles surveyed. That result produces the indicator score and should be manually input into the data file.
 
@@ -265,7 +334,7 @@ The easiest way to compile the data are using the visual, which should be named 
 \end{Shaded}
 
 \begin{figure}
-\includegraphics[width=38.39in]{overfished} \caption{NOAA Fisheries 2020 Q4 Stock Status Map}\label{fig:unnamed-chunk-2}
+\includegraphics[width=38.39in]{overfished} \caption{NOAA Fisheries 2020 Q4 Stock Status Map}\label{fig:unnamed-chunk-4}
 \end{figure}
 
 North Pacific corresponds to the Alaska Region, Pacific corresponds to the California Current, Western Pacific corresponds to Hawaii (but be sure not to count the pacific island specific complexes), and New England corresponds to North Atlantic.
@@ -642,15 +711,95 @@ For more information, please contact Willem Klajbor (\href{mailto:willem.klajbor
 \hypertarget{beach-closures}{%
 \chapter{Beach Closures}\label{beach-closures}}
 
+Beach closures are the number of days when beach water and/or air quality is determined to be unsafe. Unsafe water and air quality may have significant impacts on human health, local economies, and the ecosystem. The Environmental Protection Agency (EPA) supports coastal states, counties and and tribes in monitoring beach water quality, and notifying the public when beaches must be closed. Beach water quality is determined by the concentration of bacteria in the water (either Enterococcus sp.or Escherichia coli).
+
+The information presented is from states, counties, and tribes that submit data to the EPA Beach Program reporting database. Not all US beach closures are captured in this database. We present a summary of known EPA Beach Program closure days by year for Alaska, California Current, Gulf of Mexico, Northeast, Hawai'ian Islands, and the Southeast regions.
+
 \hypertarget{data-22}{%
 \section{Data}\label{data-22}}
 
-Under Construction
+Data obtained from the EPA BEACON website have been provided to EPA by the coastal and Great Lakes states, tribes and territories that receive grants under the BEACH Act. Data was refined to closure, by state or territory, by year. Data compiled by states or territory and combined in regions defined as IEA regions except PI includes Guam and Marianas. Caribbean and South Atlantic data stand alone. Not all beaches in a state or territory are monitored through the EPA BEACH Act. Data for beaches monitored by state and local municipalities is not included. Changes in the number of beach closure days may be driven by changes in the number of beaches monitored under the BEACH Act versus by state and local municipalities.
+
+Step by step instructions for obtaining these data from the EPA BEACON 2.0 Portal:
+
+Go to BEACON 2.0 website reports page
+\url{https://watersgeo.epa.gov/beacon2/reports.html}
+Step 1 location filter - select National all States/Tribes/Territories
+Step 2 Additional Filtering - select Calendar Year Grouping option and select all year or the years you need to add to update the indicator
+Step 3 Report Selection - Choose Beach Actions (advisories and closures)
+Actions drop down - choose filter
+Column drop down - select Action Type
+Operator drop down - select =
+Expression Drop dpown - select Closure and Apply (note there is a permanent closure option which was not used in first indicator - explore)
+Action drop down - choose download and select CSV
 
 \hypertarget{methods-22}{%
 \section{Methods}\label{methods-22}}
 
-Under construction
+Data were compiled using the following code:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#import data}
+\NormalTok{beach }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"C:/Users/your\_path.xlsx"}\NormalTok{)}
+
+\CommentTok{\#remove unnecessary data}
+\NormalTok{drop }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"County"}\NormalTok{, }\StringTok{"Beach Id"}\NormalTok{, }\StringTok{"Beach Name"}\NormalTok{, }\StringTok{"Beach Status"}\NormalTok{, }\StringTok{"Swim Status"}\NormalTok{, }\StringTok{"Reported"}\NormalTok{, }\StringTok{"Station ID"}\NormalTok{,}
+          \StringTok{"Activity ID"}\NormalTok{, }\StringTok{"Action Reasons"}\NormalTok{, }\StringTok{"Action Indicator"}\NormalTok{, }\StringTok{"Action Possible Source"}\NormalTok{)}
+\NormalTok{beach }\OtherTok{=}\NormalTok{ beach\_actions[,}\SpecialCharTok{!}\NormalTok{(}\FunctionTok{names}\NormalTok{(beach\_actions) }\SpecialCharTok{\%in\%}\NormalTok{ drop)]}
+
+\CommentTok{\#look for best way to subset}
+\NormalTok{water }\OtherTok{\textless{}{-}} \FunctionTok{unique}\NormalTok{(beach[}\FunctionTok{c}\NormalTok{(}\StringTok{"Waterbody Name"}\NormalTok{)])}
+\NormalTok{keep }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Atlantic Ocean"}\NormalTok{, }\StringTok{"Pacific Ocean"}\NormalTok{, }\StringTok{"Gulf of Mexico"}\NormalTok{, }\StringTok{"Long Island Sound"}\NormalTok{, }\StringTok{"{-}"}\NormalTok{, }\StringTok{"Chesapeake Bay"}\NormalTok{)}
+\NormalTok{beach2 }\OtherTok{\textless{}{-}}\NormalTok{ beach[beach}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Waterbody Name}\StringTok{\textasciigrave{}} \SpecialCharTok{\%in\%}\NormalTok{ keep, ]}
+
+\CommentTok{\#one more subset...}
+\NormalTok{states }\OtherTok{\textless{}{-}} \FunctionTok{unique}\NormalTok{(beach2[}\FunctionTok{c}\NormalTok{(}\StringTok{"State"}\NormalTok{)])}
+\NormalTok{beach3 }\OtherTok{\textless{}{-}}\NormalTok{ beach2[beach2}\SpecialCharTok{$}\NormalTok{State }\SpecialCharTok{!=}\StringTok{"IL"} \SpecialCharTok{\&}\NormalTok{ beach2}\SpecialCharTok{$}\NormalTok{State }\SpecialCharTok{!=}\StringTok{"IN"}\NormalTok{, ]}
+
+\CommentTok{\#add region}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region }\OtherTok{\textless{}{-}}\StringTok{""}
+
+\CommentTok{\#and assign}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"AK"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Alaska"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"HI"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Hawaii{-}Pacific Islands"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"CA"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"OR"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"WA"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"TX"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"AL"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"LA"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"MS"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"FL"} \SpecialCharTok{\&}\NormalTok{ beach3}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Waterbody Name}\StringTok{\textasciigrave{}}\SpecialCharTok{==}\StringTok{"Gulf of Mexico"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"FL"} \SpecialCharTok{\&}\NormalTok{ beach3}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{Waterbody Name}\StringTok{\textasciigrave{}}\SpecialCharTok{==}\StringTok{"Atlantic Ocean"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Southeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"SC"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Southeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"GA"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Southeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"NC"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"VA"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"MD"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"DE"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"NJ"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"NY"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"CT"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"RI"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"MA"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"NH"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"ME"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"MP"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Hawaii{-}Pacific Islands"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"GU"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Hawaii{-}Pacific Islands"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"MK"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region[beach3}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{==}\StringTok{"PR"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Caribbean"}
+
+\CommentTok{\#combine}
+\NormalTok{beach4 }\OtherTok{\textless{}{-}}\FunctionTok{with}\NormalTok{(beach3,}\FunctionTok{aggregate}\NormalTok{(}\FunctionTok{list}\NormalTok{(}\AttributeTok{days=}\NormalTok{beach3}\SpecialCharTok{$}\StringTok{\textasciigrave{}}\AttributeTok{ActionDuration Days}\StringTok{\textasciigrave{}}\NormalTok{), }\AttributeTok{by=}\FunctionTok{list}\NormalTok{(}\AttributeTok{region=}\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Region,}\AttributeTok{year=}\NormalTok{beach3}\SpecialCharTok{$}\NormalTok{Year), sum))}
+
+\CommentTok{\#reorder}
+\NormalTok{beachwide }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(beach4, region, days)}
+\NormalTok{beachwide}
+
+\FunctionTok{write.csv}\NormalTok{(beachwide,}\AttributeTok{file=}\StringTok{"C:/Users/willem.klajbor/Documents/DataAssembly/output/beach.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
 \hypertarget{marine-species-distribution}{%
 \chapter{Marine Species Distribution}\label{marine-species-distribution}}

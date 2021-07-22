@@ -1,7 +1,87 @@
 # Beach Closures
 
+Beach closures are the number of days when beach water and/or air quality is determined to be unsafe. Unsafe water and air quality may have significant impacts on human health, local economies, and the ecosystem. The Environmental Protection Agency (EPA) supports coastal states, counties and and tribes in monitoring beach water quality, and notifying the public when beaches must be closed. Beach water quality is determined by the concentration of bacteria in the water (either Enterococcus sp.or Escherichia coli). 
+
+The information presented is from states, counties, and tribes that submit data to the EPA Beach Program reporting database. Not all US beach closures are captured in this database.  We present a summary of known EPA Beach Program closure days by year for Alaska, California Current, Gulf of Mexico, Northeast, Hawai’ian Islands, and the Southeast regions.
+
 ## Data
-Under Construction
+Data obtained from the EPA BEACON website have been provided to EPA by the coastal and Great Lakes states, tribes and territories that receive grants under the BEACH Act.  Data was refined to closure, by state or territory, by year. Data compiled by states or territory and  combined in regions defined as IEA regions except PI includes Guam and Marianas. Caribbean and South Atlantic data stand alone. Not all beaches in a state or territory are monitored through the EPA BEACH Act. Data for beaches monitored by state and local municipalities is not included. Changes in the number of beach closure days may be driven by changes in the number of beaches monitored under the BEACH Act versus by state and local municipalities.
+
+Step by step instructions for obtaining these data from the EPA BEACON 2.0 Portal:
+
+Go to BEACON 2.0 website reports page
+https://watersgeo.epa.gov/beacon2/reports.html
+Step 1 location filter - select National all States/Tribes/Territories
+Step 2 Additional Filtering - select Calendar Year Grouping option and select all year or the years you need to add to update the indicator
+Step 3 Report Selection - Choose Beach Actions (advisories and closures)
+Actions drop down - choose filter
+Column drop down - select Action Type
+Operator drop down - select =
+Expression Drop dpown - select Closure and Apply (note there is a permanent closure option which was not used in first indicator - explore)
+Action drop down - choose download and select CSV
 
 ## Methods
-Under construction
+Data were compiled using the following code:
+
+```{r, eval=FALSE}
+#import data
+beach <- read_excel("C:/Users/your_path.xlsx")
+
+#remove unnecessary data
+drop <- c("County", "Beach Id", "Beach Name", "Beach Status", "Swim Status", "Reported", "Station ID",
+          "Activity ID", "Action Reasons", "Action Indicator", "Action Possible Source")
+beach = beach_actions[,!(names(beach_actions) %in% drop)]
+
+#look for best way to subset
+water <- unique(beach[c("Waterbody Name")])
+keep <- c("Atlantic Ocean", "Pacific Ocean", "Gulf of Mexico", "Long Island Sound", "-", "Chesapeake Bay")
+beach2 <- beach[beach$`Waterbody Name` %in% keep, ]
+
+#one more subset...
+states <- unique(beach2[c("State")])
+beach3 <- beach2[beach2$State !="IL" & beach2$State !="IN", ]
+
+#add region
+beach3$Region <-""
+
+#and assign
+beach3$Region[beach3$State=="AK"] <- "Alaska"
+beach3$Region[beach3$State=="HI"] <- "Hawaii-Pacific Islands"
+beach3$Region[beach3$State=="CA"] <- "California Current"
+beach3$Region[beach3$State=="OR"] <- "California Current"
+beach3$Region[beach3$State=="WA"] <- "California Current"
+beach3$Region[beach3$State=="TX"] <- "Gulf of Mexico"
+beach3$Region[beach3$State=="AL"] <- "Gulf of Mexico"
+beach3$Region[beach3$State=="LA"] <- "Gulf of Mexico"
+beach3$Region[beach3$State=="MS"] <- "Gulf of Mexico"
+beach3$Region[beach3$State=="FL" & beach3$`Waterbody Name`=="Gulf of Mexico"] <- "Gulf of Mexico"
+beach3$Region[beach3$State=="FL" & beach3$`Waterbody Name`=="Atlantic Ocean"] <- "Southeast"
+beach3$Region[beach3$State=="SC"] <- "Southeast"
+beach3$Region[beach3$State=="GA"] <- "Southeast"
+beach3$Region[beach3$State=="NC"] <- "Northeast"
+beach3$Region[beach3$State=="VA"] <- "Northeast"
+beach3$Region[beach3$State=="MD"] <- "Northeast"
+beach3$Region[beach3$State=="DE"] <- "Northeast"
+beach3$Region[beach3$State=="NJ"] <- "Northeast"
+beach3$Region[beach3$State=="NY"] <- "Northeast"
+beach3$Region[beach3$State=="CT"] <- "Northeast"
+beach3$Region[beach3$State=="RI"] <- "Northeast"
+beach3$Region[beach3$State=="MA"] <- "Northeast"
+beach3$Region[beach3$State=="NH"] <- "Northeast"
+beach3$Region[beach3$State=="ME"] <- "Northeast"
+beach3$Region[beach3$State=="MP"] <- "Hawaii-Pacific Islands"
+beach3$Region[beach3$State=="GU"] <- "Hawaii-Pacific Islands"
+beach3$Region[beach3$State=="MK"] <- "California Current"
+beach3$Region[beach3$State=="PR"] <- "Caribbean"
+
+#combine
+beach4 <-with(beach3,aggregate(list(days=beach3$`ActionDuration Days`), by=list(region=beach3$Region,year=beach3$Year), sum))
+
+#reorder
+beachwide <- spread(beach4, region, days)
+beachwide
+
+write.csv(beachwide,file="C:/Users/willem.klajbor/Documents/DataAssembly/output/beach.csv")
+
+```
+

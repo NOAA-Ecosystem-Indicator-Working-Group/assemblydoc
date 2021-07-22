@@ -10,7 +10,7 @@ Billion dollar disaster event frequency data are taken from NOAA’s National Ce
 
 The Billion Dollar Event Frequency Data displayed on the website were compiled using the following code:
 
-```{r, setup, eval=FALSE}
+```{r, eval=FALSE}
 PKG <- c("foreign","stringr","data.table")
 
 for (p in PKG) {
