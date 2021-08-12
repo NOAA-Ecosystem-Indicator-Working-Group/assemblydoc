@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.22)  22 JUL 2021 13:53
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.22)  12 AUG 2021 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,20 +944,57 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 ]
 Chapter 1.
-[9] [10
 
-]
+Underfull \hbox (badness 1796) in paragraph at lines 159--160
+\TU/lmr/m/n/10 methods can be found at []$[][][][][] [] [] [] [][][][] [] [][][
+][][][] [] [][][] [] [][][][][][][][] [] [] [] [][][][][][] [][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+[][][][][][][] [] [][][][][][][][][][][][][][][][][][] [] [][][][] [] [][][][][
+] [] [][][][]$[] \TU/lmr/m/n/10 or by emailing him
+ []
+
+[9] [10]
 Chapter 2.
-[11] [12
 
-]
+Underfull \hbox (badness 3977) in paragraph at lines 180--181
+\TU/lmr/m/n/10 Data are compiled and analyzed by the COPEPOD database man-
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 180--181
+\TU/lmr/m/n/10 ager Todd O’Brien. More information about Todd’s methods can
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
+\TU/lmr/m/n/10 be found at []$[][][][][] [] [] [] [][][][] [] [][][][][][] [] [
+][][] [] [][][][][][][][] [] [] [] [][][][][][] [][] [][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 3792) in paragraph at lines 180--181
+[][][][][][][][][][][][][][][][][][] [] [][][][] [] [][][][][] [] [][][][]$[] \
+TU/lmr/m/n/10 or by emailing him directly at
+ []
+
+
+Underfull \vbox (badness 5847) has occurred while \output is active []
+
+[11
+
+] [12]
 Chapter 3.
-[13] [14
+[13
+
+] [14
 
 ]
 Chapter 4.
 
-Underfull \hbox (badness 1565) in paragraph at lines 207--208
+Underfull \hbox (badness 1565) in paragraph at lines 218--219
 \TU/lmr/m/n/10 is stored at []$[][][][][] [] [] [] [][][][][][] [] [][][] [] []
 [][][][][][][][][][][][][][] [] [][][] [][] [][][][][][][][][] [][] [][][][][][
 ] [][]
@@ -965,56 +1002,56 @@ Underfull \hbox (badness 1565) in paragraph at lines 207--208
 
 [15]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 221.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 232.
 
 LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 221.
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 232.
 
 [16] [17] [18
 
 ]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 []\TU/lmr/m/n/10 Alaska: []$[][][][][] [] [] [] [][][][] [][] [][][][] [] [][][
 ][][][][][][] [] [][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][] [] 
 [][][] [] [][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--281
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
 [] [] [][] [] [][][][] [] [][][] [] [][][][] [][] [][][][][][][] [] [][][][][][
 ][][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 282--283
+Underfull \hbox (badness 4805) in paragraph at lines 293--294
 []\TU/lmr/m/n/10 Gulf of Mexico: []$[][][][][] [] [] [] [][][][][][] [] [][][] 
 [] [][][][][][][][][][][][][][][] [] [][][] [][] [][][][][][][][][] [][]
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 []$[][][][][] [] [] [] [][][][][][][][][] [] [][][][] [] [][][][] [] [][][] [] 
 [][][][][][] [] [][][][][][][][] [] [][][][][] [] [] [] [][] [] [][][][] [] [][
 ][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 308--309
 [][][][] [][] [][][][][][][] [] [][][][][][][][][][][][][][][] [] [][][][][][] 
 [] [][][][][][][][][][] [] [][][][][][][][] [] [][][][][] [] [][][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 [][][][][][] [][] [][][][][][] [] [][][][] [] [][][][][][] [] [][][][] [] [][][
 ][] [] [][][][][][][][][][][][] [] [][][][][][][][][][][][][][][] [] [][][]$[]\
 TU/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 6808) in paragraph at lines 307--308
+Underfull \hbox (badness 6808) in paragraph at lines 318--319
 [] [] [][][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][][
 ][][][][] [] [][][][] [] [][][] [] []$[]\TU/lmr/m/n/10 ). Fi-
  []
@@ -1024,14 +1061,14 @@ Underfull \hbox (badness 6808) in paragraph at lines 307--308
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
 []$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][][] [] [][][] [] []
 [][][][][][][] [] [][][][][][][][][][] [][] [][][][][][][][][][][] [] [][][][][
 ][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--327
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
 []\TU/lmr/m/n/10 After traveling to []$[][][][][] [] [] [] [][][] [] [][][][][]
 [][][][] [] [][][][] [] [][][] [] [][][][][][][][] [] [][][][][][][][][][] [][]
 
@@ -1041,12 +1078,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--327
 File: overfished.png Graphic file (type bmp)
 <overfished.png>
 
-Overfull \hbox (415.88922pt too wide) in paragraph at lines 337--337
+Overfull \hbox (415.88922pt too wide) in paragraph at lines 348--348
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.0805pt on input line 338.
+LaTeX Warning: Float too large for page by 24.0805pt on input line 349.
 
 [24] [25] [26
 
@@ -1060,11 +1097,29 @@ Chapter 8.
 
 ]
 Chapter 9.
-[31] [32
 
-]
+Underfull \hbox (badness 1173) in paragraph at lines 414--415
+\TU/lmr/m/n/10 SST Data are currently compiled and analyzed by Todd O’Brien fro
+m
+ []
+
+
+Underfull \hbox (badness 1715) in paragraph at lines 414--415
+\TU/lmr/m/n/10 NMFS ([]$[][][][] [] [][][][][][] [] [][][][] [] [][][]$[]). Mor
+e information about Todd’s meth-
+ []
+
+
+Underfull \hbox (badness 7151) in paragraph at lines 414--415
+\TU/lmr/m/n/10 ods can be found here []$[][][][][] [] [] [] [][][][] [] [][][][
+][][] [] [][][] [] [][][][][][][][] [] [] [] [][][][][][] [][]
+ []
+
+[31] [32]
 Chapter 10.
-[33] [34
+[33
+
+] [34
 
 ]
 Chapter 11.
@@ -1080,54 +1135,66 @@ Chapter 13.
 
 ]
 Chapter 14.
-[41] [42
+[41]
+Underfull \vbox (badness 10000) detected at line 646
+ []
 
-]
+
+Underfull \vbox (badness 10000) detected at line 646
+ []
+
+[42]
+Overfull \vbox (2.28998pt too high) detected at line 646
+ []
+
+[43] [44]
 Chapter 15.
-[43] [44
+[45
+
+] [46
 
 ]
 Chapter 16.
-[45] [46
+[47] [48] [49] [50
 
 ]
 Chapter 17.
-[47] [48
+[51] [52
 
 ]
 Chapter 18.
-[49] [50
+[53] [54
 
 ]
 Chapter 19.
-[51]
-Underfull \vbox (badness 10000) detected at line 705
+[55]
+Underfull \vbox (badness 10000) detected at line 901
  []
 
 
-Underfull \vbox (badness 10000) detected at line 705
+Underfull \vbox (badness 10000) detected at line 901
  []
 
-[52] [53] [54
+[56] [57] [58
 
 ]
 Chapter 20.
-[55] [56] [57] [58
+[59] [60] [61] [62
 
 ]
 Chapter 21.
 No file bookdown-demo.bbl.
-[59] (./bookdown-demo.aux)
+[63] (./bookdown-demo.aux)
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 2728D2F6EC6BF21E486676A00E35DAFC;6786.
+(rerunfilecheck)             Checksum: 92DAA8C54973A3423F1B5CEC474E9F42;6742.
  ) 
 Here is how much of TeX's memory you used:
- 17019 strings out of 478442
- 302540 string characters out of 5856508
- 774998 words of memory out of 5000000
- 37117 multiletter control sequences out of 15000+600000
+ 17014 strings out of 478442
+ 302497 string characters out of 5856508
+ 776802 words of memory out of 5000000
+ 37112 multiletter control sequences out of 15000+600000
  409905 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,6n,120p,947b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (59 pages).
+Output written on bookdown-demo.pdf (63 pages).

@@ -1,17 +1,90 @@
 # Commercial Fishing
 
-## Landings
+Commercial landings are the weight of, or revenue from, fish that are caught, brought to shore, processed, and sold for profit. It does not include sport or subsistence (to feed themselves) fishermen or for-hire sector, which earns its revenue from selling recreational fishing trips to saltwater anglers. Data on those fisheries are presented under the recreational landings and angler trips indicator.
 
-### Data
-Under Construction
+Commercial landings make up a major part of coastal economies. U.S. commercial fisheries are among the world’s largest and most sustainable; producing seafood, fish meal, vitamin supplements, and a host of other products for both domestic and international consumers. 
 
-### Methods
-Under construction
+The weight (tonnage), and revenue from the sale of commercial landings provides data on the ability of marine ecosystems to continue to supply these important products. 
 
-## Revenue
+## Data
+Commercial landings and gross revenue were downloaded from the National Marine Fisheries Service’s annual commercial fisheries landings query tool which can be found at https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200::::::. State pounds landed and revenue generated were aggregated to the appropriate region, and all revenue data was deflated to 2017 constant dollars using the Bureau of Labor Statistic’s Consumer Price Index (series CUUR0000SA0).
 
-### Data
-Under Construction
+The methods code below uses output from the above query service in .csv format.
 
-### Methods
-Under construction
+## Methods
+The following code produces Commercial Fishing Landings and Revenue data:
+
+```{r, eval=FALSE}
+#commercial Effort and landings
+PKG <- c("foreign","stringr", "data.table")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+Landings_Revenue <- read.csv(file="X:/datafile", skip=4,
+                             fill = TRUE, header=TRUE, as.is=TRUE)
+
+Landings_Revenue$Pounds <- NULL
+
+END.YEAR <- max(Landings_Revenue$Year)
+START.YEAR <- min(Landings_Revenue$Year)
+
+#Unprocessed Seafood Producer Price Index used to translate nominal dollars into Real (constant) 2017 dollars
+#to account for inflation
+
+temp <- tempfile()
+temp.connect <- url("https://download.bls.gov/pub/time.series/cu/cu.data.1.AllItems")
+temp <- data.table(read.delim(temp.connect, fill=FALSE, stringsAsFactors=FALSE))
+temp <- temp[which(temp$period=="M13"),]
+temp$series_id <- trimws(temp$series_id, which="both")
+temp <- temp[which(temp$series_id=="CUUR0000SA0")]
+temp$series_id <- temp$footnote_codes <- temp$period <- NULL
+names(temp) <- c("Year","CPI")
+
+Landings_Revenue <- merge(Landings_Revenue,temp, by='Year', all.x=TRUE)
+Landings_Revenue[["Dollars"]] <- as.numeric(gsub(",","",Landings_Revenue[["Dollars"]]))
+Landings_Revenue[["Metric.Tons"]] <- as.numeric(gsub(",","",Landings_Revenue[["Metric.Tons"]]))
+
+#Nominal Revenue converted to 2017 constant dollars below
+Landings_Revenue[["Real.Revenue"]] <- Landings_Revenue[["Dollars"]]*
+  unique(temp$CPI[temp$Year==2020])/Landings_Revenue$CPI
+rm(temp)
+
+GOM <- c("Florida West Coast","Alabama","Louisiana","Mississippi","Texas" )
+NE <- c("North Carolina","Virginia","Maryland","Delaware","Pennsylvania","New Jersey","New York","Connecticut","Rhode Island",
+        "Massachusetts","New Hampshire","Maine")
+SE <- c("South Carolina","Georgia","Florida East Coast")
+CALI <- c("California","Oregon","Washington")
+AK <- c("Alaska")
+HI <- c("Hawaii")
+
+Landings_Revenue$Region <- ""
+Landings_Revenue$Region[Landings_Revenue$State%in%GOM] <- "Gulf.of.Mexico"
+Landings_Revenue$Region[Landings_Revenue$State%in%NE] <- "Northeast"
+Landings_Revenue$Region[Landings_Revenue$State%in%SE] <- "Southeast"
+Landings_Revenue$Region[Landings_Revenue$State%in%CALI] <- "California.Current"
+Landings_Revenue$Region[Landings_Revenue$State%in%AK] <- "Alaska"
+Landings_Revenue$Region[Landings_Revenue$State%in%HI] <- "Hawaii"
+Landings_Revenue <- Landings_Revenue[which(Landings_Revenue$Region!=""),]
+
+Landings_Revenue_all <- aggregate(cbind(Metric.Tons,Dollars,Real.Revenue)~Year+Region, data=Landings_Revenue, FUN=sum)
+
+names(Landings_Revenue_all) <- c("Year","Region","Metric.Tons","Nominal.Revenue","Real.Revenue")
+
+rev <- Landings_Revenue_all[,c(1,2,5)]
+land <- Landings_Revenue_all[,c(1,2,3)]
+
+library(tidyr)
+rev_all <- spread(rev, Region, Real.Revenue)
+land_all <- spread(land, Region, Metric.Tons)
+
+write.csv(rev_all,file="C:/Users/yourfilepath/commercialrevenue.csv")
+write.csv(land_all,file="C:/Users/yourfilepath/commerciallandings.csv")
+rm(list=ls())
+#
+
+```
+
+Direct any questions to willem.klajbor@noaa.gov or geret.depiper@noaa.gov

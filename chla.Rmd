@@ -1,7 +1,14 @@
 # Chlorophyll-a
 
-## Data
-Under Construction
+*This Indicator requires non-EIWG Contacts to update as of August 2021
 
-## Methods
-Under construction
+At the base of most marine food webs are microscopic plants, called phytoplankton - which also produce nearly half of the Earth’s oxygen. One way we measure the amount of phytoplankton in the ocean is via a pigment that phytoplankton produce - chlorophyll a. Using ocean color sensors on satellites, we can measure the amount of chlorophyll a in surface waters. Environmental and oceanographic factors continuously influence the abundance, composition, spatial distribution, and productivity of phytoplankton. Tracking the amount of phytoplankton in the ocean gives us the status of the base of the food web, and how much food is available for other animals to grow. Changes in the amount of phytoplankton in the ocean are part of the natural seasonal cycle, but can also indicate an ecosystem’s response to a major external disturbance.
+
+## Data and Methods
+Chlorophyll a data were obtained from the NOAA Fisheries Coastal & Oceanic Plankton Ecology, Production, & Observations Database (https://www.st.nmfs.noaa.gov/copepod/). Measurements of ocean chlorophyll concentration were combined from both the SeaWiFS and MODIS-Aqua "ocean color" datasets and binned at 0.5 x 0.5 degree latitude-longitude boxes, annual averages for each year calculated from the average of all monthly means in that year, and the annual mean was calculated as the average of all annual means.
+
+Since no portal/product exists at present for the spatial and temporal needs of the NaMES website, data are compiled and analyzed by the COPEPOD database manager Todd O'Brien. More information about Todd's methods can be found at https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit?rtpof=true or by emailing him directly at todd.obrien@noaa.gov.
+
+Presently, EIWG Member Veronica Lance is working with the NOAA CoastWatch team to produce dedicated monthly and annual means of the SST and Chl-a indicators at the LME scale for future NaMES use. More information about this can be found by emailing Veronica directly at Veronica.Lance@noaa.gov.
+
+Questions can be directed to the above emails or willem.klajbor@noaa.gov

@@ -1,8 +1,113 @@
 # Coastal Tourism
 
+*Description under construction as we add plain language for Total Wage Compensation and Total Employment
+
 ## Data
-Under Construction
+Coastal Tourism economic data was taken from NOAA’s Office of Coastal Management Economics National Ocean Watch custom report building tool, with contextual data taken from the 2019 NOAA Report on the U.S. Ocean and Great Lakes Economy: Regional and State Profiles. Growth was estimated by subtracting the previous year’s Coastal Tourism GDP, Employment, and Real Wage compensation from the current year’s values, then dividing by the previous year’s values to present a percentage. "Real" GDP and Wage Compensation Values were used per the Bureau of Labor Statistics definition and calculations.
+
+The portal can be accessed at https://coast.noaa.gov/quickreport/#/ENOW
+
+The following method code is designed for an output using the "Coastal Economy" Data and subsetting by the Coastal Portion of States
 
 ## Methods
-Under construction
+The following code calculates year over year percent change for Coastal Tourism Real GDP, Real Wage Compensation, and Employement.
 
+```{r, eval=FALSE}
+#Adapted from code by G. DePiper
+#download data from https://coast.noaa.gov/api/services/enow/v1/getsocioecondatafor?dataset=CoastalEconomy&geotype=StateCoastal&geoid=01000,02000,06000,09000,10000,12000,13000,15000,22000,23000,24000,25000,28000,33000,34000,36000,37000,41000,44000,45000,48000,51000,53000,55000,72000,78000&year=2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005&f=csv
+#metric Ocean Economy, states
+#states to include: AL AK CA CT DE FL GA HI LA ME MD MA MS NH NJ NY NC OR RI SC TX VA WA WI
+#move .csv to directory, save as xlsx
+
+PKG <- c("foreign","stringr","data.table","tidyr", "tidyverse", "readxl")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+
+library(DataCombine)
+
+#replace with user file location
+GDP <- read_excel("the data file from above")
+
+GDP$stateName <- GDP$GeoName
+GDP$Region <-""
+list <- unique(GDP$GeoName)
+
+GDP$Region[GDP$stateName=="Alaska"] <- "Alaska"
+GDP$Region[GDP$stateName=="Hawaii"] <- "Hawaii-Pacific Islands"
+GDP$Region[GDP$stateName=="California"] <- "California Current"
+GDP$Region[GDP$stateName=="Oregon"] <- "California Current"
+GDP$Region[GDP$stateName=="Washington"] <- "California Current"
+GDP$Region[GDP$stateName=="Texas"] <- "Gulf of Mexico"
+GDP$Region[GDP$stateName=="Alabama"] <- "Gulf of Mexico"
+GDP$Region[GDP$stateName=="Louisiana"] <- "Gulf of Mexico"
+GDP$Region[GDP$stateName=="Mississippi"] <- "Gulf of Mexico"
+GDP$Region[GDP$stateName=="Florida"] <- "Gulf of Mexico"
+GDP$Region[GDP$stateName=="South Carolina"] <- "Southeast"
+GDP$Region[GDP$stateName=="Georgia"] <- "Southeast"
+GDP$Region[GDP$stateName=="North Carolina"] <- "Northeast"
+GDP$Region[GDP$stateName=="Virginia"] <- "Northeast"
+GDP$Region[GDP$stateName=="Maryland"] <- "Northeast"
+GDP$Region[GDP$stateName=="Delaware"] <- "Northeast"
+GDP$Region[GDP$stateName=="New Jersey"] <- "Northeast"
+GDP$Region[GDP$stateName=="New York"] <- "Northeast"
+GDP$Region[GDP$stateName=="Connecticut"] <- "Northeast"
+GDP$Region[GDP$stateName=="Rhode Island"] <- "Northeast"
+GDP$Region[GDP$stateName=="Massachusetts"] <- "Northeast"
+GDP$Region[GDP$stateName=="New Hampshire"] <- "Northeast"
+GDP$Region[GDP$stateName=="Maine"] <- "Northeast"
+GDP$Region[GDP$stateName=="Puerto Rico"] <- "Carribbean"
+GDP$Region[GDP$stateName=="U.S. Virgin Islands"] <- "Carribbean"
+
+
+#limit data to tourism and related fields and combine into regions
+GDPx <- filter(GDP, SectorName==
+                 "Leisure and Hospitality")
+GDPx <- GDPx[which(GDPx$Region!=""),]
+
+RealGDP <- aggregate(cbind(RealGDP)~Year+Region, data=GDPx, FUN=sum)
+RealGDP2 <- aggregate(cbind(RealGDP)~Year+Region, data=GDPx, FUN=sum)
+RealGDP <- spread(RealGDP, Region, RealGDP)
+
+RealWages <- aggregate(cbind(RealWages)~Year+Region, data=GDPx, FUN=sum)
+RealWages2 <- aggregate(cbind(RealWages)~Year+Region, data=GDPx, FUN=sum)
+RealWages <- spread(RealWages, Region, RealWages)
+
+TourEmp <- aggregate(cbind(Employment)~Year+Region, data=GDPx, FUN=sum)
+TourEmp2 <- aggregate(cbind(Employment)~Year+Region, data=GDPx, FUN=sum)
+TourEmp <- spread(TourEmp, Region, Employment)
+
+#pct change between rows GDP
+pctchg <- PercChange(RealGDP2, Var = 'RealGDP',
+                     type = 'percent',
+                     NewVar = 'pctchgw',
+                     slideBy = -1)
+pctchg = subset(pctchg, select = -c(RealGDP) )
+pctchange <- spread(pctchg, Region, pctchg)
+
+#pct change between rows Wages
+pctchgW <- PercChange(RealWages2, Var = 'RealWages',
+                     type = 'percent',
+                     NewVar = 'pctchgw',
+                     slideBy = -1)
+pctchgW = subset(pctchgW, select = -c(RealWages) )
+pctchangeW <- spread(pctchgW, Region, pctchgw)
+
+#pct change between rows Employment
+pctchgT <- PercChange(TourEmp2, Var = 'Employment',
+                      type = 'percent',
+                      NewVar = 'pctchgT',
+                      slideBy = -1)
+pctchgT = subset(pctchgT, select = -c(Employment) )
+pctchangeT <- spread(pctchgT, Region, pctchgT)
+
+write.csv(pctchange,file="C:/Users/yourfilepath/CoastTourGDP.csv")
+write.csv(pctchangeT,file="C:/Users/yourfilepath/TourismEmployment.csv")
+write.csv(pctchangeW,file="C:/Users/yourfilepath/TourismRealWage.csv")
+
+```
+
+Questions can be directed to willem.klajbor@noaa.gov, kate.quigley@noaa.gov, or geret.depiper@noaa.gov

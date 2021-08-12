@@ -124,7 +124,7 @@
 
 \title{Technical Indicator Assembly Document for NOAA NaMES}
 \author{Willem Klajbor, The NOAA Ecosystem Indicators Working Group}
-\date{2021-07-22}
+\date{2021-08-12}
 
 \begin{document}
 \maketitle
@@ -147,18 +147,42 @@ Ecosystem indicators are quantitative and/or qualitative measures of key compone
 \hypertarget{chlorophyll-a}{%
 \chapter{Chlorophyll-a}\label{chlorophyll-a}}
 
+*This Indicator requires non-EIWG Contacts to update as of August 2021
+
+At the base of most marine food webs are microscopic plants, called phytoplankton - which also produce nearly half of the Earth's oxygen. One way we measure the amount of phytoplankton in the ocean is via a pigment that phytoplankton produce - chlorophyll a. Using ocean color sensors on satellites, we can measure the amount of chlorophyll a in surface waters. Environmental and oceanographic factors continuously influence the abundance, composition, spatial distribution, and productivity of phytoplankton. Tracking the amount of phytoplankton in the ocean gives us the status of the base of the food web, and how much food is available for other animals to grow. Changes in the amount of phytoplankton in the ocean are part of the natural seasonal cycle, but can also indicate an ecosystem's response to a major external disturbance.
+
+\hypertarget{data-and-methods}{%
+\section{Data and Methods}\label{data-and-methods}}
+
+Chlorophyll a data were obtained from the NOAA Fisheries Coastal \& Oceanic Plankton Ecology, Production, \& Observations Database (\url{https://www.st.nmfs.noaa.gov/copepod/}). Measurements of ocean chlorophyll concentration were combined from both the SeaWiFS and MODIS-Aqua ``ocean color'' datasets and binned at 0.5 x 0.5 degree latitude-longitude boxes, annual averages for each year calculated from the average of all monthly means in that year, and the annual mean was calculated as the average of all annual means.
+
+Since no portal/product exists at present for the spatial and temporal needs of the NaMES website, data are compiled and analyzed by the COPEPOD database manager Todd O'Brien. More information about Todd's methods can be found at \url{https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit?rtpof=true} or by emailing him directly at \href{mailto:todd.obrien@noaa.gov}{\nolinkurl{todd.obrien@noaa.gov}}.
+
+Presently, EIWG Member Veronica Lance is working with the NOAA CoastWatch team to produce dedicated monthly and annual means of the SST and Chl-a indicators at the LME scale for future NaMES use. More information about this can be found by emailing Veronica directly at \href{mailto:Veronica.Lance@noaa.gov}{\nolinkurl{Veronica.Lance@noaa.gov}}.
+
+Questions can be directed to the above emails or \href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}
+
+\hypertarget{zooplankton}{%
+\chapter{Zooplankton}\label{zooplankton}}
+
+*This Indicator requires non-EIWG Contacts to update as of August 2021
+
+Zooplankton are a diverse group of animals found in oceans, bays, and estuaries. By eating phytoplankton, and each other, zooplankton play a significant role in the transfer of materials and energy up the oceanic food web (e.g., fish, birds, marine mammals, humans.) Like phytoplankton, environmental and oceanographic factors continuously influence the abundance, composition and spatial distribution of zooplankton. These include the abundance and type of phytoplankton present in the water, as well as the water's temperature, salinity, oxygen, and pH. Zooplankton can rapidly react to changes in their environment. For this reason monitoring the status of zooplankton is essential for detecting changes in, and evaluating the status of ocean ecosystems. We present the annual average total biovolume of zooplankton in the Alaska, California Current, Gulf of Mexico and Northeast regions.
+
 \hypertarget{data}{%
 \section{Data}\label{data}}
 
-Under Construction
+Zooplankton data for each region were obtained from the NOAA Fisheries Coastal \& Oceanic Plankton Ecology, Production, \& Observations Database, an integrated data set of quality-controlled, globally distributed plankton biomass and abundance data with common biomass units and served in a common electronic format with supporting documentation and access software which can be found at \url{https://www.st.nmfs.noaa.gov/copepod/about/about-copepod.html}
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-Under construction
+Data are compiled and analyzed by the COPEPOD database manager Todd O'Brien. More information about Todd's methods can be found at \url{https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit?rtpof=true} or by emailing him directly at \href{mailto:todd.obrien@noaa.gov}{\nolinkurl{todd.obrien@noaa.gov}}.
 
-\hypertarget{zooplankton}{%
-\chapter{Zooplankton}\label{zooplankton}}
+Questions can be directed to the above email or \href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}
+
+\hypertarget{coral-reefs}{%
+\chapter{Coral Reefs}\label{coral-reefs}}
 
 \hypertarget{data-1}{%
 \section{Data}\label{data-1}}
@@ -170,19 +194,6 @@ Under Construction
 
 Under construction
 
-\hypertarget{coral-reefs}{%
-\chapter{Coral Reefs}\label{coral-reefs}}
-
-\hypertarget{data-2}{%
-\section{Data}\label{data-2}}
-
-Under Construction
-
-\hypertarget{methods-2}{%
-\section{Methods}\label{methods-2}}
-
-Under construction
-
 \hypertarget{forage-fish}{%
 \chapter{Forage Fish}\label{forage-fish}}
 
@@ -190,8 +201,8 @@ Forage fish, otherwise known as small pelagics are fish and invertebrates (like 
 
 Small pelagic species are often important to fisheries and serve as forage for commercially and recreationally important fish, as well as other ecosystem species (e.g.~seabirds and marine mammals). They are a critical part of marine food webs and important to monitor because so many other organisms depend on them. We present the annual total biomass of small pelagics/forage fish in the Alaska, California Current, and Northeast regions, as well as selected taxa in the Gulf of Mexico region.
 
-\hypertarget{data-3}{%
-\section{Data}\label{data-3}}
+\hypertarget{data-2}{%
+\section{Data}\label{data-2}}
 
 \hypertarget{alaska}{%
 \subsection{Alaska}\label{alaska}}
@@ -227,8 +238,8 @@ The NE IEA Program keeps all of their ESR data in an R package called ecodata. T
 
 The Southeast Atlantic forage indicator is the Menhaden CPUE Index score used by the SEIEA team in their Ecosystem Status Report. At the time of writing, the report is under review and data are not publicly available, but can be found on our Google Drive and GitHub Repository. This will be updated in the future once data are available.
 
-\hypertarget{methods-3}{%
-\section{Methods}\label{methods-3}}
+\hypertarget{methods-2}{%
+\section{Methods}\label{methods-2}}
 
 \hypertarget{alaska-1}{%
 \subsection{Alaska}\label{alaska-1}}
@@ -270,8 +281,8 @@ This produces a .csv file with the name ``total\_surv2'' that displays The Sprin
 
 Seabirds are a vital part of marine ecosystems and valuable indicators of an ecosystem's status. Seabirds are attracted to fishing vessels and frequently get hooked or entangled in fishing gear, especially longline fisheries. This is a common threat to seabirds. Depending on the geographic region, fishermen in the United States often interact with albatross, cormorants, gannet, loons, pelicans, puffins, gulls, storm-petrels, shearwaters, terns, and many other species. We track seabirds because of their importance to marine food webs, but also as an indication of efficient fishing practices. We present estimates of seabird abundance in the Alaska, California Current, Gulf of Mexico and Northeast regions.
 
-\hypertarget{data-4}{%
-\section{Data}\label{data-4}}
+\hypertarget{data-3}{%
+\section{Data}\label{data-3}}
 
 Data for Alaska, California Current, and the Gulf of Mexico were obtained from the regional NOAA Integrated Ecosystem Assessment Program teams that produce indicators and Ecosystem Status Report. The links for each of the datasets can be found here:
 
@@ -283,8 +294,8 @@ Gulf of Mexico: \url{https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Rep
 
 Seabird count and transect length data for the Northeast are extracted from the Atlantic Marine Assessment Program for Protected Species (AMAPPS) annual reports. Counts are summed and divided by the sum of the transect length in nautical miles. For more information see \url{https://www.nefsc.noaa.gov/psb/AMAPPS/}
 
-\hypertarget{methods-4}{%
-\section{Methods}\label{methods-4}}
+\hypertarget{methods-3}{%
+\section{Methods}\label{methods-3}}
 
 \hypertarget{alaska-2}{%
 \subsection{Alaska}\label{alaska-2}}
@@ -313,13 +324,13 @@ Fish play an important role in marine ecosystems, supporting the ecological stru
 
 We present the number of overfished stocks by year in all regions.
 
-\hypertarget{data-5}{%
-\section{Data}\label{data-5}}
+\hypertarget{data-4}{%
+\section{Data}\label{data-4}}
 
 Data are obtained from the NOAA Fisheries Fishery Stock Status website \url{https://www.fisheries.noaa.gov/national/population-assessments/fishery-stock-status-updates}. Stocks that meet the criteria for overfished status are summed by year for each region. The status of stocks are available in report form and graphically.
 
-\hypertarget{methods-5}{%
-\section{Methods}\label{methods-5}}
+\hypertarget{methods-4}{%
+\section{Methods}\label{methods-4}}
 
 This indicator is compiled manually.
 
@@ -347,6 +358,19 @@ For more information, contact Willem Klajbor (\href{mailto:willem.klajbor@noaa.g
 \hypertarget{esa}{%
 \section{ESA}\label{esa}}
 
+\hypertarget{data-5}{%
+\subsection{Data}\label{data-5}}
+
+Under Construction
+
+\hypertarget{methods-5}{%
+\subsection{Methods}\label{methods-5}}
+
+Under construction
+
+\hypertarget{mmpa}{%
+\section{MMPA}\label{mmpa}}
+
 \hypertarget{data-6}{%
 \subsection{Data}\label{data-6}}
 
@@ -357,34 +381,44 @@ Under Construction
 
 Under construction
 
-\hypertarget{mmpa}{%
-\section{MMPA}\label{mmpa}}
+\hypertarget{unusual-mortality-events}{%
+\chapter{Unusual Mortality Events}\label{unusual-mortality-events}}
 
 \hypertarget{data-7}{%
-\subsection{Data}\label{data-7}}
+\section{Data}\label{data-7}}
 
 Under Construction
 
 \hypertarget{methods-7}{%
-\subsection{Methods}\label{methods-7}}
-
-Under construction
-
-\hypertarget{unusual-mortality-events}{%
-\chapter{Unusual Mortality Events}\label{unusual-mortality-events}}
-
-\hypertarget{data-8}{%
-\section{Data}\label{data-8}}
-
-Under Construction
-
-\hypertarget{methods-8}{%
-\section{Methods}\label{methods-8}}
+\section{Methods}\label{methods-7}}
 
 Under construction
 
 \hypertarget{sea-surface-temperature}{%
 \chapter{Sea Surface Temperature}\label{sea-surface-temperature}}
+
+*This Indicator requires non-EIWG Contacts to update as of August 2021
+
+Sea Surface Temperature (SST) is defined as the average temperature of the top few millimeters of the ocean. This temperature impacts the rate of all physical, chemical, and most biological processes occurring in the ocean. Sea Surface Temperature is globally monitored by sensors on satellites, buoys, ships, ocean reference stations, AUVs and other technologies.
+
+Sea Surface Temperature monitoring tells us how the ocean and atmosphere interact, as well as providing fundamental data on the global climate system. This information also aids us in weather prediction i.e.~identifying the onset of El Niño and La Niña cycles - multiyear shifts in atmospheric pressure and wind speeds. These shifts affect ocean circulation, global weather patterns, and marine ecosystems. Sea Surface Temperature anomalies have been linked to shifting marine resources. With warming temperatures, we observe the poleward movements of fish and other species. Temperature extremes - both ocean heatwaves and cold spells, have been linked to coral bleaching as well as fishery and aquaculture mortality. We present annual average SST in all regions.
+
+\hypertarget{data-8}{%
+\section{Data}\label{data-8}}
+
+The sea surface temperature were accessed from (\url{https://www.ncdc.noaa.gov/oisst}). The data are plotted in degrees Celsius.
+
+\hypertarget{methods-8}{%
+\section{Methods}\label{methods-8}}
+
+SST Data are currently compiled and analyzed by Todd O'Brien from NMFS (\href{mailto:todd.obrien@noaa.gov}{\nolinkurl{todd.obrien@noaa.gov}}). More information about Todd's methods can be found here \url{https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit}
+
+Presently, EIWG Member Veronica Lance is working with the NOAA CoastWatch team to produce dedicated monthly and annual means of the SST and Chl-a indicators at the LME scale for future NaMES use. More information about this can be found by emailing Veronica directly at \href{mailto:Veronica.Lance@noaa.gov}{\nolinkurl{Veronica.Lance@noaa.gov}}.
+
+Questions can be directed to the above emails or \href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}
+
+\hypertarget{sea-level}{%
+\chapter{Sea Level}\label{sea-level}}
 
 \hypertarget{data-9}{%
 \section{Data}\label{data-9}}
@@ -393,19 +427,6 @@ Under Construction
 
 \hypertarget{methods-9}{%
 \section{Methods}\label{methods-9}}
-
-Under construction
-
-\hypertarget{sea-level}{%
-\chapter{Sea Level}\label{sea-level}}
-
-\hypertarget{data-10}{%
-\section{Data}\label{data-10}}
-
-Under Construction
-
-\hypertarget{methods-10}{%
-\section{Methods}\label{methods-10}}
 
 Under construction
 
@@ -418,13 +439,13 @@ Sea ice affects the movement of ocean waters. When sea ice forms, ocean salts ar
 
 Sea ice is an important element of the Arctic system. It provides an important habitat for biological activity, i.e.~algae grows on the bottom of sea ice, forming the basis of the Arctic food web, and it plays a critical role in the life cycle of many marine mammals - seals and polar bears. Sea ice also serves a critical role in supporting Indigenous communities culture and survival. We present the annual sea ice extent in millions of Kilometers for the Arctic region.
 
-\hypertarget{data-11}{%
-\section{Data}\label{data-11}}
+\hypertarget{data-10}{%
+\section{Data}\label{data-10}}
 
 Sea ice data was accessed from the NOAA National Centers for Environmental Information, \url{https://www.ncdc.noaa.gov/snow-and-ice/extent/} , with the data pulled from here: \url{https://www.ncdc.noaa.gov/snow-and-ice/extent/sea-ice/N/3/data.csv}. The data are plotted in units of million square km.
 
-\hypertarget{methods-11}{%
-\section{Methods}\label{methods-11}}
+\hypertarget{methods-10}{%
+\section{Methods}\label{methods-10}}
 
 To download the current sea ice data, you can either:
 
@@ -496,18 +517,138 @@ Under Construction
 \hypertarget{coastal-population}{%
 \chapter{Coastal Population}\label{coastal-population}}
 
-\hypertarget{data-12}{%
-\section{Data}\label{data-12}}
+\hypertarget{data-11}{%
+\section{Data}\label{data-11}}
 
 Under Construction
 
-\hypertarget{methods-12}{%
-\section{Methods}\label{methods-12}}
+\hypertarget{methods-11}{%
+\section{Methods}\label{methods-11}}
 
 Under construction
 
 \hypertarget{coastal-tourism}{%
 \chapter{Coastal Tourism}\label{coastal-tourism}}
+
+*Description under construction as we add plain language for Total Wage Compensation and Total Employment
+
+\hypertarget{data-12}{%
+\section{Data}\label{data-12}}
+
+Coastal Tourism economic data was taken from NOAA's Office of Coastal Management Economics National Ocean Watch custom report building tool, with contextual data taken from the 2019 NOAA Report on the U.S. Ocean and Great Lakes Economy: Regional and State Profiles. Growth was estimated by subtracting the previous year's Coastal Tourism GDP, Employment, and Real Wage compensation from the current year's values, then dividing by the previous year's values to present a percentage. ``Real'' GDP and Wage Compensation Values were used per the Bureau of Labor Statistics definition and calculations.
+
+The portal can be accessed at \url{https://coast.noaa.gov/quickreport/\#/ENOW}
+
+The following method code is designed for an output using the ``Coastal Economy'' Data and subsetting by the Coastal Portion of States
+
+\hypertarget{methods-12}{%
+\section{Methods}\label{methods-12}}
+
+The following code calculates year over year percent change for Coastal Tourism Real GDP, Real Wage Compensation, and Employement.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Adapted from code by G. DePiper}
+\CommentTok{\#download data from https://coast.noaa.gov/api/services/enow/v1/getsocioecondatafor?dataset=CoastalEconomy\&geotype=StateCoastal\&geoid=01000,02000,06000,09000,10000,12000,13000,15000,22000,23000,24000,25000,28000,33000,34000,36000,37000,41000,44000,45000,48000,51000,53000,55000,72000,78000\&year=2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005\&f=csv}
+\CommentTok{\#metric Ocean Economy, states}
+\CommentTok{\#states to include: AL AK CA CT DE FL GA HI LA ME MD MA MS NH NJ NY NC OR RI SC TX VA WA WI}
+\CommentTok{\#move .csv to directory, save as xlsx}
+
+\NormalTok{PKG }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"foreign"}\NormalTok{,}\StringTok{"stringr"}\NormalTok{,}\StringTok{"data.table"}\NormalTok{,}\StringTok{"tidyr"}\NormalTok{, }\StringTok{"tidyverse"}\NormalTok{, }\StringTok{"readxl"}\NormalTok{)}
+
+\ControlFlowTok{for}\NormalTok{ (p }\ControlFlowTok{in}\NormalTok{ PKG) \{}
+  \ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(p,}\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)) \{}
+    \FunctionTok{install.packages}\NormalTok{(p)}
+    \FunctionTok{require}\NormalTok{(p,}\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)\}}
+\NormalTok{\}}
+
+\FunctionTok{library}\NormalTok{(DataCombine)}
+
+\CommentTok{\#replace with user file location}
+\NormalTok{GDP }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"the data file from above"}\NormalTok{)}
+
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{stateName }\OtherTok{\textless{}{-}}\NormalTok{ GDP}\SpecialCharTok{$}\NormalTok{GeoName}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region }\OtherTok{\textless{}{-}}\StringTok{""}
+\NormalTok{list }\OtherTok{\textless{}{-}} \FunctionTok{unique}\NormalTok{(GDP}\SpecialCharTok{$}\NormalTok{GeoName)}
+
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Alaska"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Alaska"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Hawaii"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Hawaii{-}Pacific Islands"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"California"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Oregon"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Washington"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"California Current"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Texas"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Alabama"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Louisiana"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Mississippi"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Florida"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Gulf of Mexico"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"South Carolina"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Southeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Georgia"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Southeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"North Carolina"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Virginia"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Maryland"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Delaware"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"New Jersey"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"New York"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Connecticut"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Rhode Island"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Massachusetts"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"New Hampshire"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Maine"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"Puerto Rico"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Carribbean"}
+\NormalTok{GDP}\SpecialCharTok{$}\NormalTok{Region[GDP}\SpecialCharTok{$}\NormalTok{stateName}\SpecialCharTok{==}\StringTok{"U.S. Virgin Islands"}\NormalTok{] }\OtherTok{\textless{}{-}} \StringTok{"Carribbean"}
+
+
+\CommentTok{\#limit data to tourism and related fields and combine into regions}
+\NormalTok{GDPx }\OtherTok{\textless{}{-}} \FunctionTok{filter}\NormalTok{(GDP, SectorName}\SpecialCharTok{==}
+                 \StringTok{"Leisure and Hospitality"}\NormalTok{)}
+\NormalTok{GDPx }\OtherTok{\textless{}{-}}\NormalTok{ GDPx[}\FunctionTok{which}\NormalTok{(GDPx}\SpecialCharTok{$}\NormalTok{Region}\SpecialCharTok{!=}\StringTok{""}\NormalTok{),]}
+
+\NormalTok{RealGDP }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(RealGDP)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{GDPx, }\AttributeTok{FUN=}\NormalTok{sum)}
+\NormalTok{RealGDP2 }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(RealGDP)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{GDPx, }\AttributeTok{FUN=}\NormalTok{sum)}
+\NormalTok{RealGDP }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(RealGDP, Region, RealGDP)}
+
+\NormalTok{RealWages }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(RealWages)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{GDPx, }\AttributeTok{FUN=}\NormalTok{sum)}
+\NormalTok{RealWages2 }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(RealWages)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{GDPx, }\AttributeTok{FUN=}\NormalTok{sum)}
+\NormalTok{RealWages }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(RealWages, Region, RealWages)}
+
+\NormalTok{TourEmp }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(Employment)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{GDPx, }\AttributeTok{FUN=}\NormalTok{sum)}
+\NormalTok{TourEmp2 }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(Employment)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{GDPx, }\AttributeTok{FUN=}\NormalTok{sum)}
+\NormalTok{TourEmp }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(TourEmp, Region, Employment)}
+
+\CommentTok{\#pct change between rows GDP}
+\NormalTok{pctchg }\OtherTok{\textless{}{-}} \FunctionTok{PercChange}\NormalTok{(RealGDP2, }\AttributeTok{Var =} \StringTok{\textquotesingle{}RealGDP\textquotesingle{}}\NormalTok{,}
+                     \AttributeTok{type =} \StringTok{\textquotesingle{}percent\textquotesingle{}}\NormalTok{,}
+                     \AttributeTok{NewVar =} \StringTok{\textquotesingle{}pctchgw\textquotesingle{}}\NormalTok{,}
+                     \AttributeTok{slideBy =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}
+\NormalTok{pctchg }\OtherTok{=} \FunctionTok{subset}\NormalTok{(pctchg, }\AttributeTok{select =} \SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(RealGDP) )}
+\NormalTok{pctchange }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(pctchg, Region, pctchg)}
+
+\CommentTok{\#pct change between rows Wages}
+\NormalTok{pctchgW }\OtherTok{\textless{}{-}} \FunctionTok{PercChange}\NormalTok{(RealWages2, }\AttributeTok{Var =} \StringTok{\textquotesingle{}RealWages\textquotesingle{}}\NormalTok{,}
+                     \AttributeTok{type =} \StringTok{\textquotesingle{}percent\textquotesingle{}}\NormalTok{,}
+                     \AttributeTok{NewVar =} \StringTok{\textquotesingle{}pctchgw\textquotesingle{}}\NormalTok{,}
+                     \AttributeTok{slideBy =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}
+\NormalTok{pctchgW }\OtherTok{=} \FunctionTok{subset}\NormalTok{(pctchgW, }\AttributeTok{select =} \SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(RealWages) )}
+\NormalTok{pctchangeW }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(pctchgW, Region, pctchgw)}
+
+\CommentTok{\#pct change between rows Employment}
+\NormalTok{pctchgT }\OtherTok{\textless{}{-}} \FunctionTok{PercChange}\NormalTok{(TourEmp2, }\AttributeTok{Var =} \StringTok{\textquotesingle{}Employment\textquotesingle{}}\NormalTok{,}
+                      \AttributeTok{type =} \StringTok{\textquotesingle{}percent\textquotesingle{}}\NormalTok{,}
+                      \AttributeTok{NewVar =} \StringTok{\textquotesingle{}pctchgT\textquotesingle{}}\NormalTok{,}
+                      \AttributeTok{slideBy =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{)}
+\NormalTok{pctchgT }\OtherTok{=} \FunctionTok{subset}\NormalTok{(pctchgT, }\AttributeTok{select =} \SpecialCharTok{{-}}\FunctionTok{c}\NormalTok{(Employment) )}
+\NormalTok{pctchangeT }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(pctchgT, Region, pctchgT)}
+
+\FunctionTok{write.csv}\NormalTok{(pctchange,}\AttributeTok{file=}\StringTok{"C:/Users/yourfilepath/CoastTourGDP.csv"}\NormalTok{)}
+\FunctionTok{write.csv}\NormalTok{(pctchangeT,}\AttributeTok{file=}\StringTok{"C:/Users/yourfilepath/TourismEmployment.csv"}\NormalTok{)}
+\FunctionTok{write.csv}\NormalTok{(pctchangeW,}\AttributeTok{file=}\StringTok{"C:/Users/yourfilepath/TourismRealWage.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Questions can be directed to \href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}}, \href{mailto:kate.quigley@noaa.gov}{\nolinkurl{kate.quigley@noaa.gov}}, or \href{mailto:geret.depiper@noaa.gov}{\nolinkurl{geret.depiper@noaa.gov}}
+
+\hypertarget{coastal-employment}{%
+\chapter{Coastal Employment}\label{coastal-employment}}
 
 \hypertarget{data-13}{%
 \section{Data}\label{data-13}}
@@ -519,24 +660,108 @@ Under Construction
 
 Under construction
 
-\hypertarget{coastal-employment}{%
-\chapter{Coastal Employment}\label{coastal-employment}}
+\hypertarget{commercial-fishing}{%
+\chapter{Commercial Fishing}\label{commercial-fishing}}
+
+Commercial landings are the weight of, or revenue from, fish that are caught, brought to shore, processed, and sold for profit. It does not include sport or subsistence (to feed themselves) fishermen or for-hire sector, which earns its revenue from selling recreational fishing trips to saltwater anglers. Data on those fisheries are presented under the recreational landings and angler trips indicator.
+
+Commercial landings make up a major part of coastal economies. U.S. commercial fisheries are among the world's largest and most sustainable; producing seafood, fish meal, vitamin supplements, and a host of other products for both domestic and international consumers.
+
+The weight (tonnage), and revenue from the sale of commercial landings provides data on the ability of marine ecosystems to continue to supply these important products.
 
 \hypertarget{data-14}{%
 \section{Data}\label{data-14}}
 
-Under Construction
+Commercial landings and gross revenue were downloaded from the National Marine Fisheries Service's annual commercial fisheries landings query tool which can be found at \url{https://foss.nmfs.noaa.gov/apexfoss/f?p=215:200}::::::. State pounds landed and revenue generated were aggregated to the appropriate region, and all revenue data was deflated to 2017 constant dollars using the Bureau of Labor Statistic's Consumer Price Index (series CUUR0000SA0).
+
+The methods code below uses output from the above query service in .csv format.
 
 \hypertarget{methods-14}{%
 \section{Methods}\label{methods-14}}
 
-Under construction
+The following code produces Commercial Fishing Landings and Revenue data:
 
-\hypertarget{commercial-fishing}{%
-\chapter{Commercial Fishing}\label{commercial-fishing}}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#commercial Effort and landings}
+\NormalTok{PKG }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"foreign"}\NormalTok{,}\StringTok{"stringr"}\NormalTok{, }\StringTok{"data.table"}\NormalTok{)}
 
-\hypertarget{landings}{%
-\section{Landings}\label{landings}}
+\ControlFlowTok{for}\NormalTok{ (p }\ControlFlowTok{in}\NormalTok{ PKG) \{}
+  \ControlFlowTok{if}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{require}\NormalTok{(p,}\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)) \{}
+    \FunctionTok{install.packages}\NormalTok{(p)}
+    \FunctionTok{require}\NormalTok{(p,}\AttributeTok{character.only =} \ConstantTok{TRUE}\NormalTok{)\}}
+\NormalTok{\}}
+\NormalTok{Landings\_Revenue }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\AttributeTok{file=}\StringTok{"X:/datafile"}\NormalTok{, }\AttributeTok{skip=}\DecValTok{4}\NormalTok{,}
+                             \AttributeTok{fill =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{header=}\ConstantTok{TRUE}\NormalTok{, }\AttributeTok{as.is=}\ConstantTok{TRUE}\NormalTok{)}
+
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Pounds }\OtherTok{\textless{}{-}} \ConstantTok{NULL}
+
+\NormalTok{END.YEAR }\OtherTok{\textless{}{-}} \FunctionTok{max}\NormalTok{(Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Year)}
+\NormalTok{START.YEAR }\OtherTok{\textless{}{-}} \FunctionTok{min}\NormalTok{(Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Year)}
+
+\CommentTok{\#Unprocessed Seafood Producer Price Index used to translate nominal dollars into Real (constant) 2017 dollars}
+\CommentTok{\#to account for inflation}
+
+\NormalTok{temp }\OtherTok{\textless{}{-}} \FunctionTok{tempfile}\NormalTok{()}
+\NormalTok{temp.connect }\OtherTok{\textless{}{-}} \FunctionTok{url}\NormalTok{(}\StringTok{"https://download.bls.gov/pub/time.series/cu/cu.data.1.AllItems"}\NormalTok{)}
+\NormalTok{temp }\OtherTok{\textless{}{-}} \FunctionTok{data.table}\NormalTok{(}\FunctionTok{read.delim}\NormalTok{(temp.connect, }\AttributeTok{fill=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{stringsAsFactors=}\ConstantTok{FALSE}\NormalTok{))}
+\NormalTok{temp }\OtherTok{\textless{}{-}}\NormalTok{ temp[}\FunctionTok{which}\NormalTok{(temp}\SpecialCharTok{$}\NormalTok{period}\SpecialCharTok{==}\StringTok{"M13"}\NormalTok{),]}
+\NormalTok{temp}\SpecialCharTok{$}\NormalTok{series\_id }\OtherTok{\textless{}{-}} \FunctionTok{trimws}\NormalTok{(temp}\SpecialCharTok{$}\NormalTok{series\_id, }\AttributeTok{which=}\StringTok{"both"}\NormalTok{)}
+\NormalTok{temp }\OtherTok{\textless{}{-}}\NormalTok{ temp[}\FunctionTok{which}\NormalTok{(temp}\SpecialCharTok{$}\NormalTok{series\_id}\SpecialCharTok{==}\StringTok{"CUUR0000SA0"}\NormalTok{)]}
+\NormalTok{temp}\SpecialCharTok{$}\NormalTok{series\_id }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{footnote\_codes }\OtherTok{\textless{}{-}}\NormalTok{ temp}\SpecialCharTok{$}\NormalTok{period }\OtherTok{\textless{}{-}} \ConstantTok{NULL}
+\FunctionTok{names}\NormalTok{(temp) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Year"}\NormalTok{,}\StringTok{"CPI"}\NormalTok{)}
+
+\NormalTok{Landings\_Revenue }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(Landings\_Revenue,temp, }\AttributeTok{by=}\StringTok{\textquotesingle{}Year\textquotesingle{}}\NormalTok{, }\AttributeTok{all.x=}\ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{Landings\_Revenue[[}\StringTok{"Dollars"}\NormalTok{]] }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,Landings\_Revenue[[}\StringTok{"Dollars"}\NormalTok{]]))}
+\NormalTok{Landings\_Revenue[[}\StringTok{"Metric.Tons"}\NormalTok{]] }\OtherTok{\textless{}{-}} \FunctionTok{as.numeric}\NormalTok{(}\FunctionTok{gsub}\NormalTok{(}\StringTok{","}\NormalTok{,}\StringTok{""}\NormalTok{,Landings\_Revenue[[}\StringTok{"Metric.Tons"}\NormalTok{]]))}
+
+\CommentTok{\#Nominal Revenue converted to 2017 constant dollars below}
+\NormalTok{Landings\_Revenue[[}\StringTok{"Real.Revenue"}\NormalTok{]] }\OtherTok{\textless{}{-}}\NormalTok{ Landings\_Revenue[[}\StringTok{"Dollars"}\NormalTok{]]}\SpecialCharTok{*}
+  \FunctionTok{unique}\NormalTok{(temp}\SpecialCharTok{$}\NormalTok{CPI[temp}\SpecialCharTok{$}\NormalTok{Year}\SpecialCharTok{==}\DecValTok{2020}\NormalTok{])}\SpecialCharTok{/}\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{CPI}
+\FunctionTok{rm}\NormalTok{(temp)}
+
+\NormalTok{GOM }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Florida West Coast"}\NormalTok{,}\StringTok{"Alabama"}\NormalTok{,}\StringTok{"Louisiana"}\NormalTok{,}\StringTok{"Mississippi"}\NormalTok{,}\StringTok{"Texas"}\NormalTok{ )}
+\NormalTok{NE }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"North Carolina"}\NormalTok{,}\StringTok{"Virginia"}\NormalTok{,}\StringTok{"Maryland"}\NormalTok{,}\StringTok{"Delaware"}\NormalTok{,}\StringTok{"Pennsylvania"}\NormalTok{,}\StringTok{"New Jersey"}\NormalTok{,}\StringTok{"New York"}\NormalTok{,}\StringTok{"Connecticut"}\NormalTok{,}\StringTok{"Rhode Island"}\NormalTok{,}
+        \StringTok{"Massachusetts"}\NormalTok{,}\StringTok{"New Hampshire"}\NormalTok{,}\StringTok{"Maine"}\NormalTok{)}
+\NormalTok{SE }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"South Carolina"}\NormalTok{,}\StringTok{"Georgia"}\NormalTok{,}\StringTok{"Florida East Coast"}\NormalTok{)}
+\NormalTok{CALI }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"California"}\NormalTok{,}\StringTok{"Oregon"}\NormalTok{,}\StringTok{"Washington"}\NormalTok{)}
+\NormalTok{AK }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Alaska"}\NormalTok{)}
+\NormalTok{HI }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Hawaii"}\NormalTok{)}
+
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region }\OtherTok{\textless{}{-}} \StringTok{""}
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region[Landings\_Revenue}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\NormalTok{GOM] }\OtherTok{\textless{}{-}} \StringTok{"Gulf.of.Mexico"}
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region[Landings\_Revenue}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\NormalTok{NE] }\OtherTok{\textless{}{-}} \StringTok{"Northeast"}
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region[Landings\_Revenue}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\NormalTok{SE] }\OtherTok{\textless{}{-}} \StringTok{"Southeast"}
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region[Landings\_Revenue}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\NormalTok{CALI] }\OtherTok{\textless{}{-}} \StringTok{"California.Current"}
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region[Landings\_Revenue}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\NormalTok{AK] }\OtherTok{\textless{}{-}} \StringTok{"Alaska"}
+\NormalTok{Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region[Landings\_Revenue}\SpecialCharTok{$}\NormalTok{State}\SpecialCharTok{\%in\%}\NormalTok{HI] }\OtherTok{\textless{}{-}} \StringTok{"Hawaii"}
+\NormalTok{Landings\_Revenue }\OtherTok{\textless{}{-}}\NormalTok{ Landings\_Revenue[}\FunctionTok{which}\NormalTok{(Landings\_Revenue}\SpecialCharTok{$}\NormalTok{Region}\SpecialCharTok{!=}\StringTok{""}\NormalTok{),]}
+
+\NormalTok{Landings\_Revenue\_all }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(}\FunctionTok{cbind}\NormalTok{(Metric.Tons,Dollars,Real.Revenue)}\SpecialCharTok{\textasciitilde{}}\NormalTok{Year}\SpecialCharTok{+}\NormalTok{Region, }\AttributeTok{data=}\NormalTok{Landings\_Revenue, }\AttributeTok{FUN=}\NormalTok{sum)}
+
+\FunctionTok{names}\NormalTok{(Landings\_Revenue\_all) }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Year"}\NormalTok{,}\StringTok{"Region"}\NormalTok{,}\StringTok{"Metric.Tons"}\NormalTok{,}\StringTok{"Nominal.Revenue"}\NormalTok{,}\StringTok{"Real.Revenue"}\NormalTok{)}
+
+\NormalTok{rev }\OtherTok{\textless{}{-}}\NormalTok{ Landings\_Revenue\_all[,}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{5}\NormalTok{)]}
+\NormalTok{land }\OtherTok{\textless{}{-}}\NormalTok{ Landings\_Revenue\_all[,}\FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{,}\DecValTok{2}\NormalTok{,}\DecValTok{3}\NormalTok{)]}
+
+\FunctionTok{library}\NormalTok{(tidyr)}
+\NormalTok{rev\_all }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(rev, Region, Real.Revenue)}
+\NormalTok{land\_all }\OtherTok{\textless{}{-}} \FunctionTok{spread}\NormalTok{(land, Region, Metric.Tons)}
+
+\FunctionTok{write.csv}\NormalTok{(rev\_all,}\AttributeTok{file=}\StringTok{"C:/Users/yourfilepath/commercialrevenue.csv"}\NormalTok{)}
+\FunctionTok{write.csv}\NormalTok{(land\_all,}\AttributeTok{file=}\StringTok{"C:/Users/yourfilepath/commerciallandings.csv"}\NormalTok{)}
+\FunctionTok{rm}\NormalTok{(}\AttributeTok{list=}\FunctionTok{ls}\NormalTok{())}
+\CommentTok{\#}
+\end{Highlighting}
+\end{Shaded}
+
+Direct any questions to \href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}} or \href{mailto:geret.depiper@noaa.gov}{\nolinkurl{geret.depiper@noaa.gov}}
+
+\hypertarget{recreational-fishing}{%
+\chapter{Recreational Fishing}\label{recreational-fishing}}
+
+\hypertarget{effort}{%
+\section{Effort}\label{effort}}
 
 \hypertarget{data-15}{%
 \subsection{Data}\label{data-15}}
@@ -548,8 +773,8 @@ Under Construction
 
 Under construction
 
-\hypertarget{revenue}{%
-\section{Revenue}\label{revenue}}
+\hypertarget{harvest}{%
+\section{Harvest}\label{harvest}}
 
 \hypertarget{data-16}{%
 \subsection{Data}\label{data-16}}
@@ -561,11 +786,11 @@ Under Construction
 
 Under construction
 
-\hypertarget{recreational-fishing}{%
-\chapter{Recreational Fishing}\label{recreational-fishing}}
+\hypertarget{fishing-engagement}{%
+\chapter{Fishing Engagement}\label{fishing-engagement}}
 
-\hypertarget{effort}{%
-\section{Effort}\label{effort}}
+\hypertarget{commercial}{%
+\section{Commercial}\label{commercial}}
 
 \hypertarget{data-17}{%
 \subsection{Data}\label{data-17}}
@@ -577,8 +802,8 @@ Under Construction
 
 Under construction
 
-\hypertarget{harvest}{%
-\section{Harvest}\label{harvest}}
+\hypertarget{recreational}{%
+\section{Recreational}\label{recreational}}
 
 \hypertarget{data-18}{%
 \subsection{Data}\label{data-18}}
@@ -590,47 +815,18 @@ Under Construction
 
 Under construction
 
-\hypertarget{fishing-engagement}{%
-\chapter{Fishing Engagement}\label{fishing-engagement}}
-
-\hypertarget{commercial}{%
-\section{Commercial}\label{commercial}}
-
-\hypertarget{data-19}{%
-\subsection{Data}\label{data-19}}
-
-Under Construction
-
-\hypertarget{methods-19}{%
-\subsection{Methods}\label{methods-19}}
-
-Under construction
-
-\hypertarget{recreational}{%
-\section{Recreational}\label{recreational}}
-
-\hypertarget{data-20}{%
-\subsection{Data}\label{data-20}}
-
-Under Construction
-
-\hypertarget{methods-20}{%
-\subsection{Methods}\label{methods-20}}
-
-Under construction
-
 \hypertarget{billion-dollar-disasters}{%
 \chapter{Billion Dollar Disasters}\label{billion-dollar-disasters}}
 
 In the United States the number of weather and climate-related disasters exceeding 1 billion dollars has been increasing since 1980. These events have significant impacts to coastal economies and communities. The Billion Dollar Disaster indicator provides information on the frequency and the total estimated costs of major weather and climate events that occur in the United States. This indicator compiles the annual number of weather and climate-related disasters across seven event types. Events are included if they are estimated to cause more than one billion U.S. dollars in direct losses. The cost estimates of these events are adjusted for inflation using the Consumer Price Index (CPI) and are based on costs documented in several Federal and private-sector databases. We present the total annual number of disaster events for all regions.
 
-\hypertarget{data-21}{%
-\section{Data}\label{data-21}}
+\hypertarget{data-19}{%
+\section{Data}\label{data-19}}
 
 Billion dollar disaster event frequency data are taken from NOAA's National Centers for Environmental Information (\url{https://www.ncdc.noaa.gov/billions/}). The number of disasters within each region were summed for every year of available data. Although the number is the count of unique disaster events within a region, the same disaster can impact multiple regions, meaning a sum across regions will overestimate the unique number of disasters.
 
-\hypertarget{methods-21}{%
-\section{Methods}\label{methods-21}}
+\hypertarget{methods-19}{%
+\section{Methods}\label{methods-19}}
 
 The Billion Dollar Event Frequency Data displayed on the website were compiled using the following code:
 
@@ -715,8 +911,8 @@ Beach closures are the number of days when beach water and/or air quality is det
 
 The information presented is from states, counties, and tribes that submit data to the EPA Beach Program reporting database. Not all US beach closures are captured in this database. We present a summary of known EPA Beach Program closure days by year for Alaska, California Current, Gulf of Mexico, Northeast, Hawai'ian Islands, and the Southeast regions.
 
-\hypertarget{data-22}{%
-\section{Data}\label{data-22}}
+\hypertarget{data-20}{%
+\section{Data}\label{data-20}}
 
 Data obtained from the EPA BEACON website have been provided to EPA by the coastal and Great Lakes states, tribes and territories that receive grants under the BEACH Act. Data was refined to closure, by state or territory, by year. Data compiled by states or territory and combined in regions defined as IEA regions except PI includes Guam and Marianas. Caribbean and South Atlantic data stand alone. Not all beaches in a state or territory are monitored through the EPA BEACH Act. Data for beaches monitored by state and local municipalities is not included. Changes in the number of beach closure days may be driven by changes in the number of beaches monitored under the BEACH Act versus by state and local municipalities.
 
@@ -733,8 +929,8 @@ Operator drop down - select =
 Expression Drop dpown - select Closure and Apply (note there is a permanent closure option which was not used in first indicator - explore)
 Action drop down - choose download and select CSV
 
-\hypertarget{methods-22}{%
-\section{Methods}\label{methods-22}}
+\hypertarget{methods-20}{%
+\section{Methods}\label{methods-20}}
 
 Data were compiled using the following code:
 
@@ -801,16 +997,18 @@ Data were compiled using the following code:
 \end{Highlighting}
 \end{Shaded}
 
+Questions can be directed to \href{mailto:willem.klajbor@noaa.gov}{\nolinkurl{willem.klajbor@noaa.gov}} or \href{mailto:stephanie.oakes@noaa.gov}{\nolinkurl{stephanie.oakes@noaa.gov}}
+
 \hypertarget{marine-species-distribution}{%
 \chapter{Marine Species Distribution}\label{marine-species-distribution}}
 
-\hypertarget{data-23}{%
-\section{Data}\label{data-23}}
+\hypertarget{data-21}{%
+\section{Data}\label{data-21}}
 
 Under Construction
 
-\hypertarget{methods-23}{%
-\section{Methods}\label{methods-23}}
+\hypertarget{methods-21}{%
+\section{Methods}\label{methods-21}}
 
 Under construction
 

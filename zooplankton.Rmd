@@ -1,7 +1,13 @@
 # Zooplankton
 
+*This Indicator requires non-EIWG Contacts to update as of August 2021
+
+Zooplankton are a diverse group of animals found in oceans, bays, and estuaries. By eating phytoplankton, and each other, zooplankton play a significant role in the transfer of materials and energy up the oceanic food web (e.g., fish, birds, marine mammals, humans.) Like phytoplankton, environmental and oceanographic factors continuously influence the abundance, composition and spatial distribution of zooplankton. These include the abundance and type of phytoplankton present in the water, as well as the water’s temperature, salinity, oxygen, and pH. Zooplankton can rapidly react to changes in their environment. For this reason monitoring the status of zooplankton is essential for detecting changes in, and evaluating the status of ocean ecosystems. We present the annual average total biovolume of zooplankton in the Alaska, California Current, Gulf of Mexico and Northeast regions.
+
 ## Data
-Under Construction
+Zooplankton data for each region were obtained from the NOAA Fisheries Coastal & Oceanic Plankton Ecology, Production, & Observations Database, an integrated data set of quality-controlled, globally distributed plankton biomass and abundance data with common biomass units and served in a common electronic format with supporting documentation and access software which can be found at https://www.st.nmfs.noaa.gov/copepod/about/about-copepod.html
 
 ## Methods
-Under construction
+Data are compiled and analyzed by the COPEPOD database manager Todd O'Brien. More information about Todd's methods can be found at https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit?rtpof=true or by emailing him directly at todd.obrien@noaa.gov.
+
+Questions can be directed to the above email or willem.klajbor@noaa.gov
