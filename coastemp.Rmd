@@ -1,8 +1,114 @@
 # Coastal Employment
 
+The total coastal employment is the number of jobs in coastal communities. Businesses in coastal counties employ tens of millions of people nationally. This includes hundreds of thousands of ocean-dependent businesses that pay over $100 billion in wages annually. Many coastal and ocean amenities attracting visitors are free, generating no direct employment, wages, or gross domestic product. However, these “nonmarket” features are key drivers for many coastal businesses. We present data for all regions.
+
 ## Data
-Under Construction
+Coastal employment numbers were downloaded from the U.S. Bureau of Labor Statistics’ quarterly census of employment and wages, filtered to present only coastal county values using the Census Bureau’s list of coastal counties within each state. Of note is that these data fail to include self-employed individuals. Coastal county employment numbers were then summed within each region for reporting purposes. This data can be accessed through NOAA's ENOW Portal at https://coast.noaa.gov/digitalcoast/tools/enow.html
 
 ## Methods
-Under construction
+A data update was not necessary in 2021, so the code shown below was most recently used in August 2019. It may need to be updated for future use.
 
+```{r, eval=FALSE}
+
+#Geret DePiper
+#Employment for Coastal Counties
+#Data Pull For Ecosystem Indicators Working Group
+#August 28, 2019
+#Data was downloaded from https://www.bls.gov/cew/downloadable-data-files.htm
+PKG <- c("foreign","stringr","data.table","tidyr", "tidyverse")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+
+COUNTIES <- read.csv(file="X:/gdepiper/EIWG/data/Results/coastlinecounties.csv", skip =2, as.is=TRUE) #Coastal County List taken from U.S. Census Bureau
+COUNTIES <- COUNTIES[,c(1,6)]
+names(COUNTIES) <- c("fips1","Coast")
+COUNTIES$fips <- as.integer(COUNTIES$fips1)
+COUNTIES <- COUNTIES[which(!is.na(COUNTIES$fips)),]
+
+#Using population data from https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=PEP_2018_PEPANNRES&prodType=table
+#to grab appropriate list of FIPS for Puerto Rico
+NEW_DATA <- read.csv(file="X:/gdepiper/EIWG/data/Results/PEP_2018_PEPANNRES.csv", as.is=TRUE)
+STATES <- matrix(unlist(strsplit(NEW_DATA$GEO.display.label,split=",")),ncol=2,byrow=TRUE)
+colnames(STATES) <- c("county_name","State")
+NEW_DATA <- cbind(NEW_DATA,STATES)
+NEW_DATA$State <- as.character(NEW_DATA$State)
+NEW_DATA$county_name <- as.character(NEW_DATA$county_name)
+rm(STATES)
+NEW_DATA$GEO.id <- NEW_DATA$GEO.display.label <- NULL
+NEW_DATA$State <- trimws(NEW_DATA$State, which="both")
+NEW_DATA$county_name <- trimws(NEW_DATA$county_name, which="both")
+
+NEW_DATA <- merge(COUNTIES,NEW_DATA,by.y="GEO.id2", by.x="fips",all=TRUE)
+NEW_DATA$Coast[NEW_DATA$State=="Puerto Rico" & !NEW_DATA$county_name%in%c("San Sebastián Municipio",
+                                                                          "Moca Municipio","Hormigueros Municipio","San Germán Municipio","Sabana Grande Municipio",
+                                                                          "Maricao Municipio","Las Marías Municipio","Lares Municipio","Utuado Municipio","Adjuntas Municipio",
+                                                                          "Jayuya Municipio","Villalba Municipio","Orocovis Municipio","Ciales Municipio","Florida Municipio",
+                                                                          "Morovis Municipio","Corozal Municipio","Barranquitas Municipio","Coamo Municipio","Aibonito Municipio",
+                                                                          "Comerío Municipio","Naranjito Municipio","Toa Alta Municipio","Bayamón Municipio",
+                                                                          "Aguas Buenas Municipio","Cidra Municipio","Cayey Municipio","Caguas Municipio","San Lorenzo Municipio",
+                                                                          "Gurabo Municipio","Trujillo Alto Municipio","Juncos Municipio","Canóvanas Municipio","Las Piedras Municipio")] <- "Caribbean"
+NEW_DATA <- NEW_DATA[which(!is.na(NEW_DATA$Coast)),]
+NEW_DATA$fips1[is.na(NEW_DATA$fips1)] <- as.character(NEW_DATA$fips[is.na(NEW_DATA$fips1)])
+STATES <- cbind(NEW_DATA$fips1,NEW_DATA$State)
+STATES <- as.data.frame(rbind(STATES,cbind("78000","Virgin Islands")))
+colnames(STATES) <- c('fips',"State")
+STATES$fips <- as.character(STATES$fips)
+
+rm(NEW_DATA)
+FIPS <- as.character(unique(STATES$fips))
+
+
+EMPLOYMENT <- NULL
+for (x in 1:nrow(STATES))  {
+  for (y in 1990:2018)  {
+    tstate <- STATES[x,2]
+    datafolder <- file.path(paste0("X:/gdepiper/EIWG/data/County_Employment/",y,".annual.by_area", sep=""))
+    filelist <- as.data.frame(list.files(path=datafolder, all.files=TRUE))
+    fl <- filelist[filelist[,1]%in%grep(paste("*",y,"*",sep=""),filelist),]
+    fl = do.call(rbind, lapply(filelist, function(xx) {
+      xx = as.data.frame(xx, stringsAsFactors=F)
+      names(xx) = "FILEPATH"
+      return(xx) }) )
+    fl$fips = sapply(fl$FILEPATH, USE.NAMES=F, function(zz) {
+      temp = do.call(rbind,strsplit(as.character(zz), split = " "))
+      return(temp[NCOL(temp)-3]) })
+    fl <- merge(fl,STATES,by='fips')
+    for (z in 1:nrow(fl)) {
+      temp <- read.csv(file=paste0("X:/gdepiper/EIWG/data/County_Employment/",y,".annual.by_area/",fl[z,2],sep=""))
+      temp <- temp[which(temp$own_code==0),]
+      temp <- cbind(temp$area_fips,temp$annual_avg_emplvl,temp$year)
+      EMPLOYMENT <- rbind(EMPLOYMENT,temp)
+      rm(temp)
+    }
+  }
+}
+colnames(EMPLOYMENT) <- c("fips","Annual_Employment","Year")
+EMPLOYMENT <- merge(EMPLOYMENT,COUNTIES, by.x="fips",by.y="fips1")
+EMPLOYMENT <- merge(EMPLOYMENT,STATES, by="fips")
+EMPLOYMENT$Region <- ""
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("Florida","Alabama","Louisiana","Mississippi","Texas")] <- "Gulf.of.Mexico"
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("North Carolina","Virginia","Maryland","Delaware","Pennsylvania",
+                                        "New Jersey","New York","Connecticut","Rhode Island",
+                                        "Massachusetts","New Hampshire","Maine")] <- "Northeast"
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("South Carolina","Georgia")] <- "Southeast"
+EMPLOYMENT$Region[EMPLOYMENT$State=="Florida" & EMPLOYMENT$Coast=="Atlantic"] <- "Southeast"
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("California","Oregon","Washington")] <- "California.Current"
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("Alaska")] <- "Alaska"
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("Hawaii")] <- "Hawaii"
+EMPLOYMENT$Region[EMPLOYMENT$State%in%c("Puerto Rico")] <- "Caribbean"
+
+EMPLOYMENT$Annual_Employment[is.na(EMPLOYMENT$Annual_Employment)] <- 0
+
+write.csv(EMPLOYMENT,"X:/gdepiper/EIWG/data/Raw_Imported_Employment.csv")
+
+EMPLOYMENT <- aggregate(Annual_Employment~Year+Region, data=EMPLOYMENT, FUN=sum)
+
+write.csv(EMPLOYMENT,"X:/gdepiper/EIWG/data/Results/EIWG_Employment.csv")
+
+```
+
+Questions can be directed to willem.klajbor@noaa.gov kate.quigley@noaa.gov or geret.depiper@noaa.gov

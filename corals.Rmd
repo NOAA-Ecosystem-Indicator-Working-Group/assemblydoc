@@ -1,7 +1,15 @@
 # Coral Reefs
 
+*Coral reef plain language currently being updated here: https://docs.google.com/document/d/1lp7pJQpGipg9uTlGRcufIv5K_3WePiE0utt34YNSZxg/edit
+
 ## Data
-Under Construction
+
+*To be updated
+
+The coral reef ecosystem scores shown here were analyzed using data from the National Coral Reef Monitoring Program (NCRMP).  NCRMP collects data in all U.S. coral reef regions in four themes: benthic (corals and algae), reef fish, climate (ocean acidification and thermal stress), and human connections (socioeconomic surveys). Data are described here: https://www.coris.noaa.gov/monitoring/status_report/docs/Atlantic_Status_Reports_Methods_Final_508compliant.pdf and stored here: https://docs.google.com/document/d/1UGDJCtEdF2eP2wAG_v--nGCtVRNCm6Tz8rcGQIKyLzY/edit?usp=sharing
 
 ## Methods
-Under construction
+
+* Code for guage plots to go here
+
+Questions can be directed to willem.klajbor@noaa.gov, erica.towle@noaa.gov, or steve.gittings@noaa.gov

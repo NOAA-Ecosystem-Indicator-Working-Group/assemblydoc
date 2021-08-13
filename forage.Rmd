@@ -12,7 +12,7 @@ The Indicator for the NaMES Alaksa regions is the East Bering Sea Pelagic forage
 
 ### California Current
 
-
+The Indicator for the NaMES CCE Forage Theme comes from the California Current IEA Program, specifically the Southern CCE Realtive Coolwater Forage Abundance Value which can be accessed here: https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_EI_FBS_2020.html
 
 ### Gulf of Mexico
 
@@ -42,6 +42,7 @@ The variable can be directly downloaded from this link: https://apps-afsc.fisher
 
 ### California Current
 
+The variable can be directly downloaded from this ERDDAP Link: https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_EI_FBS_2020.html
 
 ### Gulf of Mexico
 

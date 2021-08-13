@@ -1,17 +1,10 @@
 # Fishing Engagement
 
-## Commercial
+Recreational and commercial fishing engagement is measured by the presence of fishing activity in coastal communities. The commercial engagement index is measured through permits, fish dealers, and vessel landings.  The data for recreational engagement indicators varies by state. A high rank within these indicates more engagement in fisheries. For details on both data sources and indicator development, please see https://www.fisheries.noaa.gov/national/socioeconomics/social-indicators-fishing-communities-0.
 
-### Data
-Under Construction
+NOAA Monitors recreational and commercial fishing engagement to better understand the social and economic impacts of fishing policies and regulations on our nation’s vital fishing communities. This and other social indicators help assess a coastal community’s resilience. NOAA works with state and local partners to monitor these indicators. We present data from the Northeast, Southeast, Gulf of Mexico, California Current, Alaska, and Pacific Island regions.
 
-### Methods
-Under construction
+## Data and Methods
+Recreational and Commercial fishing engagement data is from the National Marine Fisheries Service’s social indicator data portal: https://www.st.nmfs.noaa.gov/data-and-tools/social-indicators/ The percentage of all communities in each region classified as medium, medium high, or highly engaged is presented for both recreational and commercial fishing. Data are organized by Lisa Colburn (lisa.colburn@noaa.gov) and reformatted manually into NaMES Format.
 
-## Recreational
-
-### Data
-Under Construction
-
-### Methods
-Under construction
+Questions can be directed to willem.klajbor@noaa.gov or geret.depiper@noaa.gov

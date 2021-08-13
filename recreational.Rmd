@@ -1,17 +1,113 @@
 # Recreational Fishing
 
-## Effort
+U.S. saltwater recreational fishing is an important source of seafood, jobs, and recreation for millions of anglers and for-hire recreational businesses. Recreational fishing effort is measured as “Angler Trips”, which is the number of recreational fishing trips people go on. Recreational fishing harvest is the number of fish caught and brought to shore on recreational fishing trips. 
 
-### Data
-Under Construction
+Recreational effort and harvest help us understand how recreational opportunities and seafood derived from our marine environment is changing over time. Fisheries managers use this data to set annual catch limits and fishing regulations, including season lengths, size, and daily catch limits. We present the total number of fish caught and angler trips annually for all marine fish in all regions. 
 
-### Methods
-Under construction
+## Data
+Recreational harvest and effort data pulled from National Summary Query at https://www.st.nmfs.noaa.gov/recreational-fisheries/data-and-documentation/queries/index Units of data are in Effort in Angler Days and Harvest in numbers of fish.
 
-## Harvest
+Because of the way the LME regions are broken up, the data must be pulled in three separate files - a .csv that represents harvest and effort for the entire US, a .csv that represents harvest and effort for West Florida, and a .csv that represents harvest and effort for East Florida.
 
-### Data
-Under Construction
+## Effort Methods
+The Recreational effort data can be pulled from the spreadsheets (Effort, West Florida Effort, and East Florida Effort) produced by the above link using the following code:
 
-### Methods
-Under construction
+```{r, eval=FALSE}
+PKG <- c("foreign","stringr", "data.table")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+
+rec_effort <- read.csv(file="C:/Users/yourpath/mrip_effort_All_States_July_2021.csv")
+rec_effort_wFL <- read.csv(file="C:/Users/yourpath/mrip_effort_West_Florida_July_2021.csv")
+rec_effort_EFL <-read.csv(file="C:/Users/yourpath/mrip_effort_East_Florida_July_2021.csv")
+
+GOM <- c("ALABAMA","LOUISIANA","MISSISSIPPI","TEXAS" )
+NE <- c("NORTH CAROLINA","VIRGINIA","MARYLAND","DELAWARE","PENNSYLANIA","NEW JERSEY","NEW YORK","CONNECTICUT","RHODE ISLAND",
+        "MASSACHUSETTS","NEW HAMPSHIRE","MAINE")
+SE <- c("SOUTH CAROLINA","GEORGIA")
+CALI <- c("CALIFORNIA","OREGON","WASHINGTON")
+AK <- c("ALASKA")
+HI <- c("HAWAII")
+
+rec_effort$Region <- ""
+rec_effort$Region[rec_effort$State%in%GOM] <- "Gulf.of.Mexico"
+rec_effort$Region[rec_effort$State%in%NE] <- "Northeast"
+rec_effort$Region[rec_effort$State%in%SE] <- "Southeast"
+rec_effort$Region[rec_effort$State%in%CALI] <- "California.Current"
+rec_effort$Region[rec_effort$State%in%AK] <- "Alaska"
+rec_effort$Region[rec_effort$State%in%HI] <- "Hawaii"
+rec_effort <- rec_effort[which(rec_effort$Region!=""),]
+
+rec_effort_EFL$State <- "EAST FL"
+rec_effort_EFL$Region <- "Southeast"
+rec_effort_wFL$State <- "West FL"
+rec_effort_wFL$Region <- "Gulf.of.Mexico"
+
+rec_effort1 <- merge(rec_effort,rec_effort_EFL,all=TRUE)
+rec_effort1 <- merge(rec_effort1,rec_effort_wFL,all=TRUE)
+
+rec_effort2 <- aggregate(cbind(Angler.Trips)~Year+Region, data=rec_effort1, FUN=sum)
+
+library(tidyr)
+rec_effort_all <- spread(rec_effort2, Region, Angler.Trips)
+
+write.csv(rec_effort_all,file="C:/Users/yourpath/recreationaleffort.csv")
+
+```
+
+
+## Harvest Methods
+The Recreational harvest data can be pulled from the spreadsheets (Harvest, West Florida Harvest, and East Florida Harvest) produced by the above link using the following code:
+
+```{r, eval=FALSE}
+PKG <- c("foreign","stringr", "data.table")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+
+rec_landings <- read.csv(file="C:/Users/yourpath/mrip_Landings_All_States_July_2021.csv")
+rec_landings_wFL <- read.csv(file="C:/Users/yourpath/mrip_Landings_West_Florida_July_2021.csv")
+rec_landings_EFL <- read.csv(file="C:/Users/yourpath/mrip_Landings_East_Florida_July_2021.csv")
+
+GOM <- c("ALABAMA","LOUISIANA","MISSISSIPPI","TEXAS" )
+NE <- c("NORTH CAROLINA","VIRGINIA","MARYLAND","DELAWARE","PENNSYLANIA","NEW JERSEY","NEW YORK","CONNECTICUT","RHODE ISLAND",
+        "MASSACHUSETTS","NEW HAMPSHIRE","MAINE")
+SE <- c("SOUTH CAROLINA","GEORGIA")
+CALI <- c("CALIFORNIA","OREGON","WASHINGTON")
+AK <- c("ALASKA")
+HI <- c("HAWAII")
+
+rec_landings$Region <- ""
+rec_landings$Region[rec_landings$State%in%GOM] <- "Gulf.of.Mexico"
+rec_landings$Region[rec_landings$State%in%NE] <- "Northeast"
+rec_landings$Region[rec_landings$State%in%SE] <- "Southeast"
+rec_landings$Region[rec_landings$State%in%CALI] <- "California.Current"
+rec_landings$Region[rec_landings$State%in%AK] <- "Alaska"
+rec_landings$Region[rec_landings$State%in%HI] <- "Hawaii"
+rec_landings <- rec_landings[which(rec_landings$Region!=""),]
+
+rec_landings_EFL$State <- "EAST FL"
+rec_landings_EFL$Region <- "Southeast"
+rec_landings_wFL$State <- "West FL"
+rec_landings_wFL$Region <- "Gulf.of.Mexico"
+
+rec_landings1 <- merge(rec_landings,rec_landings_EFL,all=TRUE)
+rec_landings1 <- merge(rec_landings1,rec_landings_wFL,all=TRUE)
+
+rec_landings2 <- aggregate(cbind(Total.Harvest..A.B1.)~Year+Region, data=rec_landings1, FUN=sum)
+
+library(tidyr)
+rec_landings_all <- spread(rec_landings2, Region, Total.Harvest..A.B1.)
+
+write.csv(rec_landings_all,file="C:/Users/yourpath/recreationallandings.csv")
+
+```
+
+Questions can be directed to willem.klajbor@noaa.gov or geret.depiper@noaa.gov

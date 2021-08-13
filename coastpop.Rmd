@@ -1,8 +1,96 @@
 # Coastal Population
 
+While marine ecosystems are important for people all across the country, they are essential for  people living in coastal communities. The population density of coastal counties is over six times greater than inland counties. In the U.S. coastal counties make up less than 10 percent of the total land area (not including Alaska), but account for 39 percent of the total population. From 1970 to 2010, the population of these counties increased by almost 40% and are projected to increase by over 10 million people or 8+% into the 2020s. 
+
+The population density of an area is an important factor for economic planning, emergency preparedness, understanding environmental impacts, resource demand, and many other reasons. Thus, this indicator is important to track. We present the number of residents within all regions.
+
 ## Data
-Under Construction
+Coastal population data was retrieved from the Census Bureau’s county population totals, filtered to present coastal counties using the Census Bureau’s list of coastal counties within each state. Coastal county populations were then summed within each region for reporting purposes. This data can be accessed through NOAA's ENOW Portal at https://coast.noaa.gov/digitalcoast/tools/enow.html
 
 ## Methods
-Under construction
+This code was used for the 2020 release of the NaMES website and will be updated for the 2021 update when the population data is released on September 23, 2021
 
+```{r, eval=FALSE}
+PKG <- c("foreign","stringr","data.table","tidyr", "tidyverse")
+
+for (p in PKG) {
+  if(!require(p,character.only = TRUE)) {
+    install.packages(p)
+    require(p,character.only = TRUE)}
+}
+
+COUNTIES <- read_excel("C:/Users/willem.klajbor/Documents/DataAssembly/sheets/coastline-counties-list.xlsx")
+#Coastal County List taken from U.S. Census Bureau: https://www2.census.gov/library/stories/2018/08/coastline-counties-list.xlsx
+COUNTIES <- COUNTIES[,c(1,6)]
+names(COUNTIES) <- c("fips","Coast")
+COUNTIES$fips <- as.integer(COUNTIES$fips)
+COUNTIES <- COUNTIES[which(!is.na(COUNTIES$fips)),]
+
+#Pre-2015 pulled from https://data.nber.org/data/census-intercensal-county-population.html
+OLD_DATA <- read.csv(file="X:/gdepiper/EIWG/data/county_population.csv", as.is=TRUE)
+
+OLD_DATA[is.na(OLD_DATA)] <- 0
+
+OLD_DATA$state_fips <- OLD_DATA$areaname <- OLD_DATA$fipsst <- OLD_DATA$county_fips <-
+  OLD_DATA$fipsco <-OLD_DATA$areaname <-  OLD_DATA$region <- OLD_DATA$division <- NULL
+OLD_DATA$state_name <- trimws(OLD_DATA$state_name, which="both")
+OLD_DATA$county_name <- trimws(OLD_DATA$county_name, which="both")
+FIPS_NAMES <- OLD_DATA[,which(names(OLD_DATA)%in%c("fips","state_name","county_name"))]
+FIPS_NAMES <- unique(FIPS_NAMES)
+
+OLD_DATA <- gather(OLD_DATA,key="Year",value="Population",pop1970:pop2014)
+OLD_DATA <- aggregate(Population~Year+state_name+county_name+fips, data=OLD_DATA,FUN=sum)
+OLD_DATA <- OLD_DATA[which(!OLD_DATA$Year%in%unique(grep("base*",OLD_DATA$Year, value=TRUE))),]
+OLD_DATA$Year <- gsub("[^0-9\\.]", "", OLD_DATA$Year)
+
+#Post-215 pulled from https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=PEP_2018_PEPANNRES&prodType=table
+NEW_DATA <- read.csv(file="X:/gdepiper/EIWG/data/PEP_2018_PEPANNRES.csv", as.is=TRUE)
+STATES <- matrix(unlist(strsplit(NEW_DATA$GEO.display.label,split=",")),ncol=2,byrow=TRUE)
+colnames(STATES) <- c("county_name","state_name")
+NEW_DATA <- cbind(NEW_DATA,STATES)
+NEW_DATA$state_name <- as.character(NEW_DATA$state_name)
+NEW_DATA$county_name <- as.character(NEW_DATA$county_name)
+rm(STATES)
+NEW_DATA$GEO.id <- NEW_DATA$GEO.display.label <- NULL
+#NEW_DATA <- merge(FIPS_NAMES,NEW_DATA, by.x="fips",by.y="GEO.id2", all=TRUE)
+NEW_DATA <- gather(NEW_DATA,key="Year",value="Population",rescen42010:respop72018)
+NEW_DATA <- NEW_DATA[which(NEW_DATA$Year%in%c("respop72015","respop72016","respop72017","respop72018")),]
+NEW_DATA$Year <- str_sub(NEW_DATA$Year, start=-4)
+NEW_DATA$state_name <- trimws(NEW_DATA$state_name, which="both")
+NEW_DATA$county_name <- trimws(NEW_DATA$county_name, which="both")
+
+OLD_DATA <- merge(OLD_DATA,COUNTIES, by="fips",all=TRUE)
+NEW_DATA <- merge(COUNTIES,NEW_DATA,by.y="GEO.id2", by.x="fips",all=TRUE)
+OLD_DATA <- rbind(OLD_DATA,NEW_DATA)
+OLD_DATA$Coast[OLD_DATA$state_name=="Puerto Rico" & !OLD_DATA$county_name%in%c("San Sebastián Municipio",
+                                                                               "Moca Municipio","Hormigueros Municipio","San Germán Municipio","Sabana Grande Municipio",
+                                                                               "Maricao Municipio","Las Marías Municipio","Lares Municipio","Utuado Municipio","Adjuntas Municipio",
+                                                                               "Jayuya Municipio","Villalba Municipio","Orocovis Municipio","Ciales Municipio","Florida Municipio",
+                                                                               "Morovis Municipio","Corozal Municipio","Barranquitas Municipio","Coamo Municipio","Aibonito Municipio",
+                                                                               "Comerío Municipio","Naranjito Municipio","Toa Alta Municipio","Bayamón Municipio",
+                                                                               "Aguas Buenas Municipio","Cidra Municipio","Cayey Municipio","Caguas Municipio","San Lorenzo Municipio",
+                                                                               "Gurabo Municipio","Trujillo Alto Municipio","Juncos Municipio","Canóvanas Municipio","Las Piedras Municipio")] <- "Caribbean"
+OLD_DATA <- OLD_DATA[which(!is.na(OLD_DATA$Coast)),]
+
+OLD_DATA$Region <- ""
+OLD_DATA$Region[OLD_DATA$state_name%in%c("Florida","Alabama","Louisiana","Mississippi","Texas" )] <- "Gulf.of.Mexico"
+OLD_DATA$Region[OLD_DATA$state_name%in%c("North Carolina","Virginia","Maryland","Delaware","Pennsylvania",
+                                         "New Jersey","New York","Connecticut","Rhode Island",
+                                         "Massachusetts","New Hampshire","Maine")] <- "Northeast"
+OLD_DATA$Region[OLD_DATA$state_name%in%c("South Carolina","Georgia")] <- "Southeast"
+OLD_DATA$Region[OLD_DATA$state_name=="Florida" & OLD_DATA$Coast=="Atlantic"] <- "Southeast"
+OLD_DATA$Region[OLD_DATA$state_name%in%c("California","Oregon","Washington")] <- "California.Current"
+OLD_DATA$Region[OLD_DATA$state_name%in%c("Alaska")] <- "Alaska"
+OLD_DATA$Region[OLD_DATA$state_name%in%c("Hawaii")] <- "Hawaii"
+OLD_DATA$Region[OLD_DATA$state_name%in%c("Puerto Rico")] <- "Caribbean"
+
+OLD_DATA$Population <- as.numeric(OLD_DATA$Population)
+OLD_DATA <- aggregate(Population~Year+Region, data=OLD_DATA, FUN=sum)
+OLD_DATA$Year <- as.numeric(OLD_DATA$Year)
+OLD_DATA <- OLD_DATA[which(OLD_DATA$Year<3000),]
+
+write.csv(OLD_DATA,file="X:/gdepiper/EIWG/data/Coastal_Population_EIWG.csv")
+
+```
+
+Questions can be directed to willem.klajbor@noaa.gov kate.quigley@noaa.gov or geret.depiper@noaa.gov
