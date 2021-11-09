@@ -1,15 +1,67 @@
 # Coral Reefs
 
-*Coral reef plain language currently being updated here: https://docs.google.com/document/d/1lp7pJQpGipg9uTlGRcufIv5K_3WePiE0utt34YNSZxg/edit
+Coral reefs are some of the most diverse and valuable ecosystems on Earth. Though they cover less than one percent of the Earth’s surface, they are estimated to provide ecosystem services (economic and environmental services) worth hundreds of billions of dollars each year. Healthy reefs protect islands and coasts from storm surge, contribute to local economies through tourism (i.e., sportfishing, snorkeling, and diving), and contribute about one-quarter of the total fish catch, providing critical food resources for tens of millions of people particularly in developing island nations.
 
 ## Data
-
-*To be updated
 
 The coral reef ecosystem scores shown here were analyzed using data from the National Coral Reef Monitoring Program (NCRMP).  NCRMP collects data in all U.S. coral reef regions in four themes: benthic (corals and algae), reef fish, climate (ocean acidification and thermal stress), and human connections (socioeconomic surveys). Data are described here: https://www.coris.noaa.gov/monitoring/status_report/docs/Atlantic_Status_Reports_Methods_Final_508compliant.pdf and stored here: https://docs.google.com/document/d/1UGDJCtEdF2eP2wAG_v--nGCtVRNCm6Tz8rcGQIKyLzY/edit?usp=sharing
 
 ## Methods
 
-* Code for guage plots to go here
+Coral scores are determined by the scores on the sheet attached above.
+
+The code to plot the sub-gauge scores can be found below:
+
+```{r, eval=FALSE}
+#Gauge Plot Example 1
+#W Klajbor Aug 2021
+#Adapted from code on pomvlad.blog
+
+#libs
+library(ggplot2)
+library(dplyr)
+
+#data
+df <- data.frame(matrix(nrow=4, ncol = 2))
+
+names(df) <- c("variable", "percentage")
+df$variable <- c("Benthic", "Fish", "Climate", "Human Connection")
+#CHANGE VALUES ON NEXT LINE IN ORDER LISTED ABOVE
+df$percentage <- c(0.8,0.93,0.74,NA)
+df <- df %>% mutate(variable = factor(variable, 
+                                   levels = c("Benthic", "Fish", "Climate", "Human Connection"),
+                                   ordered = TRUE),
+  group=ifelse(percentage <0.6, "red",
+                                 ifelse(percentage>=0.6 & percentage<0.8, "yellow","green")),
+                    label=paste0(percentage*100, "%"),
+                    title=dplyr::recode(variable,`Benthic`="Benthic 
+(Good)", 
+                                        `Fish`="Fish 
+(Very Good)",
+                                        `Climate`="Climate 
+(Fair)",
+                                        `Human Connection`="Human Connections"))
+
+#ADD NOMINAL DESCRIPTORS ABOVE
+
+#Base Gauge Plots
+ggplot(df, aes(fill = group, ymax = percentage, ymin = 0, xmax = 2, xmin = 1)) +
+  geom_rect(aes(ymax=1, ymin=0, xmax=2, xmin=1), fill ="#ece8bd") +
+  geom_rect() +
+  coord_polar(theta = "y",start=-pi/2) + xlim(c(0, 2)) + ylim(c(0,2)) +
+  geom_text(aes(x = 0, y = 0, label = label, colour=group), size=6.5, family="Poppins SemiBold") +
+  geom_text(aes(x=1.5, y=1.5, label=title), family="Poppins Light", size=4.2) +
+  facet_wrap(~title, ncol = 4) +
+  theme_void() +
+  scale_fill_manual(values = c("red"="#6FCAF7", "yellow"="#2FA0D8", "green"="#0A76AC")) +
+  scale_colour_manual(values = c("red"="#6FCAF7", "yellow"="#2FA0D8", "green"="#0A76AC")) +
+  theme(strip.background = element_blank(),
+        strip.text.x = element_blank()) +
+  guides(fill="none") +
+  guides(colour="none")
+
+
+```
+
 
 Questions can be directed to willem.klajbor@noaa.gov, erica.towle@noaa.gov, or steve.gittings@noaa.gov
