@@ -1,7 +1,11 @@
 # Marine Species Distribution
 
+The geographic location where a species is found, known as that species’ “distribution”, is a fundamental piece of information. Some species naturally move from location to location throughout the year, following seasons, food, or other factors. However, as climate change causes ocean waters to warm, populations of many species are moving towards the poles (northward in the northern hemisphere) or deeper towards cooler waters, allowing them to track their preferred temperature. Changes in a species distribution are not always due to individual animals following a preferred temperature, but could also be due to reduced survival of individuals in the warming areas. Understanding where and how fast marine species are moving is important to coastal communities as these changing distributions can affect the species available for fishing, recreation, and cultural practices. Marine species distributions are also good indicators of a warming ocean as they largely follow the species’ preferred temperature, can react quickly to ocean changes, and have been measured for many years, allowing us to see changes over time.  
+
 ## Data
-Under Construction
+The marine species distribution data shown here is the average “centroid”, or mean location (as either latitude or depth) of the species weighted by biomass, of a large number of species from a region. These centroids are calculated by Ocean Adapt using data gathered by NOAA’s National Marine Fisheries Service (NMFS), and other agencies. NMFS monitors marine species populations by conducting annual bottom trawl surveys, some of which have been conducted for over 40 years.
+
+The link to the OceanADAPT Site can be found here: https://oceanadapt.rutgers.edu/
 
 ## Methods
-Under construction
+Data are downloaded directly from OceanADAPT at the link above

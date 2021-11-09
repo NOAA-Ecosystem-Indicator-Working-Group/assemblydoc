@@ -8,6 +8,7 @@ rmd_files: ["index.Rmd",
 "seabirds.Rmd",
 "overfished.Rmd",
 "marinemammals.Rmd",
+"speciesdist.Rmd",
 "sst.Rmd",
 "sealevel.Rmd",
 "seaice.Rmd",
@@ -20,7 +21,6 @@ rmd_files: ["index.Rmd",
 "engagement.Rmd",
 "disasters.Rmd",
 "beaches.Rmd",
-"speciesdist.Rmd",
 "99-references.Rmd"]
 new_session: false
 delete_merged_file: true
