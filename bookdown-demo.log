@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.22)  9 NOV 2021 16:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.6.22)  2 DEC 2021 13:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,42 +940,42 @@ LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
 
 [5] [6
 
-] [7] [8
-
-]
+] [7] [8]
 Chapter 1.
 
-Underfull \hbox (badness 1796) in paragraph at lines 159--160
+Underfull \hbox (badness 1796) in paragraph at lines 197--198
 \TU/lmr/m/n/10 methods can be found at []$[][][][][] [] [] [] [][][][] [] [][][
 ][][][] [] [][][] [] [][][][][][][][] [] [] [] [][][][][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
 [][][][][][][] [] [][][][][][][][][][][][][][][][][][] [] [][][][] [] [][][][][
 ] [] [][][][]$[] \TU/lmr/m/n/10 or by emailing him
  []
 
-[9] [10]
+[9
+
+] [10]
 Chapter 2.
 
-Underfull \hbox (badness 3977) in paragraph at lines 180--181
+Underfull \hbox (badness 3977) in paragraph at lines 218--219
 \TU/lmr/m/n/10 Data are compiled and analyzed by the COPEPOD database man-
  []
 
 
-Underfull \hbox (badness 4391) in paragraph at lines 180--181
+Underfull \hbox (badness 4391) in paragraph at lines 218--219
 \TU/lmr/m/n/10 ager Todd O’Brien. More information about Todd’s methods can
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
 \TU/lmr/m/n/10 be found at []$[][][][][] [] [] [] [][][][] [] [][][][][][] [] [
 ][][] [] [][][][][][][][] [] [] [] [][][][][][] [][] [][][][][][][] []
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 180--181
+Underfull \hbox (badness 3792) in paragraph at lines 218--219
 [][][][][][][][][][][][][][][][][][] [] [][][][] [] [][][][][] [] [][][][]$[] \
 TU/lmr/m/n/10 or by emailing him directly at
  []
@@ -988,49 +988,49 @@ Underfull \vbox (badness 5847) has occurred while \output is active []
 ] [12]
 Chapter 3.
 
-Underfull \hbox (badness 1675) in paragraph at lines 192--193
+Underfull \hbox (badness 1675) in paragraph at lines 230--231
 \TU/lmr/m/n/10 The coral reef ecosystem scores shown here were analyzed using d
 ata
  []
 
 
-Underfull \hbox (badness 1152) in paragraph at lines 192--193
+Underfull \hbox (badness 1152) in paragraph at lines 230--231
 \TU/lmr/m/n/10 from the National Coral Reef Monitoring Program (NCRMP). NCRMP
  []
 
 
-Underfull \hbox (badness 2626) in paragraph at lines 192--193
+Underfull \hbox (badness 2626) in paragraph at lines 230--231
 \TU/lmr/m/n/10 collects data in all U.S. coral reef regions in four themes: ben
 thic
  []
 
 
-Underfull \hbox (badness 2181) in paragraph at lines 192--193
+Underfull \hbox (badness 2181) in paragraph at lines 230--231
 \TU/lmr/m/n/10 (corals and algae), reef fish, climate (ocean acidification and 
 thermal
  []
 
 
-Underfull \hbox (badness 1057) in paragraph at lines 192--193
+Underfull \hbox (badness 1057) in paragraph at lines 230--231
 \TU/lmr/m/n/10 stress), and human connections (socioeconomic surveys). Data are
  de-
  []
 
 
-Underfull \hbox (badness 3547) in paragraph at lines 192--193
+Underfull \hbox (badness 3547) in paragraph at lines 230--231
 \TU/lmr/m/n/10 scribed here: []$[][][][][] [] [] [] [][][] [] [][][][][] [] [][
 ][][] [] [][][] [] [][][][][][][][][][] [] [][][][][][] [] [][][][][][] [] [][]
 [][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 [][][][][][][][] [] [][][][][][] [] [][][][][][][] [] [][][][][][][] [] [][][][
 ][] [] [][][][][][][][][][][][] [] [][][]$[] \TU/lmr/m/n/10 and stored
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
 \TU/lmr/m/n/10 here: []$[][][][][] [] [] [] [][][][] [] [][][][][][] [] [][][] 
 [] [][][][][][][][] [] [] [] [][][][][][][][][][][][][][][][][] [] [] [][][][]
  []
@@ -1038,11 +1038,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--193
 [13
 
 ]
-Underfull \vbox (badness 10000) detected at line 250
+Underfull \vbox (badness 10000) detected at line 288
  []
 
 
-Underfull \vbox (badness 10000) detected at line 250
+Underfull \vbox (badness 10000) detected at line 288
  []
 
 [14] [15] [16
@@ -1050,63 +1050,63 @@ Underfull \vbox (badness 10000) detected at line 250
 ]
 Chapter 4.
 [17]
-Underfull \hbox (badness 1565) in paragraph at lines 277--278
+Underfull \hbox (badness 1565) in paragraph at lines 315--316
 \TU/lmr/m/n/10 is stored at []$[][][][][] [] [] [] [][][][][][] [] [][][] [] []
 [][][][][][][][][][][][][][] [] [][][] [][] [][][][][][][][][] [][] [][][][][][
 ] [][]
  []
 
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 291.
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 329.
 
 LaTeX Font Warning: Font shape `TU/lmtt/bx/it' in size <10> not available
-(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 291.
+(Font)              Font shape `TU/lmtt/b/sl' tried instead on input line 329.
 
 [18] [19] [20
 
 ]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
 []\TU/lmr/m/n/10 Alaska: []$[][][][][] [] [] [] [][][][] [][] [][][][] [] [][][
 ][][][][][][] [] [][][][] [] [][][] [] [][][][] [] [][][][] [] [][][][][][] [] 
 [][][] [] [][][][][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
 [] [] [][] [] [][][][] [] [][][] [] [][][][] [][] [][][][][][][] [] [][][][][][
 ][][][][][][][][][] [] [][][][][][] [] [][][][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 4805) in paragraph at lines 354--355
+Underfull \hbox (badness 4805) in paragraph at lines 392--393
 []\TU/lmr/m/n/10 Gulf of Mexico: []$[][][][][] [] [] [] [][][][][][] [] [][][] 
 [] [][][][][][][][][][][][][][][] [] [][][] [][] [][][][][][][][][] [][]
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 []$[][][][][] [] [] [] [][][][][][][][][] [] [][][][] [] [][][][] [] [][][] [] 
 [][][][][][] [] [][][][][][][][] [] [][][][][] [] [] [] [][] [] [][][][] [] [][
 ][] []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 [][][][] [][] [][][][][][][] [] [][][][][][][][][][][][][][][] [] [][][][][][] 
 [] [][][][][][][][][][] [] [][][][][][][][] [] [][][][][] [] [][][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 [][][][][][] [][] [][][][][][] [] [][][][] [] [][][][][][] [] [][][][] [] [][][
 ][] [] [][][][][][][][][][][][] [] [][][][][][][][][][][][][][][] [] [][][]$[]\
 TU/lmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 6808) in paragraph at lines 379--380
+Underfull \hbox (badness 6808) in paragraph at lines 417--418
 [] [] [][][][][][][][][][][][][][][][][][][] [] [][][][][][][][][][][][][][][][
 ][][][][] [] [][][][] [] [][][] [] []$[]\TU/lmr/m/n/10 ). Fi-
  []
@@ -1116,14 +1116,14 @@ Underfull \hbox (badness 6808) in paragraph at lines 379--380
 ]
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
 []$[][][][][] [] [] [] [][][] [] [][][][][][][][][] [] [][][][] [] [][][] [] []
 [][][][][][][] [] [][][][][][][][][][] [][] [][][][][][][][][][][] [] [][][][][
 ][][] [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
 []\TU/lmr/m/n/10 After traveling to []$[][][][][] [] [] [] [][][] [] [][][][][]
 [][][][] [] [][][][] [] [][][] [] [][][][][][][][] [] [][][][][][][][][][] [][]
 
@@ -1133,133 +1133,133 @@ Underfull \hbox (badness 10000) in paragraph at lines 398--399
 File: overfished.png Graphic file (type bmp)
 <overfished.png>
 
-Overfull \hbox (415.88922pt too wide) in paragraph at lines 409--409
+Overfull \hbox (415.88922pt too wide) in paragraph at lines 447--447
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 24.0805pt on input line 410.
+LaTeX Warning: Float too large for page by 24.0805pt on input line 448.
 
 [26] [27] [28
 
 ]
 Chapter 7.
-[29] [30
+[29] [30] [31] [32
 
 ]
 Chapter 8.
-[31] [32]
+[33] [34]
 Chapter 9.
 
-Underfull \hbox (badness 1173) in paragraph at lines 479--480
+Underfull \hbox (badness 1173) in paragraph at lines 563--564
 \TU/lmr/m/n/10 SST Data are currently compiled and analyzed by Todd O’Brien fro
 m
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 479--480
+Underfull \hbox (badness 1715) in paragraph at lines 563--564
 \TU/lmr/m/n/10 NMFS ([]$[][][][] [] [][][][][][] [] [][][][] [] [][][]$[]). Mor
 e information about Todd’s meth-
  []
 
 
-Underfull \hbox (badness 7151) in paragraph at lines 479--480
+Underfull \hbox (badness 7151) in paragraph at lines 563--564
 \TU/lmr/m/n/10 ods can be found here []$[][][][][] [] [] [] [][][][] [] [][][][
 ][][] [] [][][] [] [][][][][][][][] [] [] [] [][][][][][] [][]
  []
 
-[33
-
-] [34]
-Chapter 10.
 [35
 
-] [36
+] [36]
+Chapter 10.
+[37
+
+] [38
 
 ]
 Chapter 11.
-[37] [38]
+[39] [40]
 Chapter 12.
 
 Underfull \vbox (badness 6808) has occurred while \output is active []
 
-[39
+[41
 
 ]
-Underfull \hbox (badness 3713) in paragraph at lines 572--573
+Underfull \hbox (badness 3713) in paragraph at lines 657--658
 \TU/lmr/m/n/10 NOAA EPNP Data is hosted by Columbia University at this link:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--573
+Underfull \hbox (badness 10000) in paragraph at lines 657--658
 []$[][][][][] [] [] [] [][][][][] [] [][][][] [] [][][][][][][][] [] [][][] [] 
 [][][][][][][] [] [][][][][] [] [][][][][] [] [][][][] [] [][][][][][][][] []
  []
 
-[40]
+[42]
 Chapter 13.
-[41
+[43
 
 ]
-Underfull \vbox (badness 10000) detected at line 685
+Underfull \vbox (badness 10000) detected at line 770
  []
 
 
-Underfull \vbox (badness 10000) detected at line 685
+Underfull \vbox (badness 10000) detected at line 770
  []
 
-[42] [43] [44
+[44] [45] [46
 
 ]
 Chapter 14.
-[45]
-Underfull \vbox (badness 10000) detected at line 805
+[47]
+Underfull \vbox (badness 10000) detected at line 890
  []
 
 
-Underfull \vbox (badness 10000) detected at line 805
+Underfull \vbox (badness 10000) detected at line 890
  []
 
-[46]
-Overfull \vbox (2.28998pt too high) detected at line 805
+[48]
+Overfull \vbox (2.28998pt too high) detected at line 890
  []
 
-[47] [48]
+[49] [50]
 Chapter 15.
-[49
+[51
 
 ]
-Underfull \vbox (badness 10000) detected at line 925
+Underfull \vbox (badness 10000) detected at line 1010
  []
 
 
-Underfull \vbox (badness 10000) detected at line 925
+Underfull \vbox (badness 10000) detected at line 1010
  []
 
-[50]
-Underfull \vbox (badness 10000) detected at line 925
+[52]
+Underfull \vbox (badness 10000) detected at line 1010
  []
 
 
-Underfull \vbox (badness 10000) detected at line 925
+Underfull \vbox (badness 10000) detected at line 1010
  []
 
-[51] [52]
+[53] [54]
 Chapter 16.
-[53
+[55
 
-] [54] [55] [56
+] [56] [57] [58
 
 ]
 Chapter 17.
 
-Underfull \hbox (badness 4353) in paragraph at lines 1036--1037
+Underfull \hbox (badness 4353) in paragraph at lines 1121--1122
 \TU/lmr/m/n/10 Recreational harvest and effort data pulled from National Summar
 y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1122
 \TU/lmr/m/n/10 Query at []$[][][][][] [] [] [] [][][] [] [][] [] [][][][] [] []
 [][][] [] [][][] [] [][][][][][][][][][][][] [][] [][][][][][][][][] [] [][][][
 ] [][] [][][] [][]
@@ -1268,39 +1268,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
 
 Underfull \vbox (badness 3209) has occurred while \output is active []
 
-[57] [58] [59] [60]
+[59] [60] [61] [62]
 Chapter 18.
-[61
+[63
 
-] [62
+] [64
 
 ]
 Chapter 19.
-[63]
-Underfull \vbox (badness 10000) detected at line 1245
+[65]
+Underfull \vbox (badness 10000) detected at line 1330
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1245
+Underfull \vbox (badness 10000) detected at line 1330
  []
 
-[64] [65] [66
+[66] [67] [68
 
 ]
 Chapter 20.
-[67] [68]
+[69] [70]
 No file bookdown-demo.bbl.
-[69] (./bookdown-demo.aux)
+[71] (./bookdown-demo.aux)
 Package rerunfilecheck Info: File `bookdown-demo.out' has not changed.
-(rerunfilecheck)             Checksum: FC5BFA85772D2667AFF7CC7FB45C7842;6484.
+(rerunfilecheck)             Checksum: 235548A4E5DF2A4D004330E57F8FA9A0;6607.
  ) 
 Here is how much of TeX's memory you used:
- 17002 strings out of 478442
- 302373 string characters out of 5856508
- 781355 words of memory out of 5000000
- 37100 multiletter control sequences out of 15000+600000
+ 16999 strings out of 478442
+ 302359 string characters out of 5856508
+ 781252 words of memory out of 5000000
+ 37097 multiletter control sequences out of 15000+600000
  409905 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,6n,120p,1358b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bookdown-demo.pdf (69 pages).
+Output written on bookdown-demo.pdf (71 pages).

@@ -2,16 +2,58 @@
 
 ## ESA
 
-### Data
-Under Construction
+Description of Threatened and Endangered Marine Mammals (ESA):
 
-### Methods
-Under construction
+NOAA Fisheries is responsible for the protection, conservation, and recovery of endangered and threatened marine and anadromous species under the Endangered Species Act (ESA). The ESA aims to conserve these species and the ecosystems they depend on. Under the ESA, a species is considered endangered if it is in danger of extinction throughout all or a significant portion of its range, or threatened if it is likely to become endangered in the foreseeable future throughout all or a significant portion of its range See a species directory of all the threatened and endangered marine species under NOAA Fisheries jurisdiction, including marine mammals. 
+
+Under the ESA, a species must be listed if it is threatened or endangered because of any of the following 5 factors:
+
+1) Present or threatened destruction, modification, or curtailment of its habitat or range;
+
+2) Over-utilization of the species for commercial, recreational, scientific, or educational purposes;
+
+3) Disease or predation;
+
+4) Inadequacy of existing regulatory mechanisms; and
+
+5) Other natural or manmade factors affecting its continued existence.
+
+The ESA requires that listing determinations be based solely on the best scientific and commercial information available; economic impacts are not considered in making species listing determinations and are prohibited under the ESA. There are two ways by which a species may come to be listed (or delisted) under the ESA:
+
+- NOAA Fisheries receives a petition from a person or organization requesting that NOAA lists a species as threatened or endangered, reclassify a species, or delist a species.
+
+- NOAA Fisheries voluntarily chooses to examine the status of a species by initiating a status review of a species.
 
 ## MMPA
 
-### Data
-Under Construction
+Description of Marine Mammal Strategic and Depleted Stocks (MMPA):
 
-### Methods
-Under construction
+A stock is defined by the Marine Mammal Protection Act (MMPA), as a group of marine mammals of the same species or smaller taxa in a common spatial arrangement, that interbreed when mature. See a list of the marine mammal stocks NOAA protects under the MMPA.
+
+A strategic stock is defined by the MMPA as a marine mammal stock—
+
+- For which the level of direct human-caused mortality exceeds the potential biological removal level or PBR (defined by the MMPA as the maximum number of animals, not including natural mortalities, that may be removed from a marine mammal stock while allowing that stock to reach or maintain its optimum sustainable population); 
+
+- Which, based on the best available scientific information, is declining and is likely to be listed as a threatened species under the Endangered Species Act (ESA) within the foreseeable future; or 
+
+- Which is listed as a threatened or endangered species under the ESA, or is designated as depleted under the MMPA. 
+
+ 
+
+A depleted stock is defined by the MMPA as any case in which—
+
+- The Secretary of Commerce, after consultation with the Marine Mammal Commission and the Committee of Scientific Advisors on Marine Mammals established under MMPA title II, determines that a species or population stock is below its optimum sustainable population; 
+
+- A State, to which authority for the conservation and management of a species or population stock is transferred under section 109, determines that such species or stock is below its optimum sustainable population; or 
+
+- A species or population stock is listed as an endangered species or a threatened species under the ESA. 
+
+### Data
+
+Data for the Southeast and Gulf of Mexico regions are combined. Data are summarized using NOAA’s PR-SIS Data Portal (which is not public-facing), but all information displayed can be found on the NOAA Fisheries Marine Mammal Stock Assessments Page for strategic and depleted marine mammal stocks, and on the NOAA Fisheries Threatened and Endangered Species Directory Page for threatened and endangered marine mammals.
+
+Contact willem.klajbor@noaa.gov for the PR-SIS login, or contact wei.qiu@noaa.gov to get your own. Data can then be sub-sorted by year in "Reports" and turned into annual sums by region.
+
+Gauge values are not used for Marine Mammal Indicators at present.
+
+With questions contact willem.klajbor@noaa.gov, laura.ingulsrud@noaa.gov, or stephaine.oakes@noaa.gov.

@@ -1,8 +1,10 @@
 # Sea Level
 
-## Data
-Under Construction
+Description of Sea Level:
 
-## Methods
-Under construction
+Sea level varies due to the force of gravity, the Earth’s rotation and irregular features on the ocean floor. Other forces affecting sea levels include temperature, wind, ocean currents, tides, and other similar processes. With 40 percent of Americans living in densely populated coastal areas, having a clear understanding of sea level trends is critical to societal and economic well being.
 
+Measuring and predicting sea levels, tides and storm surge are important for determining coastal boundaries, ensuring safe shipping, emergency preparedness, and other aspects of the well-being of coastal communities. 
+
+## Data and Methods
+Sea level data presented here are measurements of relative sea level, water height as compared to nearby land level, from NOAA tide gauges that have >20 years of hourly data served through NOAA’s Center for Operational Oceanographic Products and Services (CO-OPS) Tides and Currents website. The data are compiled by Billy Sweet at william.sweet@noaa.gov
