@@ -27,7 +27,7 @@ Ecosystem indicators are quantitative and/or qualitative measures of key compone
 
 Ecosystem indicators are measures of the natural, social, and economic condition of the system. For example, scientists track the amount of revenue brought in by commercial fishing to measure how commercial fishing businesses are doing. Such indicators provide the ability to tell whether ecosystem attributes of interest are changing relative to management goals and objectives, and in some cases may provide the ability to predict how the system will change and assess related risk.
 
- 
+TEST
 
 Criteria for choosing a new indicator or retiring an existing indicator on this site relate both to the data sourced to develop and measure the indicator, and the indicator properties. 
 
