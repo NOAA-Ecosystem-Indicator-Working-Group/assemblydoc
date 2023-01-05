@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>1 Chlorophyll-a | Technical Indicator Assembly Document for NOAA NaMES</title>
   <meta name="description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="1 Chlorophyll-a | Technical Indicator Assembly Document for NOAA NaMES" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
   <meta name="github-repo" content="rstudio/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Willem Klajbor, The NOAA Ecosystem Indicators Working Group" />
 
 
-<meta name="date" content="2021-12-02" />
+<meta name="date" content="2023-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="zooplankton.html"/>
-<script src="asset/header-attrs-2.9/header-attrs.js"></script>
-<script src="asset/jquery-2.2.3/jquery.min.js"></script>
+<script src="asset/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="asset/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="asset/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="asset/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="asset/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="asset/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="asset/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -287,12 +286,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chlorophyll-a" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Chlorophyll-a</h1>
+<div id="chlorophyll-a" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">1</span> Chlorophyll-a<a href="chlorophyll-a.html#chlorophyll-a" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>*This Indicator requires non-EIWG Contacts to update as of August 2021</p>
 <p>At the base of most marine food webs are microscopic plants, called phytoplankton - which also produce nearly half of the Earth’s oxygen. One way we measure the amount of phytoplankton in the ocean is via a pigment that phytoplankton produce - chlorophyll a. Using ocean color sensors on satellites, we can measure the amount of chlorophyll a in surface waters. Environmental and oceanographic factors continuously influence the abundance, composition, spatial distribution, and productivity of phytoplankton. Tracking the amount of phytoplankton in the ocean gives us the status of the base of the food web, and how much food is available for other animals to grow. Changes in the amount of phytoplankton in the ocean are part of the natural seasonal cycle, but can also indicate an ecosystem’s response to a major external disturbance.</p>
-<div id="data-and-methods" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Data and Methods</h2>
+<div id="data-and-methods" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Data and Methods<a href="chlorophyll-a.html#data-and-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Chlorophyll a data were obtained from the NOAA Fisheries Coastal &amp; Oceanic Plankton Ecology, Production, &amp; Observations Database (<a href="https://www.st.nmfs.noaa.gov/copepod/" class="uri">https://www.st.nmfs.noaa.gov/copepod/</a>). Measurements of ocean chlorophyll concentration were combined from both the SeaWiFS and MODIS-Aqua “ocean color” datasets and binned at 0.5 x 0.5 degree latitude-longitude boxes, annual averages for each year calculated from the average of all monthly means in that year, and the annual mean was calculated as the average of all annual means.</p>
 <p>Since no portal/product exists at present for the spatial and temporal needs of the NaMES website, data are compiled and analyzed by the COPEPOD database manager Todd O’Brien. More information about Todd’s methods can be found at <a href="https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit?rtpof=true" class="uri">https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit?rtpof=true</a> or by emailing him directly at <a href="mailto:todd.obrien@noaa.gov" class="email">todd.obrien@noaa.gov</a>.</p>
 <p>Presently, EIWG Member Veronica Lance is working with the NOAA CoastWatch team to produce dedicated monthly and annual means of the SST and Chl-a indicators at the LME scale for future NaMES use. More information about this can be found by emailing Veronica directly at <a href="mailto:Veronica.Lance@noaa.gov" class="email">Veronica.Lance@noaa.gov</a>.</p>
@@ -310,7 +309,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="asset/gitbook-2.6.7/js/app.min.js"></script>
-<script src="asset/gitbook-2.6.7/js/lunr.js"></script>
 <script src="asset/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -350,6 +348,10 @@ gitbook.start({
 "text": null
 },
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },

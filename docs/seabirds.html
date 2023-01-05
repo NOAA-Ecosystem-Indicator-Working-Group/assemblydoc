@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Seabirds | Technical Indicator Assembly Document for NOAA NaMES</title>
   <meta name="description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Seabirds | Technical Indicator Assembly Document for NOAA NaMES" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
   <meta name="github-repo" content="rstudio/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Willem Klajbor, The NOAA Ecosystem Indicators Working Group" />
 
 
-<meta name="date" content="2021-12-02" />
+<meta name="date" content="2023-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="forage-fish.html"/>
 <link rel="next" href="overfished-stocks.html"/>
-<script src="asset/header-attrs-2.9/header-attrs.js"></script>
-<script src="asset/jquery-2.2.3/jquery.min.js"></script>
+<script src="asset/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="asset/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="asset/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="asset/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="asset/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="asset/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="asset/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -287,33 +286,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="seabirds" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Seabirds</h1>
+<div id="seabirds" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">5</span> Seabirds<a href="seabirds.html#seabirds" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Seabirds are a vital part of marine ecosystems and valuable indicators of an ecosystem’s status. Seabirds are attracted to fishing vessels and frequently get hooked or entangled in fishing gear, especially longline fisheries. This is a common threat to seabirds. Depending on the geographic region, fishermen in the United States often interact with albatross, cormorants, gannet, loons, pelicans, puffins, gulls, storm-petrels, shearwaters, terns, and many other species. We track seabirds because of their importance to marine food webs, but also as an indication of efficient fishing practices. We present estimates of seabird abundance in the Alaska, California Current, Gulf of Mexico and Northeast regions.</p>
-<div id="data-3" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> Data</h2>
+<div id="data-3" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Data<a href="seabirds.html#data-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Data for Alaska, California Current, and the Gulf of Mexico were obtained from the regional NOAA Integrated Ecosystem Assessment Program teams that produce indicators and Ecosystem Status Report. The links for each of the datasets can be found here:</p>
 <p>Alaska: <a href="https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv" class="uri">https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv</a></p>
 <p>California Current: <a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22</a></p>
 <p>Gulf of Mexico: <a href="https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv" class="uri">https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv</a></p>
 <p>Seabird count and transect length data for the Northeast are extracted from the Atlantic Marine Assessment Program for Protected Species (AMAPPS) annual reports. Counts are summed and divided by the sum of the transect length in nautical miles. For more information see <a href="https://www.nefsc.noaa.gov/psb/AMAPPS/" class="uri">https://www.nefsc.noaa.gov/psb/AMAPPS/</a></p>
 </div>
-<div id="methods-3" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> Methods</h2>
-<div id="alaska-2" class="section level3" number="5.2.1">
-<h3><span class="header-section-number">5.2.1</span> Alaska</h3>
+<div id="methods-3" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Methods<a href="seabirds.html#methods-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="alaska-2" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Alaska<a href="seabirds.html#alaska-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Multivariate Breeding Index variable from the Eastern Bering Sea Ecosystem Status Report is currently used to represent seabirds for the NaMES Alaska Region. That data can be downloaded manually by clicking <a href="https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv" class="uri">https://apps-afsc.fisheries.noaa.gov/refm/reem/ecoweb/csv/table/Seabird.csv</a>.</p>
 </div>
-<div id="california-current-2" class="section level3" number="5.2.2">
-<h3><span class="header-section-number">5.2.2</span> California Current</h3>
+<div id="california-current-2" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> California Current<a href="seabirds.html#california-current-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Density Anomaly for Cassin’s Auklets in the Southern California Current (Spring) are used to represent the seabird indicator for the NaMES California Current region. Because this is an anomaly variable, the values for previous years will change every year - therefore, the entire dataset must be downloaded and replaced each year. The data can be downloaded manually by clicking <a href="https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22" class="uri">https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_AS_DENS.csv?time,density_anomaly&amp;species_cohort=%22Cassins%20auklet%20(So%20CC,%20Spring)%22</a></p>
 </div>
-<div id="gulf-of-mexico-2" class="section level3" number="5.2.3">
-<h3><span class="header-section-number">5.2.3</span> Gulf of Mexico</h3>
+<div id="gulf-of-mexico-2" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Gulf of Mexico<a href="seabirds.html#gulf-of-mexico-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The GoA IEA team produces a standardized seabird relative abundance variable that is stored at <a href="https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv" class="uri">https://github.com/mandykarnauskas/GoM-Ecosystem-Status-Report/blob/master/data/bird_standardized_abundancesFINAL.csv</a>. As of this writing, the data had not been updated since 2020 and only go until 2015.</p>
 </div>
-<div id="northeast-2" class="section level3" number="5.2.4">
-<h3><span class="header-section-number">5.2.4</span> Northeast</h3>
+<div id="northeast-2" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Northeast<a href="seabirds.html#northeast-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The northeast seabirds indicator is compiled using the AMAPPS Annual report each year. This indicator is compiled completely manually. The reports can be found at <a href="https://www.nefsc.noaa.gov/psb/AMAPPS/" class="uri">https://www.nefsc.noaa.gov/psb/AMAPPS/</a>. To calculate the indicator score for each year, one must go to the Seabirds -&gt; Results section of a corresponding year’s report and identify the paragraphs containing the “Total seabirds seen,” “Total Seen in Zone,” and the “Nautical Miles Surveyed” values. Then, those values for each cruise should be input into this google sheet (<a href="https://docs.google.com/spreadsheets/d/1-g_d9eMWUchbm2xojlRG8Q_y7xzbtcyU1bHriW2ua4U/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1-g_d9eMWUchbm2xojlRG8Q_y7xzbtcyU1bHriW2ua4U/edit#gid=0</a>). Finally, using the google sheet, the total number of seabirds observed for the entire year should be divided by the total nautical miles surveyed. That result produces the indicator score and should be manually input into the data file.</p>
 
 </div>
@@ -329,7 +328,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="asset/gitbook-2.6.7/js/app.min.js"></script>
-<script src="asset/gitbook-2.6.7/js/lunr.js"></script>
 <script src="asset/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -369,6 +367,10 @@ gitbook.start({
 "text": null
 },
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },

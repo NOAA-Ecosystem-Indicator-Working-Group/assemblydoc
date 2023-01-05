@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Marine Mammals | Technical Indicator Assembly Document for NOAA NaMES</title>
   <meta name="description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Marine Mammals | Technical Indicator Assembly Document for NOAA NaMES" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
   <meta name="github-repo" content="rstudio/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Willem Klajbor, The NOAA Ecosystem Indicators Working Group" />
 
 
-<meta name="date" content="2021-12-02" />
+<meta name="date" content="2023-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="overfished-stocks.html"/>
 <link rel="next" href="marine-species-distribution.html"/>
-<script src="asset/header-attrs-2.9/header-attrs.js"></script>
-<script src="asset/jquery-2.2.3/jquery.min.js"></script>
+<script src="asset/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="asset/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="asset/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="asset/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="asset/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="asset/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="asset/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -287,10 +286,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="marine-mammals" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Marine Mammals</h1>
-<div id="esa" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> ESA</h2>
+<div id="marine-mammals" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Marine Mammals<a href="marine-mammals.html#marine-mammals" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="esa" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> ESA<a href="marine-mammals.html#esa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Description of Threatened and Endangered Marine Mammals (ESA):</p>
 <p>NOAA Fisheries is responsible for the protection, conservation, and recovery of endangered and threatened marine and anadromous species under the Endangered Species Act (ESA). The ESA aims to conserve these species and the ecosystems they depend on. Under the ESA, a species is considered endangered if it is in danger of extinction throughout all or a significant portion of its range, or threatened if it is likely to become endangered in the foreseeable future throughout all or a significant portion of its range See a species directory of all the threatened and endangered marine species under NOAA Fisheries jurisdiction, including marine mammals.</p>
 <p>Under the ESA, a species must be listed if it is threatened or endangered because of any of the following 5 factors:</p>
@@ -307,8 +306,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>NOAA Fisheries voluntarily chooses to examine the status of a species by initiating a status review of a species.</p></li>
 </ul>
 </div>
-<div id="mmpa" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> MMPA</h2>
+<div id="mmpa" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> MMPA<a href="marine-mammals.html#mmpa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Description of Marine Mammal Strategic and Depleted Stocks (MMPA):</p>
 <p>A stock is defined by the Marine Mammal Protection Act (MMPA), as a group of marine mammals of the same species or smaller taxa in a common spatial arrangement, that interbreed when mature. See a list of the marine mammal stocks NOAA protects under the MMPA.</p>
 <p>A strategic stock is defined by the MMPA as a marine mammal stock—</p>
@@ -323,8 +322,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>A State, to which authority for the conservation and management of a species or population stock is transferred under section 109, determines that such species or stock is below its optimum sustainable population; or</p></li>
 <li><p>A species or population stock is listed as an endangered species or a threatened species under the ESA.</p></li>
 </ul>
-<div id="data-5" class="section level3" number="7.2.1">
-<h3><span class="header-section-number">7.2.1</span> Data</h3>
+<div id="data-5" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Data<a href="marine-mammals.html#data-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Data for the Southeast and Gulf of Mexico regions are combined. Data are summarized using NOAA’s PR-SIS Data Portal (which is not public-facing), but all information displayed can be found on the NOAA Fisheries Marine Mammal Stock Assessments Page for strategic and depleted marine mammal stocks, and on the NOAA Fisheries Threatened and Endangered Species Directory Page for threatened and endangered marine mammals.</p>
 <p>Contact <a href="mailto:willem.klajbor@noaa.gov" class="email">willem.klajbor@noaa.gov</a> for the PR-SIS login, or contact <a href="mailto:wei.qiu@noaa.gov" class="email">wei.qiu@noaa.gov</a> to get your own. Data can then be sub-sorted by year in “Reports” and turned into annual sums by region.</p>
 <p>Gauge values are not used for Marine Mammal Indicators at present.</p>
@@ -343,7 +342,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="asset/gitbook-2.6.7/js/app.min.js"></script>
-<script src="asset/gitbook-2.6.7/js/lunr.js"></script>
 <script src="asset/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -383,6 +381,10 @@ gitbook.start({
 "text": null
 },
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },

@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>19 Billion Dollar Disasters | Technical Indicator Assembly Document for NOAA NaMES</title>
   <meta name="description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="19 Billion Dollar Disasters | Technical Indicator Assembly Document for NOAA NaMES" />
   <meta property="og:type" content="book" />
-  
   
   <meta property="og:description" content="This is a technical document that describes the methods and data used to develop the indicators presented on www.ecowatch.noaa.gov" />
   <meta name="github-repo" content="rstudio/NOAA-Ecosystem-Indicator-Working-Group/assemblydoc" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Willem Klajbor, The NOAA Ecosystem Indicators Working Group" />
 
 
-<meta name="date" content="2021-12-02" />
+<meta name="date" content="2023-01-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   
 <link rel="prev" href="fishing-engagement.html"/>
 <link rel="next" href="beach-closures.html"/>
-<script src="asset/header-attrs-2.9/header-attrs.js"></script>
-<script src="asset/jquery-2.2.3/jquery.min.js"></script>
+<script src="asset/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="asset/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="asset/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,9 +49,9 @@
 
 
 
-
-<link href="asset/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="asset/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="asset/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="asset/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="asset/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 <style type="text/css">
@@ -287,15 +286,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="billion-dollar-disasters" class="section level1" number="19">
-<h1><span class="header-section-number">19</span> Billion Dollar Disasters</h1>
+<div id="billion-dollar-disasters" class="section level1 hasAnchor" number="19">
+<h1><span class="header-section-number">19</span> Billion Dollar Disasters<a href="billion-dollar-disasters.html#billion-dollar-disasters" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In the United States the number of weather and climate-related disasters exceeding 1 billion dollars has been increasing since 1980. These events have significant impacts to coastal economies and communities. The Billion Dollar Disaster indicator provides information on the frequency and the total estimated costs of major weather and climate events that occur in the United States. This indicator compiles the annual number of weather and climate-related disasters across seven event types. Events are included if they are estimated to cause more than one billion U.S. dollars in direct losses. The cost estimates of these events are adjusted for inflation using the Consumer Price Index (CPI) and are based on costs documented in several Federal and private-sector databases. We present the total annual number of disaster events for all regions.</p>
-<div id="data-14" class="section level2" number="19.1">
-<h2><span class="header-section-number">19.1</span> Data</h2>
+<div id="data-14" class="section level2 hasAnchor" number="19.1">
+<h2><span class="header-section-number">19.1</span> Data<a href="billion-dollar-disasters.html#data-14" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Billion dollar disaster event frequency data are taken from NOAA’s National Centers for Environmental Information (<a href="https://www.ncdc.noaa.gov/billions/" class="uri">https://www.ncdc.noaa.gov/billions/</a>). The number of disasters within each region were summed for every year of available data. Although the number is the count of unique disaster events within a region, the same disaster can impact multiple regions, meaning a sum across regions will overestimate the unique number of disasters.</p>
 </div>
-<div id="methods-12" class="section level2" number="19.2">
-<h2><span class="header-section-number">19.2</span> Methods</h2>
+<div id="methods-12" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Methods<a href="billion-dollar-disasters.html#methods-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Billion Dollar Event Frequency Data displayed on the website were compiled using the following code:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="billion-dollar-disasters.html#cb12-1" aria-hidden="true" tabindex="-1"></a>PKG <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;foreign&quot;</span>,<span class="st">&quot;stringr&quot;</span>,<span class="st">&quot;data.table&quot;</span>)</span>
 <span id="cb12-2"><a href="billion-dollar-disasters.html#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -377,7 +376,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="asset/gitbook-2.6.7/js/app.min.js"></script>
-<script src="asset/gitbook-2.6.7/js/lunr.js"></script>
 <script src="asset/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="asset/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -417,6 +415,10 @@ gitbook.start({
 "text": null
 },
 "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 },
