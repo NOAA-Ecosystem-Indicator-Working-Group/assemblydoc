@@ -23,7 +23,7 @@
 <meta name="author" content="Willem Klajbor, The NOAA Ecosystem Indicators Working Group" />
 
 
-<meta name="date" content="2023-01-05" />
+<meta name="date" content="2023-01-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -289,11 +289,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Technical Indicator Assembly Document for NOAA NaMES</h1>
 <p class="author"><em>Willem Klajbor, The NOAA Ecosystem Indicators Working Group</em></p>
-<p class="date"><em>2023-01-05</em></p>
+<p class="date"><em>2023-01-06</em></p>
 </div>
 <div id="overview" class="section level1 unnumbered hasAnchor">
 <h1>Overview<a href="index.html#overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The National Marine Ecosystem Status web portal provides the status of marine ecosystems across the U.S. and access to NOAA ecosystem indicator information and data. This website is designed to document the data sources and methods used to create the indicators displayed on the site.</p>
+<p>This website is designed to serve as a technical memorandum and should be used to replicate the methods used to populate and update the website in the case of turnover.</p>
 <div id="definition-of-indicators" class="section level2 hasAnchor" number="0.1">
 <h2><span class="header-section-number">0.1</span> Definition of Indicators<a href="index.html#definition-of-indicators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ecosystem indicators are quantitative and/or qualitative measures of key components of the ecosystem. Marine ecosystems provide food, jobs, security, well-being, and other services to millions of people across the U.S. Yet, marine ecosystems and the people that rely on them are facing increasingly complex challenges. Tracking the status and trends of ocean and coastal ecosystems is critically important to understand how these ecosystems are changing and identify potential issues.</p>
@@ -302,33 +303,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">0.2</span> Indicator Criteria<a href="index.html#indicator-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>*Language as of December 2021</p>
 <p>Ecosystem indicators are measures of the natural, social, and economic condition of the system. For example, scientists track the amount of revenue brought in by commercial fishing to measure how commercial fishing businesses are doing. Such indicators provide the ability to tell whether ecosystem attributes of interest are changing relative to management goals and objectives, and in some cases may provide the ability to predict how the system will change and assess related risk.</p>
-<p>TESTING</p>
 <p>Criteria for choosing a new indicator or retiring an existing indicator on this site relate both to the data sourced to develop and measure the indicator, and the indicator properties.</p>
 <p>Indicators should meet the following Indicator Criteria:</p>
-<p>Indicators should be theoretically sound, reliably represent key ecosystem attributes and hold up to peer review.
-Indicators should have demonstrable importance to the ecosystem (e.g., keystone or structural architect species) and society (e.g charismatic or subsistence species))
-Indicators should be relevant and understandable to management, to the public, and to policy makers
-Indicators should be responsive, showing sensitivity to and reacting predictably to environmental variability and/or management or policy actions.
-The direction of response should be theoretically- or empirically-expected.
-When possible, indicators should provide early warning of ecosystem change.
-Indicators should complement the indicators already served on the portal in ways such that they are not redundant</p>
+<ul>
+<li>Indicators should be theoretically sound, reliably represent key ecosystem attributes and hold up to peer review.</li>
+<li>Indicators should have demonstrable importance to the ecosystem (e.g., keystone or structural architect species) and society (e.g charismatic or subsistence species))</li>
+<li>Indicators should be relevant and understandable to management, to the public, and to policy makers</li>
+<li>Indicators should be responsive, showing sensitivity to and reacting predictably to environmental variability and/or management or policy actions.</li>
+<li>The direction of response should be theoretically- or empirically-expected.</li>
+<li>When possible, indicators should provide early warning of ecosystem change.</li>
+<li>Indicators should complement the indicators already served on the portal in ways such that they are not redundant</li>
+</ul>
 <p>Data used to develop indicators should meet the following Data Criteria:</p>
-<p>Data should be publicly available and be quantitative whenever possible. Qualitative information and expert opinion can provide context for quantitative indicators.
-Data should be specific, preferably directly measurable or observable.
-Data should be updated on a regular basis, preferably at least annually.
-Time-series should be long-term (&gt;10-years preferred) and likely to extend for the foreseeable future.
-Data collection that is cost effective for the program collecting the data is preferable to increase the likelihood the data set will continue to be collected and maintained over time.
-For nascent time series that have less than 10 years measurement, careful consideration of statistical treatment is required. In some cases reporting just the raw data is appropriate.
-For long-term climatological indices, recent short-term (e.g., last five years) trend analysis may not be appropriate.
-Some important data, such as those relating to corals, pH, oxygen etc. may be considered for use even if not regularly monitored.
-Careful consideration and explanation of the limits of such data must be documented and communicated on the NaMES web portal.
-Data should have appropriate and adequate spatial coverage.
-Ideally there will be data from each US Large Marine Ecosystem (LME), providing national coverage and the ability to synthesize the data across all regions.
-Some data (e.g., sea ice) are not readily available for all regions and in these cases full spatial coverage in all relevant areas is important.
-Some data (e.g., seabirds) do not cover the full region in relevant areas nor all species.
-Careful consideration and explanation of the limits of such data must be documented and communicated on the NaMES web portal.
-Normal ranges of spatial (e.g. patchiness) and temporal (e.g. diel, seasonal, annual, and decadal) variation for data should be considered to ascertain status and trends.
-Data should have sufficient signal-to-noise ratio to estimate measurement, process uncertainty, and detect significant change.</p>
+<ul>
+<li>Data should be publicly available and be quantitative whenever possible. Qualitative information and expert opinion can provide context for quantitative indicators.</li>
+<li>Data should be specific, preferably directly measurable or observable.</li>
+<li>Data should be updated on a regular basis, preferably at least annually.</li>
+<li>Time-series data should be long-term (&gt;10-years preferred) and likely to extend for the foreseeable future.</li>
+<li>Data collection that is cost effective for the program collecting the data is preferable to increase the likelihood the data set will continue to be collected and maintained over time.</li>
+<li>For nascent time series that have less than 10 years measurement, careful consideration of statistical treatment is required. In some cases reporting just the raw data is appropriate.</li>
+<li>For long-term climatological indices, recent short-term (e.g., last five years) trend analysis may not be appropriate.</li>
+<li>Some important data, such as those relating to corals, pH, oxygen etc. may be considered for use even if not regularly monitored.</li>
+<li>Careful consideration and explanation of the limits of such data must be documented and communicated on the NaMES web portal.</li>
+<li>Data should have appropriate and adequate spatial coverage.</li>
+<li>Ideally there will be data from each US Large Marine Ecosystem (LME), providing national coverage and the ability to synthesize the data across all regions.</li>
+<li>Some data (e.g., sea ice) are not readily available for all regions and in these cases full spatial coverage in all relevant areas is important.</li>
+<li>Some data (e.g., seabirds) do not cover the full region in relevant areas nor all species.</li>
+<li>Careful consideration and explanation of the limits of such data must be documented and communicated on the NaMES web portal.</li>
+<li>Normal ranges of spatial (e.g. patchiness) and temporal (e.g. diel, seasonal, annual, and decadal) variation for data should be considered to ascertain status and trends.</li>
+<li>Data should have sufficient signal-to-noise ratio to estimate measurement, process uncertainty, and detect significant change.</li>
+</ul>
 
 </div>
 </div>
