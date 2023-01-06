@@ -1,17 +1,17 @@
 # Sea Surface Temperature
 
-*This Indicator requires non-EIWG Contacts to update as of August 2021
+Sea surface temperature (SST) is defined as the temperature of the top few millimeters of the ocean. This temperature directly or indirectly  impacts the rate of all physical, chemical, and most biological processes occurring in the ocean. SST is globally monitored by sensors on satellites, buoys, ships, ocean reference stations, autonomous underwater vehicles (AUVs) and other technologies. 
 
-Sea Surface Temperature (SST) is defined as the average temperature of the top few millimeters of the ocean. This temperature impacts the rate of all physical, chemical, and most biological processes occurring in the ocean. Sea Surface Temperature is globally monitored by sensors on satellites, buoys, ships, ocean reference stations, AUVs and other technologies. 
-
-Sea Surface Temperature monitoring tells us how the ocean and atmosphere interact, as well as providing fundamental data on the global climate system. This information also aids us in weather prediction i.e. identifying the onset of El Niño and La Niña cycles - multiyear shifts in atmospheric pressure and wind speeds. These shifts affect ocean circulation, global weather patterns, and marine ecosystems. Sea Surface Temperature anomalies have been linked to shifting marine resources. With warming temperatures, we observe the poleward movements of fish and other species. Temperature extremes - both ocean heatwaves and cold spells, have been linked to coral bleaching as well as fishery and aquaculture mortality. We present annual average SST in all regions.
-
+SST monitoring tells us how the ocean and atmosphere interact, as well as providing fundamental data on the global climate system. This information also aids us in weather prediction, i.e. identifying the onset of El Niño and La Niña cycles - multiyear shifts in atmospheric pressure and wind speeds. These shifts affect ocean circulation, global weather patterns, and marine ecosystems. SST anomalies have been linked to shifting marine resources. With warming temperatures, we observe the poleward movements of fish and other species. Temperature extremes—both ocean heatwaves and cold spells—have been linked to coral bleaching as well as fishery and aquaculture mortality. We present the annual average SST in all regions.
+ 
 ## Data
-The sea surface temperature were accessed from (https://www.ncdc.noaa.gov/oisst).  The data are plotted in degrees Celsius.
+The SST product used for this analysis is the NOAA Coral Reef Watch CoralTemp v3.1 SST composite monthly accessed from CoastWatch (https://coralreefwatch.noaa.gov/product/5km/index_5km_sst.php). Great Lakes SST data were accessed from this link (https://coastwatch.glerl.noaa.gov/glsea/glsea.html).
+
+The data are plotted in degrees Celsius.
 
 ## Methods
-SST Data are currently compiled and analyzed by Todd O'Brien from NMFS (todd.obrien@noaa.gov). More information about Todd's methods can be found here https://docs.google.com/document/d/13ZUwU-OGZN2hz_DXT2ai8pSnhtjMwcSY/edit
+SST Data are currently compiled and analyzed by Melanie Abecassis from NESDIS (melanie.abecassis@noaa.gov).
 
-Presently, EIWG Member Veronica Lance is working with the NOAA CoastWatch team to produce dedicated monthly and annual means of the SST and Chl-a indicators at the LME scale for future NaMES use. More information about this can be found by emailing Veronica directly at Veronica.Lance@noaa.gov.
+The NOAA Coral Reef Watch (CRW) daily global 5km Sea Surface Temperature (SST) product, also known as CoralTemp, shows the nighttime ocean temperature measured at the surface. The CoralTemp SST data product was developed from two, related reanalysis (reprocessed) SST products and a near real-time SST product. Spanning January 1, 1985 to the present, the CoralTemp SST is one of the best and most internally consistent daily global 5km SST products available. Monthly composites were used for this analysis.
 
 Questions can be directed to the above emails or willem.klajbor@noaa.gov
